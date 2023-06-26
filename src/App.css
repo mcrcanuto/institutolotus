@@ -1,0 +1,189 @@
+* { 
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+}
+
+  /*css do menu*/
+ header {
+    height: 10vh;
+    width: 100%;
+    background-color: #DBC8EA; 
+    /* text-combine-upright: ; */
+
+  }
+  .logoimg{
+    width: 20vh;
+    height: 10vh;
+    position: absolute;
+    left: 5vw;
+  }
+  .logoimgposition {
+    width: 15vh;
+    height: 100%;
+    float: left;
+  }
+ header .placeholdermenu {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  float: right;
+ }
+ header .placeholdermenu article {
+  margin-left: 15px;
+ }
+ header .menulat {
+  margin-right: 200px;
+ }
+header .menulat ul {
+  width: 400px;
+  height: 100%;
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+ 
+}
+header .menulat ul a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: rgb(8, 8, 8);
+  list-style: none;
+  cursor: pointer;
+}
+
+header .menulat ul a li button {
+  cursor: pointer;
+}
+
+header .menulat ul a:nth-child(1) {
+  margin-left: 9.5vw;
+}
+ header .placeholdermenu input {
+  border-radius: 20px 20px 20px 20px;
+  border-color: rgb(5, 5, 5);
+  height: 3.5vh;
+  align-items: center;
+  text-align: center;
+  border-width: 0px;
+  font-style: italic;
+ }
+ header .placeholdermenu article button {
+  padding: 5px 5px 5px 5px;
+  border-radius: 20px;
+  border-color: rgba(0, 0, 0, 0.932);
+  background-color: white;
+  position: absolute;
+  left: 54vw;
+  top: 2.8vh;
+  border-width: 0px;
+ }
+#pedidos{
+  background-color:#DBC8EA;
+  border-width: 0px;
+}
+.iconempedido{
+  width: 2vw;
+  height: 2.6vh;
+  position: absolute;
+  top: 3.8vh;
+  left: 61.6vw;
+}
+.iconefpedido{
+  width: 2vw;
+  height: 2.6vh;
+  position: absolute;
+  top: 3.8vh;
+  left: 72vw;
+}
+
+
+
+
+/*css do submenu*/
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1vh;
+  background-color: #B985B1;
+  color: #FFFF;
+}
+.menu-toggle {
+  display: none;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-item {
+  margin-left: 2vw;
+  color: #ffffff;
+}
+.nav-list a:link{
+  text-decoration: none;
+} 
+.nav ul li:hover{
+  color: #5C286F;
+}
+
+
+
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: row; /* Alteração aqui para manter o menu na horizontal */
+    align-items: center;
+  }
+
+  .menu-toggle {
+    display: block;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px; /* Adição de margem para separar o botão de alternância do menu */
+  }
+
+  .nav {
+    display: block;
+  }
+
+  .open .nav {
+    display: flex;
+  }
+
+  .open .nav-item {
+    margin-right: 10px; /* Alteração aqui para manter a margem entre os itens do menu */
+    margin-bottom: 0;
+  }
+}
+.instaicone{
+  width: 5vh;
+    height: 3vh;
+    position: absolute;
+    top: 0vh; 
+    right: 15.3vw;
+}
+.insta{
+  position: absolute;
+  top: 11vh;
+  right: 10vw;
+  font-size: 16px;
+  color: #ffffff;
+}
