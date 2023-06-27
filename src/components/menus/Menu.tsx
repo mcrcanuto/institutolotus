@@ -1,10 +1,9 @@
 import { BiClipboard, BiSearch, } from "react-icons/bi";
 import {TiShoppingCart} from "react-icons/ti"
-import "../../App.css";
+import "../../css/menus.css";
 import React from "react";
 import { Popup2, Popup } from "../popup/pop";
 import '../../css/pop.css'
-import Submenu from "./submenu";
 function Menu() {
 
   const [isOpen, setIsOpen] = React.useState(false);
@@ -65,7 +64,7 @@ function Menu() {
           </div>
         </div>
       </header>
-      <Submenu/>
+
 
       {isOpen && <Popup2
       handleClose={togglePopup}
