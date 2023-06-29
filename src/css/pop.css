@@ -8,8 +8,9 @@
   }
   
   .box {
-    position: relative;
+    position: absolute;
     width: 45%;
+     left: 25vw;
     min-height: 300px;
     background-color: #e6d2f6;
     border: 1px solid #e6d2f6 ;
@@ -21,8 +22,9 @@
   }
 
   .box2 {
-    position: relative;
+    position: absolute;
     width: 45%;
+    left: 25vw;
     min-height: 200px;
     background-color: #e6d2f6;
     border: 1px solid #e6d2f6 ;
@@ -47,8 +49,8 @@
     border: 1px solid rgb(245, 245, 220);
     border-radius: 50%;
     position: fixed;
-    right: calc(28% - 1.5%);
-    top: 23%;
+    right: calc(28.8% - 1.8%);
+    top: 17%;
   }
   
   h2{
@@ -121,4 +123,24 @@
     cursor: pointer;
     padding: 6px 12px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  /*zap*/
+  
+  .btn-close2 {
+    cursor: pointer;
+    border: 1px solid rgb(245, 245, 220);
+    border-radius: 50%;
+    position: fixed;
+    right: calc(28.8% - 1.8%);
+    top: 17%;
+  }
+  .zapimg{
+    width: 2.5vw;
+    height: 5vh;
+  }
+  .zap1{
+    position: absolute;
+    left:57vw;
+
   }
