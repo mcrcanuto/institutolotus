@@ -1,22 +1,40 @@
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+import "./../css/slides.css"
 
-// Import Swiper styles
-import 'swiper/css';
+import {Swiper, SwiperSlide} from "swiper/react"
 
-export default () => {
-  return (
-    <Swiper
-      spaceBetween={50}
-      slidesPerView={3}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
-    >
-      <SwiperSlide> <img src="./../imgs/slide/blu" alt="Logo" className="" /></SwiperSlide>
-      <SwiperSlide> <img src="./../imgs/slide/cachos" alt="Logo" className="" /></SwiperSlide>
-      <SwiperSlide> <img src="./../imgs/slide/hidrata" alt="Logo" className="" /></SwiperSlide>
-      <SwiperSlide> <img src="./../imgs/slide/sabonete" alt="Logo" className="" /></SwiperSlide>
-      ....
-    </Swiper>
-  );
-};
+function Slide(){
+
+const data = [
+  {id: "1", image:"./../imgs/slide/blu.png"},
+  {id: "2", image:"./../imgs/slide/cachos.png"},
+  {id: "3", image:"./../imgs/slide/hidrata.png"},
+  {id: "4", image:"./../imgs/slide/sabonete.png"},
+]
+
+
+
+  return(
+    <div className="container">
+      <Swiper
+      slidesPerView={1}
+      pagination={{clickable: true}}
+      navigation
+      loop={true}
+      speed={3000}
+      autoplay
+      >
+        {data.map( (item) => (
+          <SwiperSlide key={item.id} >
+            <img
+            src={item.image}
+            alt="Slider"
+            className="slide-item"
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+  )
+}
+
+export default Slide;

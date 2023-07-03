@@ -37,8 +37,9 @@
   
   .btn-close {
     cursor: pointer;
-    border: 1px solid rgb(245, 245, 220);
-    border-radius: 50%;
+    border-width: 0px;
+    background-color: transparent;
+    font-size: larger;
     position: fixed;
     right: calc(28% - 1.5%);
     top: 24%;
@@ -46,8 +47,9 @@
 
   .btn-close2 {
     cursor: pointer;
-    border: 1px solid rgb(245, 245, 220);
-    border-radius: 50%;
+    border-width: 0px;
+    background-color: transparent;
+    font-size: larger;
     position: fixed;
     right: calc(28.8% - 1.8%);
     top: 17%;
@@ -135,12 +137,75 @@
     right: calc(28.8% - 1.8%);
     top: 17%;
   }
-  .zapimg{
-    width: 2.5vw;
-    height: 5vh;
-  }
+ 
   .zap1{
     position: absolute;
-    left:57vw;
+    left:84vw;
+    top: 81vh;
+    border-radius: 50px;
+    width: 15vw;
+    height: 5vh;
+    background-color: #228b22;
+    color: #e6d2f6;
+    font-family: 'Inter', sans-serif;
+   
+    border-width: 0px;
+  }
 
+.texto{
+  position: absolute;
+  top: 10vh;
+  color: black;
+}
+
+  .compre{
+    position: absolute;
+    left:65vw;
+    top: 49vh;
+  }
+  .popup-boxzap{
+    position: fixed;
+    background-color:rgba(255, 255, 255, 0);
+    left: 0;
+    top: 150px;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .boxzap {
+    position: absolute;
+    width: 45%;
+     left: 25vw;
+    min-height: 300px;
+    background-color: #f3eef7;
+    border: 1px solid #e6d2f6 ;
+    border-radius: 0px;
+    margin: 0px auto;
+    padding: 20px;
+    overflow: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .falar{
+    position: absolute;
+    left: 11.5vw;
+    top: 35vh;
+    border-radius: 50px;
+    width: 25vw;
+    height: 5vh;
+    background-color: #228b22;
+    color: #e6d2f6;
+    font-family: 'Inter', sans-serif;
+    font-size: larger;
+    border-width: 0px;
+  }
+  .botaofecha {
+    cursor: pointer;
+    border-width: 0px;
+    background-color: transparent;
+    width: 2vw;
+    height: 3vh;
+    position: fixed;
+    right: calc(28% - 1.5%);
+    top: 24%;
+    font-size: larger;
   }

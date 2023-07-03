@@ -146,6 +146,7 @@ header nav ul {
 
 header nav ul li {
   list-style: none;
+
 }
 
 header nav ul li a {
@@ -156,10 +157,11 @@ header nav ul li a {
   font-size: 1.2rem;
   padding: 2.0rem;
   transition: all 250ms linear 0s;
+  font-size: 1.1rem;
 }
 
 header nav ul li a:hover {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #5C286F;
  
 }
@@ -169,8 +171,30 @@ header nav ul li a{
   animation-duration: 1s;
   transition: 100ms;
 }
-
-
+.iconeinsta{
+  position: absolute;
+  top: 5vh;
+  left: 1vw;
+}
+.textoinsta{
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif ;
+  padding: 2.0rem;
+  transition: all 250ms linear 0s;
+  position: fixed;
+  width: 40vw;
+  left: 78vw;
+  top: 8.2vh;
+}
+.textoinsta a{
+  color:#7e0097dc;
+    font-size: 0.9rem;
+}
+.textoinsta a:hover{
+  color:#050505dc;
+    font-size: 1rem;
+}
 @keyframes menu {
   0%   { left:0px; top: -100px;}
   100% { left: 0px; top:0px;}

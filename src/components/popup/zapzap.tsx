@@ -1,6 +1,7 @@
 import React from "react";
 import { Popup2 } from "../popup/zapop";
 import '../../css/pop.css'
+import {BsWhatsapp} from "react-icons/bs"
 
 function Zap(){
     const [isOpen, setIsOpen] = React.useState(false);
@@ -16,15 +17,21 @@ function Zap(){
         <>
          <div>
                       <button onClick={togglePopup2} className="zap1"> 
-                      <img src="./../imgs/zap.png"  className="zapimg" />
+                      <BsWhatsapp className="zapicone"/> Compre pelo WhatsApp
                       </button>
                  </div>
 
                  {isOpen && <Popup2
       handleClose={togglePopup2}
       content={<div>
-      <a href="https://api.whatsapp.com/send?phone=5524998709056&text=Voc%C3%AA%20precisa%20de%20ajuda%20agora?%20Fale%20conosco%20pelo%20WhatsApp%20para%20chamar%20a%20pol%C3%ADcia.">
-        <h3>Compre pelo WhatsApp</h3></a>
+
+        <h1 className="texto">O link a seguir é contato de telefone a seguir, é um número da Delegacia da Mulher de Volta Redonda.
+         <br></br>    Use-o como emergência caso necessite de ajuda imediata.
+        </h1>
+
+      <a href="https://api.whatsapp.com/send?phone=5524998709056&text=Preciso%20da%20ajuda%20da%20pol%C3%ADcia%20nesse%20exato%20momento!">
+        <button className="falar"><BsWhatsapp/> Falar com a polícia por WhatsApp</button>
+        </a>
       </div>}
       />}
        
