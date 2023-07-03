@@ -32,15 +32,18 @@ function Card(){
             <p className='pbranco'>.</p>
             <p className='pbranco'>.</p>
             <p className='pbranco'>.</p>
-            <h1></h1>
             <p className='pbranco'>.</p>
             <p className='pbranco'>.</p>
             <p className='pbranco'>.</p>
-
+            <p className='pbranco'>.</p>
+            <p className='pbranco'>.</p>
+            <p className='pbranco'>.</p>
+            <h1>OS PRODUTOS MAIS VENDIDOS COM O MELHOR PREÇO</h1>
+          
 
             <Carousel responsive={responsive}>
   <div className="card">
-    <img src="./../imgs/logo.png" className="img" alt="imagem de produto"></img>
+    <img src="./../imgs/l.png" className="img" alt="imagem de produto"></img>
     <h2>Nome do Produto</h2>
     <p className="preco">R$100,00</p>
     <p>descricao do produto
@@ -49,7 +52,7 @@ function Card(){
   </div>
 
   <div className="card">
-    <img src="./../imgs/logo.png" className="img" alt="imagem de produto"></img>
+    <img src="./../imgs/l.png" className="img" alt="imagem de produto"></img>
     <h2>Nome do Produto</h2>
     <p className="preco">R$100,00</p>
     <p>descricao do produto
@@ -58,7 +61,7 @@ function Card(){
   </div>
 
   <div className="card">
-    <img src="./../imgs/logo.png" className="img" alt="imagem de produto"></img>
+    <img src="./../imgs/l.png" className="img" alt="imagem de produto"></img>
     <h2>Nome do Produto</h2>
     <p className="preco">R$100,00</p>
     <p>descricao do produto
@@ -67,7 +70,16 @@ function Card(){
   </div>
 
   <div className="card">
-    <img src="./../imgs/logo.png" className="img" alt="imagem de produto"></img>
+    <img src="./../imgs/l.png" className="img" alt="imagem de produto"></img>
+    <h2>Nome do Produto</h2>
+    <p className="preco">R$100,00</p>
+    <p>descricao do produto
+       <button>Adicionar ao carrinho</button>
+    </p>
+  </div>
+
+  <div className="card">
+    <img src="./../imgs/l.png" className="img" alt="imagem de produto"></img>
     <h2>Nome do Produto</h2>
     <p className="preco">R$100,00</p>
     <p>descricao do produto
@@ -77,7 +89,7 @@ function Card(){
 
   
   
-</Carousel>;
+</Carousel>
         </div>
     )
 }
