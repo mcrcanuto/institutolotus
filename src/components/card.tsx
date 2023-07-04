@@ -38,6 +38,24 @@ function Card(){
             <p className='pbranco'>.</p>
             <p className='pbranco'>.</p>
             <p className='pbranco'>.</p>
+            <p className='pbranco'>.</p>
+            <p className='pbranco'>.</p>
+            <p className='pbranco'>.</p>
+            <p className='pbranco'>.</p>
+            <p className='pbranco'>.</p>
+            <p className='pbranco'>.</p>
+            <p className='pbranco'>.</p>
+            <p className='pbranco'>.</p>
+            <p className='pbranco'>.</p>
+            <p className='pbranco'>.</p>
+            <p className='pbranco'>.</p>
+            <p className='pbranco'>.</p>
+            <p className='pbranco'>.</p>
+            <p className='pbranco'>.</p>
+            <p className='pbranco'>.</p>
+            <p className='pbranco'>.</p>
+            <p className='pbranco'>.</p>
+            <p className='pbranco'>.</p>
             <h1>OS PRODUTOS MAIS VENDIDOS COM O MELHOR PREÇO</h1>
           
 
@@ -45,18 +63,18 @@ function Card(){
   <div className="card">
     <img src="./../imgs/1.png" className="img" alt="imagem de produto"></img>
     <h2>Nome do Produto</h2>
-    <p className="preco">R$100,00</p>
+    <p className="preco">R$79,90</p>
     <p>descricao do produto
-        <button>Adicionar ao carrinho</button>
+        <button>Comprar Agora</button>
     </p>
   </div>
 
   <div className="card">
     <img src="./../imgs/2.png" className="img" alt="imagem de produto"></img>
     <h2>Nome do Produto</h2>
-    <p className="preco">R$100,00</p>
+    <p className="preco">R$18,90</p>
     <p>descricao do produto
-        <button>Adicionar ao carrinho</button>
+        <button>Comprar Agora</button>
     </p>
   </div>
 
@@ -65,7 +83,7 @@ function Card(){
     <h2>Nome do Produto</h2>
     <p className="preco">R$100,00</p>
     <p>descricao do produto
-        <button>Adicionar ao carrinho</button>
+        <button>Comprar Agora</button>
     </p>
   </div>
 
@@ -74,18 +92,83 @@ function Card(){
     <h2>Nome do Produto</h2>
     <p className="preco">R$100,00</p>
     <p>descricao do produto
-       <button>Adicionar ao carrinho</button>
+       <button>Comprar Agora</button>
     </p>
   </div>
 
   <div className="card">
-    <img src="./../imgs/l.png" className="img" alt="imagem de produto"></img>
+    <img src="./../imgs/4.png" className="img" alt="imagem de produto"></img>
     <h2>Nome do Produto</h2>
     <p className="preco">R$100,00</p>
     <p>descricao do produto
-       <button>Adicionar ao carrinho</button>
+       <button>Comprar Agora</button>
     </p>
   </div>
+
+  <div className="card">
+    <img src="./../imgs/4.png" className="img" alt="imagem de produto"></img>
+    <h2>Nome do Produto</h2>
+    <p className="preco">R$100,00</p>
+    <p>descricao do produto
+       <button>Comprar Agora</button>
+    </p>
+  </div>
+
+  <div className="card">
+    <img src="./../imgs/4.png" className="img" alt="imagem de produto"></img>
+    <h2>Nome do Produto</h2>
+    <p className="preco">R$100,00</p>
+    <p>descricao do produto
+       <button>Comprar Agora</button>
+    </p>
+  </div>
+
+  <div className="card">
+    <img src="./../imgs/4.png" className="img" alt="imagem de produto"></img>
+    <h2>Nome do Produto</h2>
+    <p className="preco">R$100,00</p>
+    <p>descricao do produto
+       <button>Comprar Agora</button>
+    </p>
+  </div>
+
+
+  <div className="card">
+    <img src="./../imgs/1.png" className="img" alt="imagem de produto"></img>
+    <h2>Nome do Produto</h2>
+    <p className="preco">R$100,00</p>
+    <p>descricao do produto
+       <button>Comprar Agora</button>
+    </p>
+  </div>
+
+  <div className="card">
+    <img src="./../imgs/2.png" className="img" alt="imagem de produto"></img>
+    <h2>Nome do Produto</h2>
+    <p className="preco">R$100,00</p>
+    <p>descricao do produto
+       <button>Comprar Agora</button>
+    </p>
+  </div>
+
+  <div className="card">
+    <img src="./../imgs/1.png" className="img" alt="imagem de produto"></img>
+    <h2>Nome do Produto</h2>
+    <p className="preco">R$100,00</p>
+    <p>descricao do produto
+       <button>Comprar Agora</button>
+    </p>
+  </div>
+
+  <div className="card">
+    <img src="./../imgs/1.png" className="img" alt="imagem de produto"></img>
+    <h2>Nome do Produto</h2>
+    <p className="preco">R$100,00</p>
+    <p>descricao do produto
+       <button>Comprar Agora</button>
+    </p>
+  </div>
+
 
   
   

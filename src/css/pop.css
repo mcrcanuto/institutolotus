@@ -161,9 +161,9 @@ h3 {
 }
 
 .compre {
-  position: absolute;
+  position: fixed;
   left: 65vw;
-  top: 49vh;
+  top: 279vh;
 }
 .popup-boxzap {
   position: fixed;
@@ -188,9 +188,9 @@ h3 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .falar {
-  position: absolute;
+  position: fixed;
   left: 11.5vw;
-  top: 35vh;
+  top: 235vh;
   border-radius: 50px;
   width: 25vw;
   height: 5vh;
@@ -199,6 +199,8 @@ h3 {
   font-family: "Inter", sans-serif;
   font-size: larger;
   border-width: 0px;
+  z-index: auto;
+  display: absolute;
 }
 .botaofecha {
   cursor: pointer;
