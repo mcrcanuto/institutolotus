@@ -23,9 +23,6 @@ const data = [
       slidesPerView={3}
       pagination={{clickable: true}}
       navigation
-      loop={true}
-      speed={3000}
-      autoplay
       >
         {data.map( (item) => (
           <SwiperSlide key={item.id} >

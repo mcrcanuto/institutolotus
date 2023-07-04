@@ -65,33 +65,56 @@ function Menu() {
         </div>
       </header>
 
-
-      {isOpen && <Popup2
-      handleClose={togglePopup}
-      content={<div>
-        <h3>INSIRA O NÚMERO DE PROTOCOLO 
-          VINCULADO A SUA DENÚNCIA</h3>
-        <input id='protocolo' type='text' maxLength={15} autoFocus></input><br></br>
-        <button onClick={togglePopup2} id='proc'>PROCURAR</button>
-      </div>}
-      />}
-       {
-        isOpen2 && <Popup
-        handleClose={Exit}
-        content={<div>
-        <h2>DENÚNCIA: XXXXXXXXXXXXXXX</h2>
-        <h1 id='p1'>STATUS DA DENÚNCIA</h1>
-        <p>resultado</p>
-        <h1>POLICIAL RESPONSÁVEL</h1>
-        <p>resultado</p>
-        <h1>NÚMERO DO DISTINTIVO</h1>
-        <p>resultado</p>
-
-        <h1 id='p2'>ATUALIZAÇÕES</h1>
-        <p>resultado</p></div>}/>
-      }
+      {isOpen && (
+        <Popup2
+          handleClose={togglePopup}
+          content={
+            <div>
+              <h3>Insira o número de protocolo vinculado a sua denúncia</h3>
+              <input
+                id="protocolo"
+                type="text"
+                maxLength={15}
+                autoFocus
+              ></input>
+              <br></br>
+              <button onClick={togglePopup2} id="proc">
+                PROCURAR
+              </button>
+            </div>
+          }
+        />
+      )}
+      {isOpen2 && (
+        <Popup
+          handleClose={Exit}
+          content={
+            <div>
+              <h2>DENÚNCIA: XXXXXXXXXXXXXXX</h2>
+              <h1 id="p1">STATUS DA DENÚNCIA</h1>
+              <p>resultado</p>
+              <h1>POLICIAL RESPONSÁVEL</h1>
+              <p>resultado</p>
+              <h1>NÚMERO DO DISTINTIVO</h1>
+              <p>resultado</p>
+              <h1 id="p2">ATUALIZAÇÕES</h1>
+              <p>resultado</p>
+              <div>
+                <h2>DENÚNCIA: XXXXXXXXXXXXXXX</h2>
+                <h1 id="p1">STATUS DA DENÚNCIA</h1>
+                <p>resultado</p>
+                <h1>POLICIAL RESPONSÁVEL</h1>
+                <p>resultado</p>
+                <h1>NÚMERO DO DISTINTIVO</h1>
+                <p>resultado</p>
+                <h1 id="p2">ATUALIZAÇÕES</h1>
+                <p>resultado</p>
+              </div>
+            </div>
+          }
+        />
+      )}
     </>
-    
   );
 }
 

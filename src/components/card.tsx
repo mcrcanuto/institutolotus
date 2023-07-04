@@ -43,7 +43,7 @@ function Card(){
 
             <Carousel responsive={responsive}>
   <div className="card">
-    <img src="./../imgs/l.png" className="img" alt="imagem de produto"></img>
+    <img src="./../imgs/1.png" className="img" alt="imagem de produto"></img>
     <h2>Nome do Produto</h2>
     <p className="preco">R$100,00</p>
     <p>descricao do produto
@@ -52,7 +52,7 @@ function Card(){
   </div>
 
   <div className="card">
-    <img src="./../imgs/l.png" className="img" alt="imagem de produto"></img>
+    <img src="./../imgs/2.png" className="img" alt="imagem de produto"></img>
     <h2>Nome do Produto</h2>
     <p className="preco">R$100,00</p>
     <p>descricao do produto
@@ -61,7 +61,7 @@ function Card(){
   </div>
 
   <div className="card">
-    <img src="./../imgs/l.png" className="img" alt="imagem de produto"></img>
+    <img src="./../imgs/3.png" className="img" alt="imagem de produto"></img>
     <h2>Nome do Produto</h2>
     <p className="preco">R$100,00</p>
     <p>descricao do produto
@@ -70,7 +70,7 @@ function Card(){
   </div>
 
   <div className="card">
-    <img src="./../imgs/l.png" className="img" alt="imagem de produto"></img>
+    <img src="./../imgs/4.png" className="img" alt="imagem de produto"></img>
     <h2>Nome do Produto</h2>
     <p className="preco">R$100,00</p>
     <p>descricao do produto
