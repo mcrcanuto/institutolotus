@@ -20,6 +20,13 @@ const data = [
 
   return(
     <div className="container2" >
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p><br></br></p>
+      <p><br></br></p>
+      
       <h1>CONHEÇA AS NOSSAS NOVIDADES </h1>
       
       <Swiper

@@ -4,6 +4,9 @@ import "../../css/menus.css";
 import React from "react";
 import { Popup2, Popup } from "../popup/pop";
 import '../../css/pop.css'
+
+import {Link} from "react-router-dom";
+
 function Menu() {
 
   const [isOpen, setIsOpen] = React.useState(false);
@@ -46,10 +49,12 @@ function Menu() {
             <ul>
               <a>
                 <li>
+                  <Link to="/Denuncia">
                   <button onClick={togglePopup} id="pedidos">
                     <BiClipboard className="iconempedido" />
                     Meus Pedidos
                   </button>
+                  </Link>
                 </li>
               </a>
               <a href="/">

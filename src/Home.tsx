@@ -1,4 +1,7 @@
 import React from "react";
+
+
+
 import Menu from "./components/menus/Menu";
 import Submenu from "./components/menus/submenu";
 import Zap from "./components/popup/zapzap";
@@ -10,6 +13,9 @@ import Card from "./components/card"
 
 function Home() {
 	return (
+
+	
+
 		<React.Fragment>
 			<Menu/>
 			<Submenu/>

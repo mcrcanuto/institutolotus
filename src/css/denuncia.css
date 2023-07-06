@@ -1,0 +1,86 @@
+.h1 {
+  background-color: #5c286f;
+  color: #e8e8e8;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-size: 5px;
+  width: 100%;
+  border-top-left-radius: 5vw;
+  border-top-right-radius: 5vw;
+}
+
+.formulario {
+  background-color: #dbc8ea;
+  width: 50vw;
+  height: auto;
+  margin-left: 50%;
+  margin-bottom: 20%;
+  margin-top: 15%;
+  border: #5c286f;
+  border-top-left-radius: 7.8%;
+  border-top-right-radius: 7.8%;
+  border-bottom-right-radius: 7.8%;
+  border-bottom-left-radius: 7.8%;
+  border-style: groove;
+}
+
+fieldset{
+ background-color: #dab0f5;
+ text-align: center;
+}
+
+.label {
+  margin-left: 2%;
+}
+
+.texto {
+  width: 300px;
+  height: 75px;
+}
+
+.crime {
+  color: black;
+}
+
+.titCrime {
+  border-style: dashed;
+  border-color: #dab0f5;
+}
+
+.titLocal {
+  border-style: dashed;
+  border-color: #dab0f5;
+}
+
+.botoes {
+  text-align: center;
+}
+
+.voltar {
+  background-color: #dab0f5;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  border: #5c286f;
+  border-style: groove;
+  border-top-left-radius: 25%;
+  border-top-right-radius: 25%;
+  border-bottom-right-radius: 25%;
+  border-bottom-left-radius: 25%;
+  margin-left: auto;
+  font-size: 20px;
+}
+
+.avancar {
+  background-color: #dab0f5;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  border: #5c286f;
+  border-style: groove;
+  border-top-left-radius: 25%;
+  border-top-right-radius: 25%;
+  border-bottom-right-radius: 25%;
+  border-bottom-left-radius: 25%;
+  margin-right: auto;
+  font-size: 20px;
+}

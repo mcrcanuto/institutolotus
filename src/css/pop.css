@@ -142,8 +142,8 @@ h3 {
 
 .zap1 {
   position: absolute;
-  left: 84vw;
-  top: 41vh;
+  left: 42vw;
+  top: 86vh;
   border-radius: 50px;
   width: 15vw;
   height: 5vh;
@@ -188,9 +188,9 @@ h3 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .falar {
-  position: fixed;
+  position: sticky;
   left: 11.5vw;
-  top: 235vh;
+  top: 378vh;
   border-radius: 50px;
   width: 25vw;
   height: 5vh;
