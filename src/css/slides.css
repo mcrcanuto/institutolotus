@@ -1,3 +1,7 @@
+
+
+
+
 /*swiper*/
 .container{
     width: 100%;
@@ -18,12 +22,10 @@
   
   /*swiper2*/
   .container2{
-    width: 90%;
-    max-width: 1440px;
-    margin: 0 auto;
-    position: absolute;
+    width: 90vw;
     top: 90vh;
-    left: 10vh;
+    left: 5vw;
+    position: absolute;
   }
   
   .title2{

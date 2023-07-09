@@ -1,4 +1,3 @@
-
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
@@ -28,6 +27,7 @@ function Card(){
       };
     return (
         <div className="App">
+          
             <p className='pbranco'>.</p>
             <p className='pbranco'>.</p>
             <p className='pbranco'>.</p>
@@ -46,6 +46,7 @@ function Card(){
             <p className='pbranco'>.</p>
             <p className='pbranco'>.</p>
             <p className='pbranco'>.</p>
+            
             <p className='pbranco'>.</p>
             <p className='pbranco'>.</p>
             <p className='pbranco'>.</p>
@@ -56,7 +57,30 @@ function Card(){
             <p className='pbranco'>.</p>
             <p className='pbranco'>.</p>
             <p className='pbranco'>.</p>
-            <h1>OS PRODUTOS MAIS VENDIDOS COM O MELHOR PREÇO</h1>
+            <p className='pbranco'>.</p>
+            <p className='pbranco'>.</p>
+            <p className='pbranco'>.</p>
+            <p className='pbranco'>.</p>
+            <p className='pbranco'>.</p>
+            <p className='pbranco'>.</p>
+            
+            <p className='pbranco'>.</p>
+            <p className='pbranco'>.</p>
+            <p className='pbranco'>.</p>
+            
+            <p className='pbranco'>.</p>
+            <p className='pbranco'>.</p>
+            <p className='pbranco'>.</p>
+            <p className='pbranco'>.</p>
+           
+
+            <hr></hr>
+            
+            <p className='pbranco'>.</p>
+            <p className='pbranco'>.</p>
+            
+            <h1>#MP - Os Melhores Preços</h1>
+            <h1 className='frase'>Conheça os produtos mais vendidos da loja com o melhor preço do mercado.</h1>
           
 
             <Carousel responsive={responsive}>
@@ -100,7 +124,7 @@ function Card(){
     <img src="./../imgs/5.png" className="img" alt="Creme Hidratante Nuvem"></img>
     <h2>Hidratante Corporal Nuvem</h2>
     <p className="preco">R$100,00</p>
-    <p>Hidratação por até 14 horas - Fragância de Algodão
+    <p>Hidratação por até 14 horas -  Algodão
        <button>Comprar Agora</button>
     </p>
   </div>
@@ -109,7 +133,7 @@ function Card(){
     <img src="./../imgs/6.png" className="img" alt="Creme Hidratante de Pitaya"></img>
     <h2>Hidratante Corporal de Pitaya</h2>
     <p className="preco">R$100,00</p>
-    <p>Hidratação por até 14 horas - Fragância de Pitaya
+    <p>Hidratação por até 14 horas -  Pitaya
        <button>Comprar Agora</button>
     </p>
   </div>

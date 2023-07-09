@@ -8,6 +8,9 @@ html, body {
   font-family: 'Inter', sans-serif;
 }
 
+
+
+
   /*css do menu*/
  header {
     height: 10vh;
@@ -16,8 +19,8 @@ html, body {
 
   }
   .logoimg{
-    width: 20vh;
-    height: 10vh;
+    width: 30vh;
+    height: 15vh;
     position: absolute;
     left: 5vw;
    

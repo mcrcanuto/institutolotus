@@ -26,7 +26,13 @@ const data = [
       <p></p>
       <p><br></br></p>
       <p><br></br></p>
+      <p><br></br></p>
       
+      <h1 className="frase">Cuide de você, cuide do seu corpo, cuide da sua beleza. Tudo o que você precisa está em nossa loja de 
+        cosméticos!<br></br>
+        No Instituto Lótus, todos os produtos são de procedência vegana, pois toda vida merece respeito!
+        
+      </h1>
       <h1>CONHEÇA AS NOSSAS NOVIDADES </h1>
       
       <Swiper
@@ -45,6 +51,8 @@ const data = [
           </SwiperSlide>
         ))}
       </Swiper>
+      <h1 className='frase'>Mantenha-se radiante o dia todo com as novidades da loja. 
+              <br></br>E comprando pelo WhatsApp, você ganha 10% de desconto na sua primeira compra!</h1>
     </div>
   )
 }

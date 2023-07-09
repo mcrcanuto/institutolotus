@@ -1,5 +1,7 @@
 import { useState } from 'react'
-import './App.css'
+import './css/denuncia.css'
+import "./css/geral.css"
+
 
 function App() {
   const [] = useState(0)
@@ -62,6 +64,8 @@ function App() {
         <input className='avancar' type="button" value="Avançar" />
       </div>
     </div>
+
+
   )
 }
 

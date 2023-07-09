@@ -8,6 +8,7 @@ import hidrata from "./../../imgs/slide/hidrata.png";
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
+import "./css/geral.css"
 
 function Slide() {
     const slides = {blu, cachos, sabonete, hidrata};

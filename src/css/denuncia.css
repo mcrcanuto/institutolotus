@@ -6,23 +6,21 @@
   justify-content: center;
   font-size: 5px;
   width: 100%;
-  border-top-left-radius: 5vw;
-  border-top-right-radius: 5vw;
+  border-top-left-radius: 3.6vw;
+  border-top-right-radius: 3.6vw;
 }
 
 .formulario {
   background-color: #dbc8ea;
-  width: 50vw;
+  width: 90vw;
   height: auto;
-  margin-left: 50%;
-  margin-bottom: 20%;
-  margin-top: 15%;
   border: #5c286f;
   border-top-left-radius: 7.8%;
   border-top-right-radius: 7.8%;
   border-bottom-right-radius: 7.8%;
   border-bottom-left-radius: 7.8%;
   border-style: groove;
+  margin: 0 auto;
 }
 
 fieldset{

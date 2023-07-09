@@ -1,0 +1,313 @@
+* { 
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+}
+
+
+
+
+  /*css do menu*/
+ header {
+    height: 10vh;
+    width: 100%;
+    background-color: #DBC8EA; 
+
+  }
+  .logoimg{
+    width: 20vh;
+    height: 10vh;
+    position: absolute;
+    left: 5vw;
+   
+  }
+  .logoimgposition {
+    width: 15vh;
+    height: 100%;
+    float: left;
+  }
+ header .placeholdermenu {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  float: right;
+ }
+ header .placeholdermenu article {
+  margin-left: 15px;
+ }
+ header .menulat {
+  margin-right: 200px;
+ }
+header .menulat ul {
+  width: 400px;
+  height: 100%;
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+ 
+}
+header .menulat ul a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: rgb(8, 8, 8);
+  list-style: none;
+  cursor: pointer;
+}
+
+header .menulat ul a li button {
+  cursor: pointer;
+}
+
+header .menulat ul a:nth-child(1) {
+  margin-left: 9.5vw;
+}
+ header .placeholdermenu input {
+  border-radius: 20px 20px 20px 20px;
+  border-color: rgb(5, 5, 5);
+  height: 3.5vh;
+  align-items: center;
+  text-align: center;
+  border-width: 0px;
+  font-style: italic;
+ }
+ header .placeholdermenu article button {
+  padding: 5px 5px 5px 5px;
+  border-radius: 20px;
+  border-color: rgba(0, 0, 0, 0.932);
+  background-color: white;
+  position: absolute;
+  left: 54vw;
+  top: 2.8vh;
+  border-width: 0px;
+ }
+#pedidos{
+  background-color:#DBC8EA;
+  border-width: 0px;
+}
+.iconempedido{
+  width: 2vw;
+  height: 2.6vh;
+  position: absolute;
+  top: 3.8vh;
+  left: 61.6vw;
+}
+.iconefpedido{
+  width: 2vw;
+  height: 2.6vh;
+  position: absolute;
+  top: 3.8vh;
+  left: 72vw;
+}
+
+
+
+
+/*css do submenu*/
+
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+
+header{
+  width: 100%;
+  background-color: #DBC8EA;
+
+}
+
+header .container {
+  display: flex; 
+  align-items: center;
+  justify-content: space-between;
+  height: 60%;
+  width: 90%; 
+  margin: auto;
+}
+
+header img {
+  width: 37px;
+  margin-right: 0;
+  padding: 15px 0;
+}
+header nav {
+  display: flex;
+}
+
+header nav ul {
+  display: flex;
+  position: absolute;
+  left: 25vw;
+}
+
+header nav ul li {
+  list-style: none;
+
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: rgb(255, 254, 254);
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif ;
+  font-size: 1.2rem;
+  padding: 2.0rem;
+  transition: all 250ms linear 0s;
+  font-size: 1.1rem;
+}
+
+header nav ul li a:hover {
+  font-size: 1.2rem;
+  color: #5C286F;
+ 
+}
+header nav ul li a{
+  position: relative;
+  animation-name: menu;
+  animation-duration: 1s;
+  transition: 100ms;
+}
+.iconeinsta{
+  position: absolute;
+  top: 5vh;
+  left: 1vw;
+}
+.textoinsta{
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif ;
+  padding: 2.0rem;
+  transition: all 250ms linear 0s;
+  position: fixed;
+  width: 40vw;
+  left: 78vw;
+  top: 8.2vh;
+}
+.textoinsta a{
+  color:#7e0097dc;
+    font-size: 0.9rem;
+}
+.textoinsta a:hover{
+  color:#050505dc;
+    font-size: 1rem;
+}
+@keyframes menu {
+  0%   { left:0px; top: -100px;}
+  100% { left: 0px; top:0px;}
+  
+}
+
+@media (max-width: 630px){
+  html{
+    font-size: 70%;
+  }
+ .hero .container{
+   flex-direction: column;
+   text-align: center;
+ }
+
+ .form-group{
+   display: block;
+ }
+}
+
+@media (max-width: 1120px){
+ 
+   .menu-section nav{
+    display: none;
+  }
+
+  .one,
+  .two,
+  .three{
+    background-color:#ffffff;
+    height: 5px;
+    width: 100%;
+    margin: 6px auto;
+    transition-duration: 0.3s;
+  }
+  .menu-toggle{
+    width: 40px;
+    height: 30px;
+    margin-right: 20px;
+  }
+
+  /*Fullscreen*/
+  .menu-section.on {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #5C286F;
+    z-index: 10; /*camada acima, evitar o scrool dos itens a baixo*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-section.on nav{
+    display: block;
+  }
+
+  
+  .menu-section.on .menu-toggle{
+    position: absolute;
+    right: 25px;
+    top: 25px;
+  }
+
+  
+  .menu-section.on .menu-toggle .one{
+    transform: rotate(45deg) translate(7px, 7px);
+    background-color: #fff;
+  }
+
+  .menu-section.on .menu-toggle .two{
+   opacity: 0;
+
+  }
+
+  .menu-section.on .menu-toggle .three{
+    transform: rotate(-45deg) translate(8px, -9px);
+    background-color: #fff;
+  }
+
+  .menu-section.on nav ul{
+    text-align: center;
+    display: block;
+  }
+
+  .menu-section.on nav ul a{ 
+   transition-duration:  0.5s;
+   font-size: 2.0rem;
+    display: block;
+    color: #fff;
+    padding: 1.8rem;
+  }
+  
+header nav ul li a .FiLogOut{
+width: 40px;
+}
+  .menu-section.on nav ul .hide{ 
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 0rem;
+     font-size: 1.6rem;
+   }
+
+}
+
+@media (max-width: 320px){
+  #form h3{
+    font-size: 2rem;
+  }
+
+}

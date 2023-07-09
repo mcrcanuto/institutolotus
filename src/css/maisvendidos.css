@@ -1,14 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
-#root {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem;
-    text-align: center;
-  }
-  
   h1 {
     margin: 1rem auto 4rem;
+    font-size: 5vh;
+    font-weight: bolder;
+    font-family: Inter, Arial;
+    color: #000;
   }
 
   h2{
@@ -23,35 +20,52 @@
     width: 100%;
     height: 16em;
     object-fit: cover;
+    z-index: 2;
   }
   
   .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 320px;
-    margin: auto 1rem;
     text-align: center;
-    font-family: arial;
-
-  
+    font-family: Inter;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    width: 79%;
+    max-width: 1440px;
   }
   
   .price {
     color: grey;
     font-size: 22px;
   }
+  h2{
+    color: rgb(203, 185, 255);
+  }
   
   .card button {
     border: none;
     outline: 0;
-    padding: 10px;
+    padding: 15px;
     color: white;
     background-color: #000;
     text-align: center;
     cursor: pointer;
     width: 100%;
     font-size: 15px;
+    font-family: Inter;
   }
   
   .card button:hover {
     opacity: 0.8;
   }
+
+  .react-multi-carousel-list  {
+    width: 88vw;
+    display: flex;
+    align-items: center;
+    left: 5vw;
+  }
+ .frase{
+  background-color: transparent;
+  color: #272727;
+  font-size: 2.5vh;
+ }
