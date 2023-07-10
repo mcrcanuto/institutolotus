@@ -14,7 +14,7 @@ function Slide() {
     const slides = {blu, cachos, sabonete, hidrata};
   
     return (
-     <div className='conatainer'>
+     <div className='container'>
         <Swiper
         modules={[Navigation, Pagination]}
         navigation

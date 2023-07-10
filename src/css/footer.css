@@ -6,6 +6,8 @@
     align-items: center;
     justify-content: center;
     margin-top: 5vh;
+    z-index: 2;
+
     
 }
 .footerdiv a{
@@ -14,9 +16,14 @@
     height: 15vh;
     margin-top: 5vh;
 }
-.logoimg{
+.logoimgfooter{
     display: flex;
     align-items: center;
     justify-content: center;
-
+    margin-left: -28vh;
+    width: 30vh;
+    height: 15vh;
+    position: absolute;
+    left: 5vw;
+    z-index: 5;
 }

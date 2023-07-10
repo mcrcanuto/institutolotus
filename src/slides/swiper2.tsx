@@ -4,6 +4,8 @@ import {Swiper, SwiperSlide} from "swiper/react"
 
 function Slide2(){
 
+
+  
 const data = [
   {id: "1", image:"./../imgs/carousel/1.png"},
   {id: "2", image:"./../imgs/carousel/2.png"},

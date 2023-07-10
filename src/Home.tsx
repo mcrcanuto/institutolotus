@@ -12,6 +12,7 @@ import Footer from "./components/footer";
 import "./css/geral.css"
 
 function Home() {
+	
 	return (
 
 	

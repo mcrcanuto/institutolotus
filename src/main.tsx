@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client'
 import {createBrowserRouter, BrowserRouter, Route, Routes} from "react-router-dom"
 import Home from "./Home.tsx"
 import Denuncia from "./denuncia"
+import QuemSomos from "./quemsomos.tsx"
+import Produtos from "./produtos.tsx"
 import "./css/geral.css"
 
 
@@ -18,6 +20,14 @@ const router = createBrowserRouter([
   path:"/",
 element: <Denuncia/>
 },
+{
+  path:"/",
+element: <QuemSomos/>
+},
+{
+  path:"/",
+element: <Produtos/>
+},
 ])
 
 register();
@@ -32,6 +42,8 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
       <Routes>
         <Route Component={Home} path="/"/>
         <Route Component={Denuncia} path="/denuncia"/>
+        <Route Component={QuemSomos} path="/quemsomos"/>
+        <Route Component={Produtos} path="/produtos"/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

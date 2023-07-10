@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
+
+* { 
+    margin: 0;
+    padding: 0;
+  }
+body{
+    font-family: inter, arial;
+    height: 100%;
+    width: 100%;
+}
+h1{
+    color: #5C286F;
+}
+h2{
+    color: #000000;
+    background-color: transparent;
+    font-size: 3.5vh;
+   text-align: center;
+}
+
+.h2ul{
+    color: #8f41ac;
+    background-color: transparent;
+    font-size: 3.5vh;
+    text-align: left;
+    width: 90%;
+    margin-left: 2vw;
+}
+
+h3{
+    text-align: justify;
+    width: 90%;
+    height: 100%;
+    color: rgba(0, 0, 0, 0.863);
+}
+
+.uldofim li{
+    list-style:circle;
+    margin-left:3vh ;
+   
+}
+.uldomeio li{
+    list-style: upper-roman;
+    margin-left: 4vh;
+    color: #000000c9;
+}
+.conheca{
+    text-align: center;
+    font-size: 4vh;
+   
+}
+.fonte{
+    text-align: left;
+    margin-left: 2vw;
+    font-family: Comfortaa, Inter, Arial;
+}

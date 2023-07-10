@@ -19,8 +19,11 @@ html, body {
 
   }
   .logoimg{
-    width: 30vh;
-    height: 15vh;
+     min-width: 15vw;
+    min-height: 15vh;
+    max-width: 1vw;
+    max-height: 1vh;
+
     position: absolute;
     left: 5vw;
    
@@ -91,22 +94,25 @@ header .menulat ul a:nth-child(1) {
   border-width: 0px;
  }
 #pedidos{
-  background-color:#DBC8EA;
+  background-color:#DBC8EA ;
   border-width: 0px;
+  font-family: Comfortaa, Inter, Arial;
 }
 .iconempedido{
   width: 2vw;
   height: 2.6vh;
   position: absolute;
   top: 3.8vh;
-  left: 61.6vw;
+  left: 60.6vw;
+  font-family: 'Inter', sans-serif;
 }
 .iconefpedido{
-  width: 2vw;
-  height: 2.6vh;
+  min-width: 2vw;
+ min-height: 2.6vh;
   position: absolute;
   top: 3.8vh;
-  left: 72vw;
+  left: 78vw;
+  font-family: 'Inter', sans-serif;
 }
 
 
@@ -114,7 +120,7 @@ header .menulat ul a:nth-child(1) {
 
 /*css do submenu*/
 
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+@import url("https://fonts.googleapis.com/css?family=Inter");
 
 header{
   width: 100%;

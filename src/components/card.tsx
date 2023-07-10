@@ -1,5 +1,6 @@
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import { Link } from "react-router-dom";
 
 
 import "./../css/maisvendidos.css"
@@ -89,7 +90,9 @@ function Card(){
     <h2>Base Bruna Tavares</h2>
     <p className="preco">R$59,90</p>
     <p>Base Matte - Tonalidade N°2 - Sensação de veludo
+    <Link to="/denuncia">
         <button>Comprar Agora</button>
+        </Link>
     </p>
   </div>
 
@@ -98,7 +101,9 @@ function Card(){
     <h2>Batom Payot Cherry</h2>
     <p className="preco">R$19,90</p>
     <p>Efeito hidratante -  Tonalidade N° 15 - Cor Cherry
+         <Link to="/denuncia">
         <button>Comprar Agora</button>
+        </Link>
     </p>
   </div>
 
@@ -107,7 +112,9 @@ function Card(){
     <h2>Paleta de Sombras VeraVerão</h2>
     <p className="preco">R$100,00</p>
     <p>Paleta de Sombra com Cores Quentes e Neutras
+        <Link to="/denuncia">
         <button>Comprar Agora</button>
+        </Link>
     </p>
   </div>
 
@@ -116,7 +123,9 @@ function Card(){
     <h2>Kit para Cabelos Siàge</h2>
     <p className="preco">R$100,00</p>
     <p>Kit Siàge Cauterização dos Fios 
-       <button>Comprar Agora</button>
+        <Link to="/denuncia">
+        <button>Comprar Agora</button>
+        </Link>
     </p>
   </div>
 
@@ -125,7 +134,9 @@ function Card(){
     <h2>Hidratante Corporal Nuvem</h2>
     <p className="preco">R$100,00</p>
     <p>Hidratação por até 14 horas -  Algodão
-       <button>Comprar Agora</button>
+        <Link to="/denuncia">
+        <button>Comprar Agora</button>
+        </Link>
     </p>
   </div>
 
@@ -134,7 +145,9 @@ function Card(){
     <h2>Hidratante Corporal de Pitaya</h2>
     <p className="preco">R$100,00</p>
     <p>Hidratação por até 14 horas -  Pitaya
-       <button>Comprar Agora</button>
+       <Link to="/denuncia">
+        <button>Comprar Agora</button>
+        </Link>
     </p>
   </div>
 
@@ -143,7 +156,9 @@ function Card(){
     <h2>Matizador Meu Liso</h2>
     <p className="preco">R$100,00</p>
     <p>Neutraliza a cor dos cabelos amarelados
-       <button>Comprar Agora</button>
+        <Link to="/denuncia">
+        <button>Comprar Agora</button>
+        </Link>
     </p>
   </div>
 
@@ -152,7 +167,9 @@ function Card(){
     <h2>Eau de Perfum Poison</h2>
     <p className="preco">R$100,00</p>
     <p>Fragância de Ameixa, Frutos Silvestres e Anis 
-       <button>Comprar Agora</button>
+       <Link to="/denuncia">
+        <button>Comprar Agora</button>
+        </Link>
     </p>
   </div>
 
@@ -162,7 +179,9 @@ function Card(){
     <h2>Hidratante Labial Carmed Melancia</h2>
     <p className="preco">R$100,00</p>
     <p>Com aroma de melancia
-       <button>Comprar Agora</button>
+       <Link to="/denuncia">
+        <button>Comprar Agora</button>
+        </Link>
     </p>
   </div>
 
@@ -171,7 +190,9 @@ function Card(){
     <h2>Primer Facial Elf</h2>
     <p className="preco">R$100,00</p>
     <p>Primer hidratante facial  de longa duração
-       <button>Comprar Agora</button>
+       <Link to="/denuncia">
+        <button>Comprar Agora</button>
+        </Link>
     </p>
   </div>
 
@@ -180,7 +201,9 @@ function Card(){
     <h2>Sérum Tratcta Vitamina C10</h2>
     <p className="preco">R$100,00</p>
     <p>Ação antioxidante e clareadora 
-       <button>Comprar Agora</button>
+       <Link to="/denuncia">
+        <button>Comprar Agora</button>
+        </Link>
     </p>
   </div>
 
@@ -189,7 +212,9 @@ function Card(){
     <h2>Máscara para Cílios MariMaravilha</h2>
     <p className="preco">R$100,00</p>
     <p>Aumenta o volume e comprimento dos fios
-       <button>Comprar Agora</button>
+        <Link to="/denuncia">
+        <button>Comprar Agora</button>
+        </Link>
     </p>
   </div> 
 

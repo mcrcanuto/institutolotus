@@ -2,8 +2,8 @@ import { BiClipboard, BiSearch, } from "react-icons/bi";
 import {TiShoppingCart} from "react-icons/ti"
 import "../../css/menus.css";
 import React from "react";
-import { Popup2, Popup } from "../popup/pop";
-import '../../css/pop.css'
+import { Popup2, Popup } from "././../popup/pop";
+import './../../css/pop.css'
 import { Link } from "react-router-dom";
 
 
@@ -29,10 +29,16 @@ function Menu() {
 
     console.log("Ta indo");
 
-  }
+
+
+  
+}
+
+
+  
   return (
     <>
-      <header className="menucima">
+      <header className="menucima" >
         <article className="logoimgposition">
           <a href="url">
             <img src="./../imgs/logo.png" alt="Logo" className="logoimg" />
