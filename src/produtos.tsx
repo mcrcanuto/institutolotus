@@ -2,8 +2,7 @@
 import React from "react";
 import Menu from "./components/menus/Menu";
 import Submenu from "./components/menus/submenu";
-import Footer from "./components/footer";
-
+import Footer from "./components/menus/footer";
 import "./css/geral.css"
 import "./css/produtos.css"
 
@@ -20,7 +19,13 @@ function Produtos(){
             </React.Fragment>
 			
 
-            <h1>SAIBA SOBRE AS LEIS QUE PROTEGEM A MULHER</h1>
+
+           <div id="container">
+            <p id="text">CONHEÇA AS LEIS QUE<br></br> PROTEGEM A MULHER</p>
+           </div>
+      
+
+
 <h2>
 Leis de proteção à mulher: Lei Carolina Dieckman (Lei 12.737/2012)
 </h2>

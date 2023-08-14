@@ -1,7 +1,5 @@
 import { useState } from 'react'
 import './css/denuncia.css'
-import "./css/geral.css"
-
 
 function App() {
   const [] = useState(0)
@@ -19,11 +17,11 @@ function App() {
             <br /><br />
             Tipo de violência: <input type="text" list='violencia'/>
             <datalist id='violencia'>
-              <option value="panelada no coco"></option>
-              <option value="passar de carro por cima"></option>
-              <option value="tacou fogo e saiu correndo"></option>
-              <option value="tacou balde de agua com gelo"></option>
-              <option value="falou pra lavar vasilha"></option>
+              <option value="Violência física(espancamento, tortura e outros tipos de agressão física)"></option>
+              <option value="Violência psicológica(ameaça, manipulação, ridicularização, humilhação...)"></option>
+              <option value="Violência sexual(estupro, impedir uso de contraceptivos, forçar aborto...)"></option>
+              <option value="Violência patrimonial(controle do dinheiro, furto, extorsão, estelionato...)"></option>
+              <option value="Violência moral(acusar de traição, fazer críticas falsas, expor vida íntima...)"></option>
             </datalist>
             <br /><br />
             Frequência do ocorrido: <select name="" id="frequencia">
@@ -60,12 +58,10 @@ function App() {
       <br />
       <br />
       <div className='botoes'>
-        <input className='voltar' type="reset" value="Voltar" />
-        <input className='avancar' type="button" value="Avançar" />
+        <button>Limpar</button> <button>Avançar</button>
       </div>
+      <br />
     </div>
-
-
   )
 }
 

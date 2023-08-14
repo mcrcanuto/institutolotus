@@ -12,6 +12,10 @@
     font-family: Inter;
     background-color: #272727;
   }
+   
+  #nome{
+    font-size: 18px;
+  }
   
   .pbranco{
     color: white;

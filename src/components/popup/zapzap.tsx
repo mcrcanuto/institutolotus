@@ -2,6 +2,7 @@ import React from "react";
 import { Popup2 } from "../popup/zapop";
 import '../../css/pop.css'
 import {BsWhatsapp} from "react-icons/bs"
+import "./../../css/geral.css"
 
 function Zap(){
     const [isOpen, setIsOpen] = React.useState(false);

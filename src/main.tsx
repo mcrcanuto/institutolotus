@@ -5,8 +5,11 @@ import Home from "./Home.tsx"
 import Denuncia from "./denuncia"
 import QuemSomos from "./quemsomos.tsx"
 import Produtos from "./produtos.tsx"
-import "./css/geral.css"
+import Autor from "./autor.tsx"
 
+import Cadastro from "./cadastro.tsx"
+import EditarPerfil from "./editarperfil.tsx"
+import "./css/geral.css"
 
 import {register} from "swiper/element/bundle"
 
@@ -28,6 +31,19 @@ element: <QuemSomos/>
   path:"/",
 element: <Produtos/>
 },
+{
+  path:"/",
+element: <Autor/>
+},
+{
+  path:"/",
+element: <Cadastro/>
+},
+{
+  path:"/",
+element: <EditarPerfil/>
+},
+
 ])
 
 register();
@@ -44,6 +60,9 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         <Route Component={Denuncia} path="/denuncia"/>
         <Route Component={QuemSomos} path="/quemsomos"/>
         <Route Component={Produtos} path="/produtos"/>
+        <Route Component={Autor} path="/autor"/>
+        <Route Component={Cadastro} path="/cadastro"/>
+        <Route Component={EditarPerfil} path="/editarperfil"/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

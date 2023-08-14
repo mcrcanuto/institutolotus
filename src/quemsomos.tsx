@@ -1,7 +1,7 @@
 import React from "react";
 import Menu from "./components/menus/Menu";
 import Submenu from "./components/menus/submenu";
-import Footer from "./components/footer";
+import Footer from "./components/menus/footer.tsx";
 import {Link} from "react-router-dom";
 import { Popup2, Popup } from "./components/popup/pop.tsx";
 

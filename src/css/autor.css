@@ -1,0 +1,77 @@
+.body {
+  align-items: center;
+  box-sizing: border-box;
+  
+}
+
+.h1 {
+  background-color: #5c286f;
+  color: #e8e8e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5px;
+  width: 100%;
+}
+
+fieldset{
+  background-color: #dab0f5;
+  text-align: center;
+ }
+
+.titAutor {
+  border-style: dashed;
+  border-color: #dab0f5;
+}
+
+.formulario {
+  background-color: #dbc8ea;
+  width: 50vw;
+  height: auto;
+  margin-left: 50%;
+  margin-bottom: 20%;
+  margin-top: 15%;
+  border: #5c286f;
+  border-top-left-radius: 7.8%;
+  border-top-right-radius: 7.8%;
+  border-bottom-right-radius: 7.8%;
+  border-bottom-left-radius: 7.8%;
+  border-style: groove;
+}
+
+.h1 {
+  background-color: #5c286f;
+  color: #e8e8e8;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-size: 5px;
+  width: 100%;
+  border-top-left-radius: 5vw;
+  border-top-right-radius: 5vw;
+}
+
+.file {
+  background-color: #392e4164;
+  border-top-left-radius: 2vw;
+  border-top-right-radius: 2vw;
+  border-bottom-left-radius: 2vw;
+  border-bottom-right-radius: 2vw;
+  width: 19vw;
+}
+
+.provas {
+  margin-left: 5vh;
+  text-align: center;
+  color: #dab0f5;
+  background-color: #947ba7;
+  border-top-left-radius: 5vw;
+  border-top-right-radius: 5vw;
+  border-bottom-left-radius: 5vw;
+  border-bottom-right-radius: 5vw;
+  width: 40vw;
+}
+
+.btEnvia {
+  text-align: center;
+}

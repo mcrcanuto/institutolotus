@@ -1,4 +1,4 @@
-import "./../css/slides.css"
+import "./../../css/slides.css"
 
 import {Swiper, SwiperSlide} from "swiper/react"
 

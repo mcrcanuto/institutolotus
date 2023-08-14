@@ -1,4 +1,5 @@
 import "../../css/pop.css"
+import "./../../css/geral.css"
 
 
 function Popup(props: any){

@@ -5,10 +5,10 @@ import React from "react";
 import Menu from "./components/menus/Menu";
 import Submenu from "./components/menus/submenu";
 import Zap from "./components/popup/zapzap";
-import Slide from "./slides/swiper";
-import Slide2 from "./slides/swiper2";
+import Slide from "./components/slides/swiper";
+import Slide2 from "./components/slides/swiper2";
 import Card from "./components/card"
-import Footer from "./components/footer";
+import Footer from "./components/menus/footer";
 import "./css/geral.css"
 
 function Home() {
