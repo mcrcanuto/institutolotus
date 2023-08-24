@@ -22,9 +22,7 @@ function Footer () {
               </li>
             </ul>
           </nav>
-          <a href="http://127.0.0.1:5173/">
-            <img src="./../imgs/logo.png" alt="Logo" className="logoimgfooter"  />
-          </a>
+          <img src="./../imgs/logo.png" alt="Logo" className="logoimgfooter"  />
         </div>
     )
 };
