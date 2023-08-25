@@ -7,12 +7,12 @@ import "././css/editarperfil.css"
 
 function EditarPerfil () {
 
- 
+
     return  (
         <div className="Container">
         <div className="container-login">
         <div className="wrap-login">
-        <form className="login-form" onSubmit={handleSubmit}>
+        <form className="login-form">
 
         <span className="login-form-title1">Editar Perfil</span>
         <span className="login-form-title"></span>
@@ -21,17 +21,17 @@ function EditarPerfil () {
      
 
         <div className="wrap-input">
-        <input className='input' type="name" onChange={handleInput}/>
+        <input className='input' type="name" />
         <span className="focus-input" data-placeholder="Nome"></span>
         </div>
 
         <div className="wrap-input">
-        <input className='input'type="name" onChange={handleInput}/>
+        <input className='input'type="name" />
         <span className="focus-input" data-placeholder="Sobrenome"></span>
         </div>
 
         <div className="wrap-input">
-    <input className='input' type="name" required onChange={handleInput}/>
+    <input className='input' type="name" required />
     <span className="focus-input" data-placeholder="Cpf"></span>
     </div>
 
@@ -39,12 +39,12 @@ function EditarPerfil () {
       
     
         <div className="wrap-input">
-        <input className='input' type="email" onChange={handleInput}/>
+        <input className='input' type="email" />
         <span className="focus-input" data-placeholder="Email"></span>
         </div>
     
         <div className="wrap-input">
-        <input className='input' type="password" onChange={handleInput}/>
+        <input className='input' type="password" />
         <span className="focus-input" data-placeholder="Senha"></span>
         </div>
 

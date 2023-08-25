@@ -1,65 +1,45 @@
-import { useState } from 'react';
 import '././css/cadastro.css'
-import axios from 'axios'
 
-
-function Cadastro () {
-  const [user, setUser] = useState('');
-
-  const {post, setPost} = useState({
-    pol_nome:'',
-    pol_sobrenome:'',
-    pol_email:'',
-    pol_cpf:'',
-    pol_senha:'',
-  })
-
-const handleInput = (event) => {
-setPost({...post, [event.target.name]: event.target.value
-})
-}
-
-function handleSubmit(event){
-  event.preventDeafult()
-  axios.post('/policial, controllersPolicial.criarPolicial', {post})
-  .then(response => console.log(response))
-  .catch(err => console.log(err))
-}
+function Cadastro() {
+ 
   return  (
-
     <div className="Container">
     <div className="container-login">
     <div className="wrap-login">
-    <form className="login-form" onSubmit={handleSubmit}>
+    <form className="login-form">
     <span className="login-form-title">Cadastrar Conta</span>
     <span className="login-form-title">
     
     </span>
     
     <div className="wrap-input">
-    <input className='input' type="name" required onChange={handleInput}/>
-    <span className="focus-input" data-placeholder="Nome"  ></span>
+    <input className='input' type="name"/>
+    <span className="focus-input" data-placeholder="Nome"></span>
     </div>
     <div className="wrap-input">
-    <input className='input'type="name" required onChange={handleInput}/>
+    <input className='input'type="name"/>
     <span className="focus-input" data-placeholder="Sobrenome"></span>
     </div>
 
     <div className="wrap-input">
-    <input className='input' type="email" required onChange={handleInput} value={user}/>
+    <input className='input' type="email"/>
     <span className="focus-input" data-placeholder="Email"></span>
     </div>
 
     <div className="wrap-input">
-    <input className='input' type="name" required onChange={handleInput}/>
-    <span className="focus-input" data-placeholder="Cpf"></span>
-    </div>
-
-    <div className="wrap-input" >
-    <input className='input' type="password" required onChange={handleInput}/>
+    <input className='input' type="password"/>
     <span className="focus-input" data-placeholder="Senha"></span>
     </div>
 
+    <div className="wrap-input">
+    <input className='input' type="password"/>
+    <span className="focus-input" data-placeholder="Confirmar Senha"></span>
+    </div>
+
+    <div className="wrap-input">
+    <input className='input' type="email"/>
+    <span className="focus-input" data-placeholder="Número do distintivo"></span>
+    </div>
 
   <div className="container-login-form-btn">
   <button className="login-form-btn">Cadastrar</button>
@@ -73,7 +53,7 @@ function handleSubmit(event){
     </div>
     );
   
-  }
+}
 
 export default Cadastro;
 
