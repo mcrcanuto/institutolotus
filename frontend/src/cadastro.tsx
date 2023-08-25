@@ -4,6 +4,7 @@ import axios from 'axios'
 
 
 function Cadastro () {
+  const [user, setUser] = useState('');
 
   const {post, setPost} = useState({
     pol_nome:'',
@@ -45,7 +46,7 @@ function handleSubmit(event){
     </div>
 
     <div className="wrap-input">
-    <input className='input' type="email" required onChange={handleInput}/>
+    <input className='input' type="email" required onChange={handleInput} value={user}/>
     <span className="focus-input" data-placeholder="Email"></span>
     </div>
 

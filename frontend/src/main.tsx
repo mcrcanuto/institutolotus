@@ -6,6 +6,8 @@ import Denuncia from "./denuncia"
 import QuemSomos from "./quemsomos.tsx"
 import Produtos from "./produtos.tsx"
 import Autor from "./autor.tsx"
+import PerfilPolicial from "./perfilpolicial"
+import Login from "./login.tsx"
 
 import Cadastro from "./cadastro.tsx"
 import EditarPerfil from "./editarperfil.tsx"
@@ -43,6 +45,14 @@ element: <Cadastro/>
   path:"/",
 element: <EditarPerfil/>
 },
+{
+  path:"/",
+element: <PerfilPolicial/>
+},
+{
+  path:"/",
+element: <Login/>
+},
 
 ])
 
@@ -63,6 +73,8 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         <Route Component={Autor} path="/autor"/>
         <Route Component={Cadastro} path="/cadastro"/>
         <Route Component={EditarPerfil} path="/editarperfil"/>
+        <Route Component={PerfilPolicial} path="/perfilpolicial"/>
+        <Route Component={Login} path="/login"/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
