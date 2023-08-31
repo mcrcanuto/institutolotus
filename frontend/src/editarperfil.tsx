@@ -24,7 +24,7 @@ function EditarPerfil () {
    
         <form className="login-form">
 
-        <span className="login-form-title1">Editar Perfil</span>
+        <span className="login-form-title2">Editar Perfil</span>
         <span className="login-form-title"></span>
         
         <span className="login-form-title">Dados Pessoais</span>

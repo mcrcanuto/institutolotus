@@ -7,7 +7,7 @@ import Submenu from "./components/menus/submenu";
 import Zap from "./components/popup/zapzap";
 import Slide from "./components/slides/swiper";
 import Slide2 from "./components/slides/swiper2";
-import Card from "./components/card"
+import Card from "./components/slides/card"
 import Footer from "./components/menus/footer";
 import "./css/geral.css"
 

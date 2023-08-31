@@ -1,9 +1,9 @@
 import { BiClipboard, BiSearch, } from "react-icons/bi";
 import {TiShoppingCart} from "react-icons/ti"
-import "../../css/menus.css";
 import React from "react";
 import { Popup2, Popup } from "././../popup/pop";
 import './../../css/pop.css'
+import "../../css/menus.css";
 import { Link } from "react-router-dom";
 
 
