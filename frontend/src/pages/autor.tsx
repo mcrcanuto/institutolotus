@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import '././css/autor.css'
+import './../css/autor.css'
 
 function Autor() {
   const [] = useState(0)

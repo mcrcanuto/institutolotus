@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './css/denuncia.css'
+import './../css/denuncia.css'
 
 function Denuncia() {
   const [] = useState(0)

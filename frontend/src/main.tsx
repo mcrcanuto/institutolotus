@@ -1,16 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import {createBrowserRouter, BrowserRouter, Route, Routes} from "react-router-dom"
-import Home from "./Home.tsx"
-import Denuncia from "./denuncia"
-import QuemSomos from "./quemsomos.tsx"
-import Produtos from "./produtos.tsx"
-import Autor from "./autor.tsx"
-import PerfilPolicial from "./perfilpolicial"
-import Login from "./login.tsx"
+import Home from "./pages/Home.tsx"
+import Denuncia from "./pages/denuncia.tsx"
+import QuemSomos from "./pages/quemsomos.tsx"
+import Produtos from "./pages/produtos.tsx"
+import Autor from "./pages/autor.tsx"
+import PerfilPolicial from "./pages/perfilpolicial.tsx"
+import Login from "./pages/login.tsx"
+import ConfirmaSaida from "./pages/ConfirmaSaida.tsx"
 
-import Cadastro from "./cadastro.tsx"
-import EditarPerfil from "./editarperfil.tsx"
+import Cadastro from "./pages/cadastro.tsx"
+import EditarPerfil from "./pages/editarperfil.tsx"
 import "./css/geral.css"
 
 import {register} from "swiper/element/bundle"
@@ -53,6 +54,10 @@ element: <PerfilPolicial/>
   path:"/",
 element: <Login/>
 },
+{
+  path:"/",
+element: <ConfirmaSaida/>
+},
 
 ])
 
@@ -75,6 +80,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         <Route Component={EditarPerfil} path="/editarperfil"/>
         <Route Component={PerfilPolicial} path="/perfilpolicial"/>
         <Route Component={Login} path="/login"/>
+        <Route Component={ConfirmaSaida} path="/confirmacao"/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

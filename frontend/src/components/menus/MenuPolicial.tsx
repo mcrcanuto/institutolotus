@@ -40,7 +40,7 @@ const [taOn, setTaOn] = useState(false);
               <Link to="/editarperfil"><FaUserEdit className="icones"/></Link>
               </li>
               <li className='sair'>
-                <Link to="/produtos"><BiLogOut className="icones"/></Link>
+                <Link to="/confirmacao"><BiLogOut className="icones"/></Link>
               </li>
               <li>
               <Link to="/produtos"><FaRegBell className="icones"/></Link> 

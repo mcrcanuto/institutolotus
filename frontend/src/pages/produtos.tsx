@@ -1,10 +1,10 @@
 
 import React from "react";
-import Menu from "./components/menus/Menu";
-import Submenu from "./components/menus/submenu";
-import Footer from "./components/menus/footer";
-import "./css/geral.css"
-import "./css/produtos.css"
+import Menu from "../components/menus/Menu";
+import Submenu from "../components/menus/submenu";
+import Footer from "../components/menus/footer";
+import "./../css/geral.css"
+import "./../css/produtos.css"
 
 function Produtos(){
    

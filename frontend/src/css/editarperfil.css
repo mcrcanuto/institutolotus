@@ -52,7 +52,7 @@
     display: block;
     font-size: 30px;
     font-family: sans-serif;
-    color: rgb(81, 42, 117); 
+    color:rgb(21, 1, 39);  
     height: 45px;
     line-height: 1.2;
     text-align: center;
@@ -200,5 +200,8 @@
    .back{
     font-size: 8vh;
     color: rgb(51, 46, 50);
+    top: 38vh;
+
+    position: absolute;
 
    }

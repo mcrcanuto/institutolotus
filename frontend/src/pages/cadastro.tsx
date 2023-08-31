@@ -1,6 +1,6 @@
 
 import {Link} from "react-router-dom"
-import '././css/cadastro.css'
+import './../css/cadastro.css'
 import axios from 'axios'
 import {useState} from 'react'
 

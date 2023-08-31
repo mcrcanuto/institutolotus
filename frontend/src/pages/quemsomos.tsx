@@ -1,15 +1,15 @@
 import React from "react";
-import Menu from "./components/menus/Menu";
-import Submenu from "./components/menus/submenu";
-import Footer from "./components/menus/footer.tsx";
+import Menu from "../components/menus/Menu.tsx";
+import Submenu from "../components/menus/submenu.tsx";
+import Footer from "../components/menus/footer.tsx";
 import {Link} from "react-router-dom";
-import { Popup2, Popup } from "./components/popup/pop.tsx";
+import { Popup2, Popup } from "../components/popup/pop.tsx";
 
 
 
-import "./css/pop.css"
-import "./css/geral.css";
-import "./css/quemsomos.css";
+import "./../css/pop.css"
+import "./../css/geral.css";
+import "./../css/quemsomos.css";
 
 
 

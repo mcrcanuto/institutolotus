@@ -1,5 +1,5 @@
-import "./css/geral.css"
-import "././css/editarperfil.css"
+import "./../css/geral.css"
+import "./../css/editarperfil.css"
 import { IoIosArrowBack } from "react-icons/Io"
 import {Link } from "react-router-dom"
 
@@ -31,31 +31,31 @@ function EditarPerfil () {
      
 
         <div className="wrap-input">
-        <input className='input' type="name" />
-        <span className="focus-input" data-placeholder="Nome"></span>
+        <input className='input' type="name" required  placeholder="Nome" />
+        <span className="focus-input" ></span>
         </div>
 
         <div className="wrap-input">
-        <input className='input'type="name" />
-        <span className="focus-input" data-placeholder="Sobrenome"></span>
+        <input className='input'type="name"  required  placeholder="Sobrenome" />
+        <span className="focus-input"></span>
         </div>
 
         <div className="wrap-input">
-    <input className='input' type="name" required />
-    <span className="focus-input" data-placeholder="Cpf"></span>
+    <input className='input' type="name" required placeholder="Cpf"/>
+    <span className="focus-input" ></span>
     </div>
 
         <span className="login-form-title">Dados de Login</span>
       
     
         <div className="wrap-input">
-        <input className='input' type="email" />
-        <span className="focus-input" data-placeholder="Email"></span>
+        <input className='input' type="email" required  placeholder="Email"/>
+        <span className="focus-input" ></span>
         </div>
     
         <div className="wrap-input">
-        <input className='input' type="password" />
-        <span className="focus-input" data-placeholder="Senha"></span>
+        <input className='input' type="password" required  placeholder="Senha" />
+        <span className="focus-input" ></span>
         </div>
 
         <div className="container-login-form-btn">
