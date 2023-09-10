@@ -29,56 +29,7 @@ function Card(){
     return (
         <div className="App">
           
-            <p className='pbranco'>.</p>
-            <p className='pbranco'>.</p>
-            <p className='pbranco'>.</p>
-            <p className='pbranco'>.</p>
-            <p className='pbranco'>.</p>
-            <p className='pbranco'>.</p>
-            <p className='pbranco'>.</p>
-            <p className='pbranco'>.</p>
-            <p className='pbranco'>.</p>
-            <p className='pbranco'>.</p>
-            <p className='pbranco'>.</p>
-            <p className='pbranco'>.</p>
-            <p className='pbranco'>.</p>
-            <p className='pbranco'>.</p>
-            <p className='pbranco'>.</p>
-            <p className='pbranco'>.</p>
-            <p className='pbranco'>.</p>
-            <p className='pbranco'>.</p>
-            
-            <p className='pbranco'>.</p>
-            <p className='pbranco'>.</p>
-            <p className='pbranco'>.</p>
-            <p className='pbranco'>.</p>
-            <p className='pbranco'>.</p>
-            <p className='pbranco'>.</p>
-            <p className='pbranco'>.</p>
-            <p className='pbranco'>.</p>
-            <p className='pbranco'>.</p>
-            <p className='pbranco'>.</p>
-            <p className='pbranco'>.</p>
-            <p className='pbranco'>.</p>
-            <p className='pbranco'>.</p>
-            <p className='pbranco'>.</p>
-            <p className='pbranco'>.</p>
-            <p className='pbranco'>.</p>
-            
-            <p className='pbranco'>.</p>
-            <p className='pbranco'>.</p>
-            <p className='pbranco'>.</p>
-            
-            <p className='pbranco'>.</p>
-            <p className='pbranco'>.</p>
-            <p className='pbranco'>.</p>
-            <p className='pbranco'>.</p>
-           
-
-           
-            
-            <p className='pbranco'>.</p>
-            <p className='pbranco'>.</p>
+          
             
             <h1>#MP - Os Melhores Preços</h1>
             <h1 className='frase'>Conheça os produtos mais vendidos da loja com o melhor preço do mercado.</h1>
