@@ -16,11 +16,7 @@
     margin: auto;
   }
   
-  header img {
-    width: 37px;
-    margin-right: 0;
-    padding: 15px 0;
-  }
+
   header nav {
     display: flex;
   }
@@ -174,12 +170,11 @@
   
   }
   .IL{
-    font-size: 5vh;
+    font-size: 4vh;
     color: #ffffff;
     text-decoration:none ;
     float: left;
-    position: absolute;
-    top: 2vh;
+
 
   }
   .icones{

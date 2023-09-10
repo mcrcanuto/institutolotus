@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
+
+
+    #aff {
+      margin: 1rem auto 4rem;
+      font-size: 5vh;
+      font-weight: bolder;
+      font-family: Inter, Arial;
+      color: #000;
+    }
+  
+    #affs{
+      font-family: Inter;
+      background-color: #272727;
+    }
+     
+    
+    .pbranco{
+      color: white;
+     
+    }
+    
+    .product--image {
+      width: 100%;
+      height: 16em;
+      object-fit: cover;
+      z-index: 2;
+    }
+    
+    #cartao {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      text-align: center;
+      font-family: Inter;
+      margin-left: 3vw;
+      margin-right: 3vw;
+      width: 79%;
+      max-width: 1440px;
+    }
+
+    .price {
+      color: grey;
+      font-size: 22px;
+    }
+    
+  
+    .react-multi-carousel-list  {
+      width: 88vw;
+      display: flex;
+      align-items: center;
+      left: 5vw;
+    }
+   

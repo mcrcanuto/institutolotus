@@ -8,14 +8,50 @@ body{
     height: 100%;
     width: 100%;
 }
-h1{
-    color: #5C286F;
-}
+
 h2{
-    color: rgba(0, 0, 0, 0.877);
-    background-color: transparent;
-    font-size: 3.5vh;
+    text-align: center;
 }
+
+@media (max-width: 1000px), (min-width:700px) {
+    #quem{
+        font-size: 4vh;
+    }
+    h2{
+        font-size: 2vh;
+     
+    }
+    h1{
+        font: 3vh;
+
+    }
+  }
+  
+  @media (max-width: 699px),(min-width:400px) {
+    #quem{
+        font-size: 6vh;
+    }
+    h2{
+        font-size: 2vh;
+    }
+    h1{
+        font: 3vh;
+    }
+}
+@media (max-width: 399px) {
+    #quem{
+        font-size: 10vh;
+    }
+    h2{
+        font-size: 2vh;
+    }
+    h1{
+        font: 3vh;
+    }
+
+}
+
+
 #buttonp{
     height: 10vh;
     width: 12vw;

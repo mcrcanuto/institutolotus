@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+@media screen and (min-width: 679px){
+.contem {
+    max-width: 1023px;
+}
+.contem {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 30px;
+    width: 100%;
+    max-width: 678px;
+}
+}
+
+@media screen and (min-width: 679px){
+.list-violence .content {
+    padding-left: 80px;
+}}
+@media screen and (min-width: 679px){
+.list-violence .content {
+    padding: 125px 0;
+}}
+.list-violence .content {
+    padding: 100px 0;
+    background-image: url(/assets/violence/bg-violence.svg);
+    background-position-x: 30px;
+    background-repeat: repeat-y;
+    display: flex;
+    flex-direction: column;
+    padding-left: 60px;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+.list-violence .content .icon {
+    font-family: 'Lato',Arial,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    align-items: center;
+    background: #5C286F;
+    border: 10px solid #f1f1f1;
+    border-radius: 100%;
+    box-sizing: border-box;
+    color: #fff;
+    display: flex;
+    font-size: 30px;
+    height: 77px;
+    justify-content: center;
+    left: -5px;
+    position: absolute;
+    top: 50px;
+    width: 77px;
+}
+
+div {
+    display: block;
+    background-color: transparent;
+}
+
+.list-violence .content .icon:before {
+    background:#5C286F;
+    content: '';
+    height: 3px;
+    left: 70px;
+    position: absolute;
+    width: 130px;
+}
+.list-violence .content .icon:after {
+    background: #5C286F;
+    border-radius: 100%;
+    content: '';
+    height: 15px;
+    left: 200px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+}
+.list-violence .content .list ul li {
+    font-family: inter, arial;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-top: 15px;
+    padding-left: 23px;
+    padding-top: 5px;
+    position: relative;
+    text-transform: uppercase;
+    color: black;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    color: black;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+}
+
+
+.list-violence .content .list ul li:before {
+    content: '';
+    border: 1px solid rgb(64, 3, 70);
+    border-width: 0 0 2px 2px;
+    font-size: 0;
+    height: 8px;
+    left: -5px;
+    line-height: 0;
+    position: absolute;
+    transform: rotate(-135deg);
+    top: 13px;
+    width: 8px;
+}
+
+#cola{
+    color: rgba(188, 103, 221, 0.979);
+    font-size: 3.5vw;
+    font-family: inter, arial;
+    background: transparent;
+}
+
+.imagem{
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 99.1vw;
+    height: 90vh;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+p{
+    font-size: 2vw;
+}

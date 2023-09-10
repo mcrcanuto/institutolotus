@@ -1,12 +1,8 @@
 import { useState } from 'react'
-import './../css/denuncia.css'
+import './css/denuncia.css'
 
-function Denuncia() {
+function App() {
   const [] = useState(0)
-
-  const handleSubmit = (e:SubmitEvent) => {
-    
-  }
 
   return (
     <div className="Container">
@@ -73,7 +69,8 @@ function Denuncia() {
           <input className='input' type="text" placeholder="Digite seu CEP" required />
           <span className="focus-input"></span>
           <br />
-          <p className='text'><input type="checkbox" name="" />Não sei meu CEP</p>
+          <input type="checkbox" name="" />
+          <p className='text'>Não sei meu CEP</p>
           </div>
           <div className="wrap-input">
           <input className='input' type="text" placeholder="Descrição do Local" required />
@@ -172,4 +169,4 @@ function Denuncia() {
   )
 }
 
-export default Denuncia;
+export default App

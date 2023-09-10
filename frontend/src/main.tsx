@@ -5,11 +5,9 @@ import Home from "./pages/Home.tsx"
 import Denuncia from "./pages/denuncia.tsx"
 import QuemSomos from "./pages/quemsomos.tsx"
 import Produtos from "./pages/produtos.tsx"
-import Autor from "./pages/autor.tsx"
 import PerfilPolicial from "./pages/perfilpolicial.tsx"
 import Login from "./pages/login.tsx"
 import ConfirmaSaida from "./pages/ConfirmaSaida.tsx"
-
 import Cadastro from "./pages/cadastro.tsx"
 import EditarPerfil from "./pages/editarperfil.tsx"
 import "./css/geral.css"
@@ -36,10 +34,6 @@ element: <Produtos/>
 },
 {
   path:"/",
-element: <Autor/>
-},
-{
-  path:"/",
 element: <Cadastro/>
 },
 {
@@ -59,6 +53,8 @@ element: <Login/>
 element: <ConfirmaSaida/>
 },
 
+
+
 ])
 
 register();
@@ -72,15 +68,14 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <BrowserRouter>
       <Routes>
         <Route Component={Home} path="/"/>
-        <Route Component={Denuncia} path="/denuncia"/>
+        <Route Component={Denuncia} path="/comprar"/>
         <Route Component={QuemSomos} path="/quemsomos"/>
         <Route Component={Produtos} path="/produtos"/>
-        <Route Component={Autor} path="/autor"/>
         <Route Component={Cadastro} path="/cadastro"/>
         <Route Component={EditarPerfil} path="/editarperfil"/>
         <Route Component={PerfilPolicial} path="/perfilpolicial"/>
         <Route Component={Login} path="/login"/>
-        <Route Component={ConfirmaSaida} path="/confirmacao"/>
+        <Route Component={ConfirmaSaida} path="/quermesmosair?"/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

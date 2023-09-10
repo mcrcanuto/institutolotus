@@ -228,6 +228,7 @@ function Card(){
         <button>Comprar Agora</button>
         </Link>
     </p>
+    <br></br><br></br><br></br>
   </div> 
 
 
