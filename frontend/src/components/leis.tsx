@@ -1,10 +1,10 @@
 import "./../css/leis.css"
-import { BiBody } from "react-icons/bi"
-import { GiBrain, GiPunchBlast } from "react-icons/gi"
+import { AiOutlineWifi } from "react-icons/ai"
+import { LuCalendarClock } from "react-icons/lu"
+import {BsHospital, BsFillHouseFill} from "react-icons/bs"
 
 
-
-function Formas () {
+function Leis () {
     return(
 <>
 
@@ -12,7 +12,7 @@ function Formas () {
 
 <div className="contem">
 <div className="conteudo">
-<div className="icone"><GiPunchBlast/></div>
+<div className="icone"><AiOutlineWifi/></div>
 <div><h2 id="agua">LEI CAROLINA DIECKMAN</h2>
 <p>
 Em maio de 2011, a atriz brasileira Carolina Dieckman sofreu um ataque virtual que culminaria na posse de 36  
@@ -33,7 +33,7 @@ proteção à mulher.</p>
 
 <div className="contem">
 <div className="conteudo">
-<div className="icone"><GiBrain/></div>
+<div className="icone"><LuCalendarClock/></div>
 <div><h2 id="agua"> LEI JOANNA MARANHÃO</h2>
 <p>Publicada no dia 17 de maio de 2012, a Lei 12.650 alterou os prazos de prescrição para casos de crimes contra a 
 dignidade sexual de crianças e adolescentes. Antes deste dispositivo legal, tais crimes eram prescritos quando a 
@@ -51,7 +51,7 @@ justo para o seu agressor, que na época, por conta das antigas leis, já tinha 
         
 <div className="contem">
 <div className="conteudo">
-<div className="icone"><BiBody/></div>
+<div className="icone"><BsHospital/></div>
 <div><h2 id="agua">LEI DO MINUTO SEGUINTE</h2>
 
 <p>Um levantamento recente do Fórum Brasileiro de Segurança Pública revelou que o percentual de estupros de mulheres e meninas aumentou em 12,5% em 2022: estima-se que um crime desse tipo ocorra a cada 9 minutos no território brasileiro.
@@ -76,18 +76,17 @@ da violência sexual;
 
 <div className="contem">
 <div className="conteudo">
-<div className="icone"><BiBody/></div>
-<div><h2 id="agua">LEI DO FEMINICÍDIO</h2>
+<div className="icone"><BsFillHouseFill/></div>
+<div><h2 id="agua">LEI MARIA DA PENHA</h2>
 
-<p>Feminicídio é o termo utilizado para definir o homicídio motivado por gênero. Isto é: a vítima é morta por ser mulher. 
-Essa é uma questão muito relacionada ao contexto de violência familiar e doméstica.
-No Brasil, a incidência de casos de feminicídio é alta: apenas no primeiro semestre de 2022, por exemplo, 
-foram registrados cerca de 699 casos, o que na prática, significaria o assassinato de 4 mulheres por dia durante o 
-período.A partir da publicação da Lei do Feminicídio, o crime passou a ser considerado como homicídio qualificado e 
-enquadrado com um dos crimes hediondos. Com isso, as penas para os agressores são mais severas, ficando compreendidas
- entre 12 e 30 anos. Além disso, para quem comete algum dos crimes hediondos não  há prisão provisória e estão vetados 
- os direitos a indulto, anistia ou graça. Ao tornar as medidas punitivas mais severas, espera-se que haja uma diminuição 
- na constância de realização dos crimes no futuro.
+<p>A Lei nº 11.340/2006, conhecida como Lei Maria da Penha, define a violência doméstica e familiar contra a mulher 
+como crime e aponta formas de evitar, enfrentar e punir essa violência.
+Com a lei, a autoridade judicial ou policial pode conceder medidas protetivas de urgência, que são ações para 
+proteger a mulher, como o afastamento do agressor/a do lar, proibição de contato com a vítima e testemunhas, suspensão 
+do porte de armas, encaminhamento da mulher a programas de proteção, entre outras.
+A lei protege a vítima mulher e o agressor pode ser homem ou mulher, que tenha relação de afeto ou convivência: 
+podem ser maridos/esposas, companheiros/as, namorados/as (que morem juntos ou não) e outros/as familiares 
+(pai, mãe, irmão, irmã, filhos/as, genro, nora, etc).
 </p>
 </div>
 </div>
@@ -109,4 +108,4 @@ enquadrado com um dos crimes hediondos. Com isso, as penas para os agressores s�
     )
 }
 
-export default Formas;
+export default Leis;

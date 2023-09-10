@@ -13,8 +13,8 @@ function Produtos(){
 
       <>
       	<React.Fragment>
-			<Menu/>
-			<Submenu/>
+			      <Menu/>
+			     <Submenu/>
             <Formas/>
             <Leis/>
             <Footer/>
