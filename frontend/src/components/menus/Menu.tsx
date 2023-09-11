@@ -1,4 +1,4 @@
-import { BiClipboard, BiSearch, } from "react-icons/bi";
+import { BiClipboard } from "react-icons/bi";
 import {TiShoppingCart} from "react-icons/ti"
 import React from "react";
 import { Popup2, Popup } from "././../popup/pop";
@@ -39,43 +39,32 @@ function Menu() {
   return (
     <>
       <header className="menucima" >
-        <article className="logoimgposition">
-         <a href="http://127.0.0.1:5173/">
-            <img src="./../imgs/logo.png" alt="Logo" className="logoimg" />
-          </a>
-        </article>
-        <div className="placeholdermenu">
-          <input type="text" placeholder="O que você procura?" />
-          <article>
-            <button>
-              <BiSearch />
-            </button>
-          </article>
+     
+      <div>
+        <Link to="/">
+      <img src="./../imgs/logo.png" id="logomenu"/>
+      </Link>
+    </div>
+
+
           <div className="menulat">
-            <ul>
-              <a>
-                <li>
-                  
-                  <button onClick={togglePopup} id="pedidos">
-                    <BiClipboard className="iconempedido" />
-                    Meus Pedidos
-                  </button>
-               
-                </li>
-              </a>
-              <a href="/">
-                <li>
-                  <Link to="/denuncia">
-                  <button id="pedidos">
-                    <TiShoppingCart className="iconefpedido" />
-                    Fazer Pedido
-                  </button>
-                  </Link>
-                </li>
-              </a>
-            </ul>
+            
+      <ul>
+          <li>  
+          <button onClick={togglePopup} id="pedidosm">
+          <BiClipboard className="iconempedido" />Meus Pedidos
+          </button>
+          </li>
+
+          <li>
+          <Link to="/denuncia">
+          <button id="pedidosf">
+          <TiShoppingCart className="iconefpedido" />Fazer Pedido
+          </button>
+          </Link>
+          </li>
+      </ul>
           </div>
-        </div>
       </header>
 
       {isOpen && (

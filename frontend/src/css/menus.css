@@ -18,21 +18,16 @@ html, body {
     background-color: #DBC8EA; 
 
   }
-  .logoimg{
-     min-width: 15vw;
-    min-height: 15vh;
-    max-width: 1vw;
-    max-height: 1vh;
 
-    position: absolute;
-    left: 5vw;
-   
-  }
-  .logoimgposition {
-    width: 15vh;
-    height: 100%;
-    float: left;
-  }
+  #logomenu{
+    width: 15vw;
+   height: 20vh;
+   position: absolute;
+   left: 5vw;
+  
+ }
+ 
+
  header .placeholdermenu {
   width: 60%;
   height: 100%;
@@ -93,26 +88,36 @@ header .menulat ul a:nth-child(1) {
   top: 2.8vh;
   border-width: 0px;
  }
-#pedidos{
+#pedidosm{
   background-color:#DBC8EA ;
   border-width: 0px;
   font-family: Comfortaa, Inter, Arial;
+  margin-left: 335%;
+  margin-top: 12%;
+  width: 12vw;
+  font-size: 2.5vh;
+}
+#pedidosf{
+  background-color:#DBC8EA ;
+  border-width: 0px;
+  font-family: Comfortaa, Inter, Arial;
+  margin-left: 150%;
+  margin-top: 3.5vh;
+  width: 12vw;
+  font-size: 2.5vh;
 }
 .iconempedido{
   width: 2vw;
   height: 2.6vh;
-  position: absolute;
-  top: 3.8vh;
-  left: 60.6vw;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', arial;
+  margin-top: 10%;
+
 }
 .iconefpedido{
   min-width: 2vw;
- min-height: 2.6vh;
-  position: absolute;
-  top: 3.8vh;
-  left: 78vw;
-  font-family: 'Inter', sans-serif;
+  min-height: 2.6vh;
+  font-family: 'Inter', arial;
+  margin-top: 10%;
 }
 
 
@@ -227,6 +232,10 @@ header nav ul li a{
  
    .menu-section nav{
     display: none;
+  }
+  #logomenu{
+    width: 0vw;
+    height: 0vh;
   }
 
   .one,
