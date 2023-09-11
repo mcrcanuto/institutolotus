@@ -9,7 +9,7 @@ function Formas () {
 <>
 
 <div>
-      <img src="./../imgs/produtos.png" className="imagem"/>
+      <img src="./../imgs/formas.png" className="imagem"/>
     </div>
 
 
@@ -19,7 +19,7 @@ function Formas () {
 <div className="content">
 <div className="icon"><GiPunchBlast/></div>
 <div><h2 id="cola">VIOLÊNCIA FÍSICA</h2>
-<p>Entendida como qualquer conduta que ofenda a integridade ou saúde corporal da mulher.</p></div>
+<p className="nossasenhora">Entendida como qualquer conduta que ofenda a integridade ou saúde corporal da mulher.</p></div>
 
 <div className="list">
     <ul>
@@ -40,7 +40,7 @@ function Formas () {
 <div className="content">
 <div className="icon"><GiBrain/></div>
 <div><h2 id="cola">VIOLÊNCIA PSICOLÓGICA</h2>
-<p>É considerada qualquer conduta que: cause dano emocional e diminuição da autoestima; 
+<p className="nossasenhora">É considerada qualquer conduta que: cause dano emocional e diminuição da autoestima; 
 prejudique e perturbe o pleno desenvolvimento da mulher; ou vise degradar ou controlar suas ações, comportamentos, 
 crenças e decisões.</p></div>
 
@@ -70,7 +70,7 @@ crenças e decisões.</p></div>
 <div className="contem">
 <div className="content">
 <div className="icon"><BiBody/></div>
-<div><h2 id="cola">VIOLÊNCIA SEXUAL</h2><p>Trata-se de qualquer conduta que constranja a presenciar,a manter ou 
+<div><h2 id="cola">VIOLÊNCIA SEXUAL</h2><p className="nossasenhora">Trata-se de qualquer conduta que constranja a presenciar,a manter ou 
 a participar de relação sexual não desejada mediante intimidação, ameaça, coação ou uso da força.</p></div>
 
 <div className="list">
@@ -90,7 +90,7 @@ a participar de relação sexual não desejada mediante intimidação, ameaça, 
 <div className="contem">
 <div className="content">
 <div className="icon"><RiMoneyDollarCircleLine/></div>
-<div><h2 id="cola">VIOLÊNCIA PATRIMONIAL</h2><p>Entendida como qualquer conduta que configure retenção, 
+<div><h2 id="cola">VIOLÊNCIA PATRIMONIAL</h2><p className="nossasenhora">Entendida como qualquer conduta que configure retenção, 
 subtração, destruição parcial ou total de seus objetos, instrumentos de trabalho, documentos pessoais, bens, valores e 
 direitos ou recursos econômicos, incluindo os destinados satisfazer suas necessidades.</p></div>
 
@@ -112,7 +112,7 @@ direitos ou recursos econômicos, incluindo os destinados satisfazer suas necess
 <div className="contem">
 <div className="content">
 <div className="icon"><GiUnbalanced/></div>
-<div><h2 id="cola">VIOLÊNCIA MORAL</h2><p>É considerada qualquer conduta que configure calúnia, difamação ou 
+<div><h2 id="cola">VIOLÊNCIA MORAL</h2><p className="nossasenhora">É considerada qualquer conduta que configure calúnia, difamação ou 
 injúria.</p></div>
 <div className="list">
     <ul>

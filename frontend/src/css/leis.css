@@ -20,7 +20,8 @@ body{
 @media screen and (min-width: 679px){
 .lista-violencia .conteudo {
     padding-right: 80px;
-}}
+}
+}
 @media screen and (min-width: 679px){
 .lista-violencia .conteudo {
     padding: 125px 0;
@@ -143,6 +144,7 @@ ul {
     object-fit: cover;
 }
 
-p{
-    font-size: 2vw;
+#meudeus{
+    font-size: 3vh;
+    text-align: justify;
 }

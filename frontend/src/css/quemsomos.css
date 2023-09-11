@@ -1,77 +1,114 @@
 
-* { 
-    margin: 0;
-    padding: 0;
+
+
+@import url("https://fonts.googleapis.com/css?family=Inter");
+
+* {
+    box-sizing: border-box;
   }
-body{
-    font-family: inter, arial;
-    height: 100%;
+  .imagem{
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 99.1vw;
+    height: 90vh;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-h2{
-    text-align: center;
-}
+  .coluna {
+    float: left;
+    width: 50%;
+    padding: 25px;
+  }
+  
 
-@media (max-width: 1000px), (min-width:700px) {
-    #quem{
-        font-size: 4vh;
-    }
-    h2{
-        font-size: 2vh;
-     
-    }
-    h1{
-        font: 3vh;
+  .rolar:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
 
+  @media screen and (max-width: 900px) {
+    .coluna {
+      width: 50%;
     }
   }
   
-  @media (max-width: 699px),(min-width:400px) {
-    #quem{
-        font-size: 6vh;
-    }
-    h2{
-        font-size: 2vh;
-    }
-    h1{
-        font: 3vh;
-    }
-}
-@media (max-width: 399px) {
-    #quem{
-        font-size: 10vh;
-    }
-    h2{
-        font-size: 2vh;
-    }
-    h1{
-        font: 3vh;
-    }
 
-}
+  @media screen and (max-width: 700px) {
+    .coluna  {
+      width: 100%;
+    }
+  }
 
-
-#buttonp{
-    height: 10vh;
-    width: 12vw;
-    background-color:  #DBC8EA;
+.h2quemsomos{
     font-size: 4vh;
-    border-color: none;
-    border-width: 0px;
-    border-radius: 15px;
+    background-color:#5C286F;
+    color: aliceblue;
+    font-family: inter,arial;
+}
+.pquemsomos{
+    font-size: 3.5vh;
+    font-family: inter,arial;
+    text-align: justify;
+}
+
+.para{
+    background-color:transparent;
+    color:#000000;
+    font-weight: normal;
+    font-size: 3.5vh;
+    font-family: inter,arial;
+    text-align: center;
+}
+.buttonquemsomos{
+    font-size: 2.5vh;
+    border: none;
+    border-radius: 10px;
+    color: rgb(250, 248, 252);
+    line-height: 1.2;
+    text-transform: uppercase;
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin-left: 96vh;
-    
+    align-items: center;
+    width: 50%;
+    margin-left: 25%;
+    height: 30px;
+    background-color: rgb(73, 35, 77);
+    cursor: pointer;
 }
-#buttonp a:visited{
-    text-decoration: none;
+#entraradm{
+    color: #5d047544;
+    font-size: 9vh;
+    position: absolute;
+    bottom: 45vh;
+    display: flex;
+   margin-left: 80%;
 }
-#buttonp a:link{
-    text-decoration: none;
+#entraradm:hover{
+  color: #ffffff;
+  font-size: 9vh;
+  position: absolute;
+  bottom: 45vh;
+  display: flex;
+ margin-left: 80%;
 }
-#buttonp a:active{
-    text-decoration: none;
-}
+.buttonpolicial{
+    font-size: 3vh;
+    border: none;
+    border-radius: 10px;
+    color: rgba(250, 248, 252, 0.911);
+    line-height: 1.2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    margin-left: 40%;
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+  }
+  #branco{
+    color: white;
+  }

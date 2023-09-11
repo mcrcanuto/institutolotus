@@ -8,13 +8,18 @@ function Leis () {
     return(
 <>
 
+<div>
+      <img src="./../imgs/leis.png" className="imagem"/>
+    </div>
+
+
 <div className="lista-violencia">
 
 <div className="contem">
 <div className="conteudo">
 <div className="icone"><AiOutlineWifi/></div>
 <div><h2 id="agua">LEI CAROLINA DIECKMAN</h2>
-<p>
+<p id="meudeus">
 Em maio de 2011, a atriz brasileira Carolina Dieckman sofreu um ataque virtual que culminaria na posse de 36  
 fotos de cunho pessoal nas mãos de um hacker. Exigindo uma quantia de R$ 10 mil reais para não publicar o conteúdo, 
 o hacker teve sua proposta negada e, de fato, tornou públicas as imagens que tinha em sua posse.
@@ -35,7 +40,7 @@ proteção à mulher.</p>
 <div className="conteudo">
 <div className="icone"><LuCalendarClock/></div>
 <div><h2 id="agua"> LEI JOANNA MARANHÃO</h2>
-<p>Publicada no dia 17 de maio de 2012, a Lei 12.650 alterou os prazos de prescrição para casos de crimes contra a 
+<p id="meudeus">Publicada no dia 17 de maio de 2012, a Lei 12.650 alterou os prazos de prescrição para casos de crimes contra a 
 dignidade sexual de crianças e adolescentes. Antes deste dispositivo legal, tais crimes eram prescritos quando a 
 criança/adolescente atingisse 18 anos. Ou seja: caso não fossem denunciados até então, os agressores não poderiam 
 ser posteriormente responsabilizados.A partir da Lei Joana Maranhão, as vítimas passam a ter um prazo de 20 anos 
@@ -54,12 +59,12 @@ justo para o seu agressor, que na época, por conta das antigas leis, já tinha 
 <div className="icone"><BsHospital/></div>
 <div><h2 id="agua">LEI DO MINUTO SEGUINTE</h2>
 
-<p>Um levantamento recente do Fórum Brasileiro de Segurança Pública revelou que o percentual de estupros de mulheres e meninas aumentou em 12,5% em 2022: estima-se que um crime desse tipo ocorra a cada 9 minutos no território brasileiro.
+<p id="meudeus">Um levantamento recente do Fórum Brasileiro de Segurança Pública revelou que o percentual de estupros de mulheres e meninas aumentou em 12,5% em 2022: estima-se que um crime desse tipo ocorra a cada 9 minutos no território brasileiro.
 A Lei do Minuto Seguinte foi criada no dia 1° de agosto de 2013 e tem como objetivo garantir o atendimento multidisciplinar, obrigatório e gratuito de vítimas de violência sexual pelo SUS. Para tanto, é considerado qualquer tipo de contato sexual que tenha ocorrido sem consentimento e não é necessária a apresentação de boletim de ocorrência: basta a palavra da vítima para que tenha acesso aos serviços em hospitais e postos de saúde do SUS
 Em seu artigo 3°, a lei lista os serviços que devem ser oferecidos para as vítimas gratuitamente pelo SUS:
 </p>
 
-<p>
+<p id="meudeus">
 <br></br>I – diagnóstico e tratamento das lesões físicas no aparelho genital e nas demais áreas afetadas;
 <br></br>II – amparo médico, psicológico e social imediatos;
 <br></br>III – facilitação do registro da ocorrência e encaminhamento ao órgão de medicina legal e 
@@ -79,7 +84,7 @@ da violência sexual;
 <div className="icone"><BsFillHouseFill/></div>
 <div><h2 id="agua">LEI MARIA DA PENHA</h2>
 
-<p>A Lei nº 11.340/2006, conhecida como Lei Maria da Penha, define a violência doméstica e familiar contra a mulher 
+<p id="meudeus">A Lei nº 11.340/2006, conhecida como Lei Maria da Penha, define a violência doméstica e familiar contra a mulher 
 como crime e aponta formas de evitar, enfrentar e punir essa violência.
 Com a lei, a autoridade judicial ou policial pode conceder medidas protetivas de urgência, que são ações para 
 proteger a mulher, como o afastamento do agressor/a do lar, proibição de contato com a vítima e testemunhas, suspensão 

@@ -1,4 +1,3 @@
-
 @import url("https://fonts.googleapis.com/css?family=Inter");
 
 body {
@@ -96,7 +95,7 @@ body {
     }
   
     footer .socialh img {
-      height: 30px;
+      height: 50px;
     }
   }
   
@@ -124,8 +123,9 @@ body {
     font-family: 'inter' ;
     transition: all 250ms linear 0s;
   }
- .linksh{
+ #linksh{
     float: right;
+
  }
  #linksp{
     float: left;

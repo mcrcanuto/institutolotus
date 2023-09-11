@@ -3,7 +3,8 @@
 @import url("https://fonts.googleapis.com/css?family=Inter");
 
 body {
-    margin: 0;
+    margin-right: 0;
+    padding: 0;
   }
 
   section {
@@ -24,7 +25,7 @@ body {
   }
   
   footer .footer-container {
-    max-width: 110vw;
+    max-width: 100vw;
     margin: 0 auto;
     padding: 0 32px;
   }

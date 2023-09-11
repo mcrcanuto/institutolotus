@@ -16,6 +16,8 @@ return(
       
 
 <section className="oipolicial">
+
+    
     <h1 id="pqp">DENÚNCIAS</h1>
 
     <div className="wrap-input">
