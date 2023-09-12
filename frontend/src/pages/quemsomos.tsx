@@ -10,7 +10,7 @@ import "./../css/pop.css"
 import "./../css/geral.css";
 import "./../css/quemsomos.css";
 import { BsPatchQuestionFill, BsFillPatchExclamationFill} from "react-icons/bs"
-import { GiPoliceBadge} from "react-icons/gi"
+
 
 
 
@@ -28,7 +28,6 @@ return (
 <div>
       <img src="./../imgs/quemsomos.png" className="imagem"/>
       <Link to="/login">
-      <p id="entraradm"><GiPoliceBadge/></p>
       </Link>
     </div>
 
@@ -77,7 +76,7 @@ nossa cidade, gerando uma maior rapidez no recebimento delas, pois são eles que
   
 <p id="branco">.</p>
 <br></br><br></br><br></br><br></br><br></br><br></br>
-<Link to="/login">
+<Link to="/login" className="link">
   <button className="buttonpolicial">Entrar como Policial</button>
   </Link>
   <br></br><br></br>

@@ -24,21 +24,34 @@
        background-color: rgb(231, 224, 214);
    }
   
-   
-   .inputp {
+   .wrap-inputpolicial {
+    width: 85%;
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin-bottom: 37px;
+}
+   .inputpolicial {
        font-size: 15px;
        color: rgb(0, 0, 0);
        line-height: 1.2;
        border: rebeccapurple;
        display: block;
-   
        width: 100%;
        height: 35px;
-   
        background-color:rgba(211, 210, 210, 0.76);
        padding: 0 5px;
    }
-   
+   #divbotaopolpesquisar{
+    margin-top: 150%;
+   }
+   #botaopolpesquisar{
+    width:5vw;
+    border: none;
+    background-color: #5C286F;
+    color: aliceblue;
+    font-size: 3vh;
+
+   }
 
   
   .titulo {
@@ -49,29 +62,51 @@
     text-align: center;
   }
   
-
-
-#filtro1{
-    background-color:  rgb(183, 178, 178);
-    height: 5vh;
-    border-radius: 5px;
-    color: rgb(1, 1, 1);
-    border: none;
-    width: 15vw;
+  .colunapolicial {
     float: left;
-    cursor: pointer;
-    
+    width: 50%;
+    padding: 25px;
+  }
+  
+
+  .rolarpolicial:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+
+  @media screen and (max-width: 900px) {
+    .colunapolicial {
+      width: 50%;
+    }
+  }
+  
+
+  @media screen and (max-width: 700px) {
+    .colunapolicial  {
+      width: 100%;
+    }
+  }
+
+.h2policial{
+    font-size: 3vh;
+    background-color:#000000;
+    color: aliceblue;
+    font-family: inter,arial;
 }
-#filtro2{
-    background-color:  rgb(183, 178, 178);
-    width: 15vw;
-    height: 5vh;
-    border-radius: 5px;
-    color: rgb(1, 1, 1);
-    border: none;
-    float: right;
-    cursor: pointer;
+.ppolicial{
+    font-size: 3.5vh;
+    font-family: inter,arial;
+    text-align: justify;
 }
+
+
+
+
+
+
+
 
 body::-webkit-scrollbar {
     width: 12px;               /* width of the entire scrollbar */

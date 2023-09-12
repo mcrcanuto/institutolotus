@@ -1,4 +1,4 @@
-import { BiClipboard } from "react-icons/bi";
+import { BiClipboard, BiSearch } from "react-icons/bi";
 import {TiShoppingCart} from "react-icons/ti"
 import React from "react";
 import { Popup2, Popup } from "././../popup/pop";
@@ -47,16 +47,22 @@ function Menu() {
     </div>
 
 
+
+    <div className="placeholdermenu">
+          <input type="text" placeholder="O que você procura? "/>
+    </div>
+
+
           <div className="menulat">
             
       <ul>
-          <li>  
+          <li className="marginli">  
           <button onClick={togglePopup} id="pedidosm">
           <BiClipboard className="iconempedido" />Meus Pedidos
           </button>
           </li>
 
-          <li>
+          <li className="marginli">
           <Link to="/denuncia">
           <button id="pedidosf">
           <TiShoppingCart className="iconefpedido" />Fazer Pedido

@@ -77,23 +77,17 @@ header .menulat ul a:nth-child(1) {
   text-align: center;
   border-width: 0px;
   font-style: italic;
+  margin-top: 2%;
+  margin-right: 85%;
+ 
  }
- header .placeholdermenu article button {
-  padding: 5px 5px 5px 5px;
-  border-radius: 20px;
-  border-color: rgba(0, 0, 0, 0.932);
-  background-color: white;
-  position: absolute;
-  left: 54vw;
-  top: 2.8vh;
-  border-width: 0px;
- }
+
 #pedidosm{
   background-color:#DBC8EA ;
   border-width: 0px;
   font-family: Comfortaa, Inter, Arial;
-  margin-left: 335%;
-  margin-top: 12%;
+  margin-left: 500%;
+  margin-top: 9%;
   width: 12vw;
   font-size: 2.5vh;
 }
@@ -101,8 +95,8 @@ header .menulat ul a:nth-child(1) {
   background-color:#DBC8EA ;
   border-width: 0px;
   font-family: Comfortaa, Inter, Arial;
-  margin-left: 150%;
-  margin-top: 3.5vh;
+  margin-left: 250%;
+  margin-top: 3vh;
   width: 12vw;
   font-size: 2.5vh;
 }
@@ -234,9 +228,61 @@ header nav ul li a{
     display: none;
   }
   #logomenu{
-    width: 0vw;
-    height: 0vh;
+    width: 20vw;
+    height: 19vh;
+    margin-left: 9%;
+    margin-top: 3.2%;
   }
+
+  header .placeholdermenu input {
+    border-radius: 20px 20px 20px 20px;
+    border-color: rgb(5, 5, 5);
+    height: 3.5vh;
+    align-items: center;
+    text-align: center;
+    border-width: 0px;
+    font-style: italic;
+    margin-top: 27%;
+    margin-right: 65%;
+   
+   }
+  
+.marginli{
+  margin-top: -6.5vh;
+}
+
+  #pedidosm{
+    background-color:#DBC8EA ;
+    border-width: 0px;
+    font-family: Comfortaa, Inter, Arial;
+    margin-left: 435%;
+  cursor: pointer;
+    width: 12vw;
+    font-size: 2.5vh;
+  }
+  #pedidosf{
+    background-color:#DBC8EA ;
+    border-width: 0px;
+    font-family: Comfortaa, Inter, Arial;
+    margin-left: 210%;
+    width: 12vw;
+    font-size: 2.5vh;
+    cursor: pointer;
+  }
+  .iconempedido{
+    width: 6vw;
+   
+    font-family: 'Inter', arial;
+    margin-top: 10%;
+  
+  }
+  .iconefpedido{
+    width: 6vw;
+    font-family: 'Inter', arial;
+    margin-top: 10%;
+  }
+
+
 
   .one,
   .two,
