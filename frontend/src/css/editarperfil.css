@@ -192,7 +192,26 @@
        margin-top: 20px;
    }
 
-   
+  
+#apagarconta {
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    margin-top: 9%;
+    background-color: #581d31;
+}
+
+
+
+
    .login-form:hover {
        cursor: pointer;
    }

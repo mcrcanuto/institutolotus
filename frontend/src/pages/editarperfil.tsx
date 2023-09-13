@@ -67,13 +67,13 @@ function EditarPerfil () {
         <div className="container-login-form-btn2">
       <button className="sim" type="reset">Cancelar</button>
      </div>
-
-
-    
-    
-     
-     
         </form>
+
+        <div >
+          <Link to="/querexcluirsuaconta?">
+      <button id="apagarconta">Apagar Conta</button>
+      </Link>
+     </div>    
         </div>
         </div>
         </div>

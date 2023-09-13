@@ -154,7 +154,7 @@ function Denuncia() {
           <div className="wrap-input1">
           <p className='text'> Selecionar arquivos - Use para enviar provas como fotos de marcas de agressão.</p>
           <br />
-          <input className='input1' type="file" required />
+          <input className='input1' type="file" />
           <span className="focus-input" data-placeholder=""></span> <br /><br />
           </div>
         </div>
