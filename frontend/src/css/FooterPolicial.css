@@ -2,11 +2,18 @@
 
 @import url("https://fonts.googleapis.com/css?family=Inter");
 
-body {
-    margin-right: 0;
-    padding: 0;
-    width: 100%;
-  }
+
+
+* { 
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+}
+
 
   section {
     font-family: Inter;
@@ -33,7 +40,7 @@ body {
   
   footer .footer-container .footer-top {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr ;
   }
   
   footer .logo {

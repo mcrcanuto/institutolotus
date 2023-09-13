@@ -15,16 +15,14 @@ function FooterPolicial() {
       
       <div className="footer-container">
         <div className="logo">INSTITUTO LÓTUS
-    
+        <br></br> <br></br>
 </div>
 
         <div className="footer-top">
           
 
           <div className="links">
-            <h3 className="services-h3"></h3>
-
-          
+           
             <ul>
               <li><a href="https://criarmeulink.com.br/u/1693515884">E-mail</a></li>
 
@@ -36,7 +34,7 @@ function FooterPolicial() {
           </div>
 
           <div className="links">
-            <h3 className="categories-h3"></h3>
+          
 
             <ul>
               
@@ -49,7 +47,7 @@ function FooterPolicial() {
           </div>
 
           <div className="links">
-            <h3 className="contact-h3"></h3>
+          
 
             <ul>
             <li> <Link to="/editarperfil">Editar Meu Perfil</Link></li>

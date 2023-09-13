@@ -12,6 +12,7 @@ import Cadastro from "./pages/cadastro.tsx"
 import EditarPerfil from "./pages/editarperfil.tsx"
 import ConfirmaExcluirConta from './pages/ConfirmaExcluirConta.tsx'
 import Status from "./pages/status.tsx"
+import Atualizar from "./pages/atualizarstatus.tsx"
 import "./css/geral.css"
 
 import {register} from "swiper/element/bundle"
@@ -62,6 +63,11 @@ element: <ConfirmaExcluirConta/>
   path:"/",
 element: <Status/>
 },
+{
+  path:"/",
+element: <Atualizar/>
+},
+
 
 
 ])
@@ -86,7 +92,8 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         <Route Component={Login} path="/login"/>
         <Route Component={ConfirmaSaida} path="/quermesmosair?"/>
         <Route Component={ConfirmaExcluirConta} path="/querexcluirsuaconta?"/>
-        <Route Component={Status} path="/status?"/>
+        <Route Component={Status} path="/status"/>
+        <Route Component={Atualizar} path="/atualizarstatus"/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

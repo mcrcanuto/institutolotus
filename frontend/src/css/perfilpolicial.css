@@ -2,13 +2,30 @@
 
 @import url("https://fonts.googleapis.com/css?family=Inter");
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* { 
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+}
+
+
+   .usuario{
+    float: right;
+    margin-right: 5%;
+    background-color: #3f3c3c;
+    padding: 1vh;
+    border-radius: 5px;
    }
- 
-   
+   #conectado{
+    font-size: 2vh;
+    font-family: inter;
+    color: white;
+    font-weight:bold;
+   }
    .oipolicial {
        width: 100%;
        margin: 0 auto;
@@ -80,7 +97,7 @@ div {
    #botaopolpesquisar{
     width:5vw;
     border: none;
-    background-color: #5C286F;
+    background-color:#08000a;
     color: aliceblue;
     font-size: 4vh;
     height: 3.5vw;
@@ -132,32 +149,196 @@ div {
     .colunapolicial  {
       width: 100%;
     }
+    .input-group {
+      align-items: stretch;
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      width: 100%;
+      font-size: 15px;
+  }
+  
+  .form-control{
+    color: beige;
+    line-height: 1.2;
+    border: rebeccapurple;
+    display: block;
+    width: 75%;
+    margin-left: 8%;
+    height: 5vw;
+    background-color:rgba(211, 210, 210, 0.76);
+    padding: 0 5px;
+    font-size: 2.5vh;
+    border-bottom: 2px solid #adadad;
+    margin-bottom: 37px;
   }
 
-.h2andamento{
+  #botaopolpesquisar{
+    width:5vw;
+    border: none;
+    color: aliceblue;
     font-size: 3vh;
+    height: 5vw;
+    cursor: pointer;
+    background-color:#08000a;
+   }
+   #botaopolpesquisar:hover{
+    width:5vw;
+    border: none;
+    color: aliceblue;
+    font-size: 3vh;
+    height: 5vw;
+    cursor: pointer;
+    background-color:#30113b;
+   }
+  }
+
+
+  @media screen and (max-width: 600px) {
+    .input-group {
+      align-items: stretch;
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      width: 100%;
+      font-size: 15px;
+  }
+  
+  .form-control{
+    color: beige;
+    line-height: 1.2;
+    border: rebeccapurple;
+    display: block;
+    width: 75%;
+    margin-left: 8%;
+    height: 7vw;
+    background-color:rgba(211, 210, 210, 0.76);
+    padding: 0 5px;
+    font-size: 2.5vh;
+    border-bottom: 2px solid #adadad;
+    margin-bottom: 37px;
+  }
+
+  #botaopolpesquisar{
+    width:5vw;
+    border: none;
+    color: aliceblue;
+    font-size: 3vh;
+    height: 7vw;
+    cursor: pointer;
     background-color:#000000;
+   }
+   #botaopolpesquisar:hover{
+    width:5vw;
+    border: none;
+    color: aliceblue;
+    font-size: 3vh;
+    height: 7vw;
+    cursor: pointer;
+    background-color:#30113b;
+   }
+}
+
+
+
+  .andamento{
+    font-size: 3vh;
+    background-color:#5C286F;
     color: aliceblue;
     font-family: inter,arial;
+    font-weight: 200;
 }
-.pandamento{
+  .den-andamento{
+    -webkit-box-shadow: 0 4px 6px -6px #222;
+    -moz-box-shadow: 0 4px 6px -6px #222;
+    box-shadow: 0 4px 6px -6px #222;
+  }
+  .agressao-andamento{
     font-size: 3.5vh;
     font-family: inter,arial;
-    text-align: justify;
+    font-weight: normal;
+    
+}
+  .autor-andamento{
+  font-size: 2.5vh;
+  font-family: inter,arial;
+  font-weight: normal;
+  text-align: center;
+
+}
+.visualizar{
+  margin-left: 26%;
+  margin-top: 4%;
+  font-size: 2vh;
+  font-weight: normal;
+  font-family: inter,arial;
+  border: none;
+  border-radius: 10px;
+  color: rgb(250, 248, 252);
+  line-height: 1.2;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 5vh;
+  background-color:#08000a;
+  cursor: pointer;
+}
+.visualizar:hover{
+  margin-left: 26%;
+  margin-top: 4%;
+  font-size: 2vh;
+  font-weight: normal;
+  font-family: inter,arial;
+  border: none;
+  border-radius: 10px;
+  color: rgb(250, 248, 252);
+  line-height: 1.2;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 5vh;
+  background-color:#30113b;
+  cursor: pointer;
 }
 
 
-.h2finalizadas{
+.finalizada{
   font-size: 3vh;
-  background-color:#000000;
+  background-color:#30113b;
   color: aliceblue;
   font-family: inter,arial;
+  font-weight: 200;
 }
-.pfinalizadas{
-  font-size: 3.5vh;
-  font-family: inter,arial;
-  text-align: justify;
+.den-finalizada{
+    -webkit-box-shadow: 0 4px 6px -6px #222;
+    -moz-box-shadow: 0 4px 6px -6px #222;
+    box-shadow: 0 4px 6px -6px #222;
+  }
+  .agressao-finalizada{
+    font-size: 3.5vh;
+    font-family: inter,arial;
+    font-weight: normal;
+    
 }
+  .autor-finalizada{
+    font-size: 2.5vh;
+    font-family: inter,arial;
+    font-weight: normal;
+    text-align: center;
+  
+}
+
+
+
+
+
+
+
+
 
 body::-webkit-scrollbar {
     width: 12px;               /* width of the entire scrollbar */

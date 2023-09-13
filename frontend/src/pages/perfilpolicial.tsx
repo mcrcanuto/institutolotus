@@ -4,6 +4,8 @@ import FooterPolicial from "../components/menus/FooterPolicial"
 import "./../css/perfilpolicial.css"
 import "./../css/geral.css"
 import {FiSearch} from "react-icons/fi"
+import {Link} from "react-router-dom"
+
 
 
 function PerfilPolicial(){
@@ -15,11 +17,15 @@ return(
       
 		</React.Fragment>
 
+
+<br></br><br></br>
+    <div className="usuario">
+  <p id="conectado">Conectado(a) como </p>
+</div>
+<br></br>
+
+
 <section className="oipolicial">
-
-    
-    <h1 id="pqp">Página do Policial </h1>
-
 
     <div className="input-group mb-3">
   <input type="text" className="form-control" placeholder="Pesquisar uma denúncia" 
@@ -34,19 +40,33 @@ return(
     <div className="rolarpolicial">
 
   <div className="colunapolicial" >
-  <h2 className="h2andamento">DENÚNCIAS EM ANDAMENTO</h2>
-  <p className="panadamento">
-</p>
-</div>
+  <h2 className="andamento">DENÚNCIAS EM ANDAMENTO</h2>
 
+  <div className="den-andamento">
+  <p className="agressao-andamento">Agressão </p>
+  <p className="autor-andamento">Agressor:</p>
+
+  <Link to="/atualizarstatus">
+  <button className="visualizar"> Visualizar Status</button>
+  </Link>
+  <br></br>
+</div>
+</div>
 
 
 <div className="colunapolicial" >
-<h2 className="h2finalizadas">DENÚNCIAS FINALIZADAS</h2>
-<p className="pfinalizadas">
-</p>
-</div>
+<h2 className="finalizada">DENÚNCIAS FINALIZADAS</h2>
 
+<div className="den-finalizada">
+<p className="agressao-finalizada">Agressão</p>
+<p className="autor-finalizada">Agressor:</p>
+
+<Link to="/atualizarstatus">
+<button className="visualizar"> Visualizar Status</button>
+</Link>
+<br></br>
+</div>
+</div>
 </div>
          <br></br><br></br><br></br><br></br>
 

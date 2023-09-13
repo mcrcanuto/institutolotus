@@ -5,6 +5,9 @@ import {BiLogOut} from "react-icons/bi"
 import {FaRegBell} from "react-icons/fa"
 import{FaUserEdit} from "react-icons/fa"
 
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
+
 
 const MenuPolicial = () => {
 
@@ -16,7 +19,7 @@ const [taOn, setTaOn] = useState(false);
       
    
        
-    <Link to="/Home">
+    <Link to="/">
          <p className='IL'>INSTITUTO LÓTUS</p>
           </Link>
        
@@ -43,7 +46,12 @@ const [taOn, setTaOn] = useState(false);
                 <Link to="/quermesmosair?"><BiLogOut className="icones"/></Link>
               </li>
               <li>
-              <Link to="/produtos"><FaRegBell className="icones"/></Link> 
+              <Popup trigger={<button className='botaonotficacao'> <FaRegBell className="icones"/></button>}>
+              <div>https://mdbootstrap.com/docs/react/extended/popup/</div>
+              <div>Popup content here !!</div>
+              <div>Popup content here !!</div>
+              <div>Popup content here !!</div>
+              </Popup>
               </li>
             </ul>
           </nav>
