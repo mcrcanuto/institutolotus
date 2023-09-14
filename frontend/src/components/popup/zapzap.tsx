@@ -1,43 +1,34 @@
-import React from "react";
-import { Popup2 } from "../popup/zapop";
+
 import '../../css/pop.css'
 import {BsWhatsapp} from "react-icons/bs"
 import "./../../css/geral.css"
 
+import  { useState } from 'react';
+import SweetAlert2 from 'react-sweetalert2';
+
+
 function Zap(){
-    const [isOpen, setIsOpen] = React.useState(false);
-    const [isOpen2, setIsOpen2] = React.useState(false);
+  const [swalProps, setSwalProps] = useState({});
+
+
   
-
-    const togglePopup2 = () => {
-      setIsOpen2(!isOpen2);
-      setIsOpen(!isOpen);
-    }
-
     return (
         <>
-         <div>
-                      <button onClick={togglePopup2} className="zap1"> 
-                      <BsWhatsapp className="zapicone"/> Compre pelo WhatsApp
-                      </button>
-                 </div>
+           <div>
+            <button id="compre" onClick={() => {
+                setSwalProps({
+                    show: true,
+                    text: 'Atenção! O link a seguir te levará até o contato da Delegacia da Mulher de Volta Redonda. Use caso nessecite de ajuda imediata.',
+                    footer: '<a href="https://api.whatsapp.com/send?1=pt_BR&phone=5524998709056">Conversar agora</a>',
+                });
+            }}>
+                <BsWhatsapp id="compreicone"/>Compre pelo WhatsApp
+            </button>
+            <SweetAlert2 {...swalProps} />
+        </div>
 
-                 {isOpen && <Popup2
-      handleClose={togglePopup2}
-      content={<div>
+         </>
 
-        <h1 className="texto">O link a seguir é contato de telefone a seguir, é um número da Delegacia da Mulher de Volta Redonda.
-         <br></br>    Use-o como emergência caso necessite de ajuda imediata.
-        </h1>
-
-      <a href="https://api.whatsapp.com/send?phone=5524998709056&text=Preciso%20da%20ajuda%20da%20pol%C3%ADcia%20nesse%20exato%20momento!">
-        <button className="falar"><BsWhatsapp/> Falar com a polícia por WhatsApp</button>
-        </a>
-      </div>}
-      />}
-       
-    </>
-    
   );
 }
 

@@ -47,20 +47,7 @@ const [taOn, setTaOn] = useState(false);
               </li>
               <li>
               
-              <Popup  trigger={<button className='botaonotficacao'> <FaRegBell className="icones"/></button>}>
-              <div>https://www.dio.me/articles/pop-up-com-css-puro-em-8-passos</div>
-              <div>Popup content here !!</div>
-              <div>Popup content here !!</div>
-              <div>Popup content here !!</div>
-              <div>https://mdbootstrap./</div>
-              <div>Popup content here !!</div>
-              <div>Popup content here !!</div>
-              <div>Popup content here !!</div>
-              <div>https://mdbootstrap./</div>
-              <div>Popup content here !!</div>
-              <div>Popup content here !!</div>
-              <div>Popup content here !!</div>
-              </Popup>
+               <FaRegBell className="icones"/>
           
               </li>
             </ul>

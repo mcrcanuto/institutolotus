@@ -199,12 +199,9 @@
   }
   .icones{
     font-size: 3.5vh;
-  }
-
-  .botaonotficacao{
-    background-color: transparent;
-    border: none;
     color: white;
   }
-
-  
+  .icones:hover{
+    font-size: 3.5vh;
+    color:#5C286F;
+  }
