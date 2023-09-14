@@ -11,6 +11,13 @@
     font-family: 'Inter', sans-serif;
   }
   
+  #queisso
+{
+  scrollbar-width: thin;
+  scrollbar-color: #ff9902 #d8d8d8;
+  height: 2vh;
+
+}
 
 
   .oii{
@@ -195,7 +202,9 @@
   }
 
   .botaonotficacao{
-    background-color: black;
+    background-color: transparent;
     border: none;
     color: white;
   }
+
+  

@@ -17,60 +17,6 @@ import "./css/geral.css"
 
 import {register} from "swiper/element/bundle"
 
-const router = createBrowserRouter([
-  {
-    path:"/",
-  element: <Home/>
-},
-
-{
-  path:"/",
-element: <Denuncia/>
-},
-{
-  path:"/",
-element: <QuemSomos/>
-},
-{
-  path:"/",
-element: <Produtos/>
-},
-{
-  path:"/",
-element: <Cadastro/>
-},
-{
-  path:"/",
-element: <EditarPerfil/>
-},
-{
-  path:"/",
-element: <PerfilPolicial/>
-},
-{
-  path:"/",
-element: <Login/>
-},
-{
-  path:"/",
-element: <ConfirmaSaida/>
-},
-{
-  path:"/",
-element: <ConfirmaExcluirConta/>
-},
-{
-  path:"/",
-element: <Status/>
-},
-{
-  path:"/",
-element: <Atualizar/>
-},
-
-
-
-])
 
 register();
 import "swiper/css"
