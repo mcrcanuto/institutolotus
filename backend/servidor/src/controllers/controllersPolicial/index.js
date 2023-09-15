@@ -1,4 +1,5 @@
 const knex = require("../../database/database");
+const jwt = require("jsonwebtoken");
 
 module.exports = {
     async pesquisarPoliciais(req, res) {
@@ -74,10 +75,53 @@ module.exports = {
                     pol_senha
             });
 
-            return res.status(201).json({msg : "Policial criado com sucesso"});
+            const policial = {nome : pol_nome, sobrenome : pol_sobrenome, email: pol_email, pol_cpf: pol_cpf}
+            
+            const token = jwt.sign( //criação de token
+                policial,
+                "chave",
+                {expiresIn: '3h'}
+            );
+
+            return res.status(201).json({token : token});
         }
         catch(error) {
             return res.status(400).json({error : error.message});
+        }
+    },
+
+    async loginPolicial(req, res) {
+        try {
+            const {email} = req.params;
+            const {senha} = req.params;
+            const consult = await knex('Polícia').where("pol_email", email);
+            if (consult != "") {
+                const pass = consult[0].pol_senha.toString();
+                bcrypt.compare(senha, pass).then((result) => {
+                    if(result) {
+                        const policial = {nome : consult[0].pol_nome, sobrenome : consult[0].pol_sobrenome, email: consult[0].pol_email, pol_cpf: consult[0].pol_cpf}
+                            
+                        const token = jwt.sign( //criação de token
+                            user,
+                            "chave",
+                            {expiresIn: '3h'}
+                        );
+
+                        return res.status(201).json({token : token})
+                    }
+                    else {
+                        return res.status(401).json({msg: "Não existe policial com essa informações"});
+                    }
+                }).catch((err) => {
+                    return res.status(400).json({error: err.message})
+                });
+            }
+            else {
+                return res.status(401).json({msg: "Não existe polical com essa informações"});
+            }
+        }
+        catch(error) {
+            return res.status(400).json({error: error.message});
         }
     },
 
@@ -86,7 +130,8 @@ module.exports = {
             const {cpf} = req.params;
             const {pol_nome, pol_sobrenome, pol_email, pol_cpf, pol_senha} = req.body;
 
-            if(await knex("Polícia").where("pol_cpf", cpf) != "") {
+            const consult = await knex("Polícia").where("pol_cpf", cpf);
+            if(consult != "") {
                 await knex("Polícia").update({
                     pol_nome,
                     pol_sobrenome,
@@ -94,7 +139,15 @@ module.exports = {
                     pol_cpf,
                     pol_senha
                 }).where("pol_cpf", cpf);
-                return res.status(201).json({msg : "Polícial atualizado com sucesso"});
+
+                const policial = {nome : consult[0].pol_nome, sobrenome : consult[0].pol_sobrenome, email: consult[0].pol_email, pol_cpf: consult[0].pol_cpf}
+                
+                const token = jwt.sign( //criação de token
+                    policial,
+                    "chave",
+                    {expiresIn: '3h'}
+                );
+                return res.status(201).json({token : token});
             }
             return res.status(401).json({msg : "Este polícial não está registrado no sistema"});
         }

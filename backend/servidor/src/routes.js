@@ -1,4 +1,5 @@
 const express = require('express');
+const auth = require('./middleware/auth');
 
 const routes = express.Router();
 
@@ -23,6 +24,7 @@ routes.delete("/denuncia/:protocolo", controllersDenuncias.apagarDenuncia);
 
 //rotas policial
 routes.get("/policial", controllersPolicial.pesquisarPoliciais);
+routes.get("/policial/login/:email/:senha", controllersPolicial.loginPolicial);
 routes.get("/policial/nome/:nome", controllersPolicial.pesquisarPolicialNome);
 routes.get("/policial/cpf/:cpf", controllersPolicial.pesquisarPolicialCPF);
 routes.get("/policial/denuncia/:protocolo", controllersPolicial.pesquisarPoliciaisDenuncia);

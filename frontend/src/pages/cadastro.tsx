@@ -9,7 +9,7 @@ import {ChangeEvent, useState} from 'react'
 function Cadastro () {
 
 
-  const navigate = useNavigate();
+  const navigate = useNavigate(); //declara navegador
   const [cadInfo, setInfo] = useState({
       nome : "",
       sobreNome : "",
@@ -30,15 +30,15 @@ function Cadastro () {
       pol_cpf : cadInfo.cpf,
       pol_senha : cadInfo.senha
     }).then((res) => {
-
-      navigate("/perfilpolicial");
+      localStorage.setItem('token', res.data.token); //coloca o item dentro do localStorage
+      navigate("/perfilpolicial"); //navega para outra página
     }).catch((error) => {
       console.log(error);
     })
   }
 
   return  (
-
+<>
     <div className="Container">
     <div className="container-login">
     <div className="wrap-login">
@@ -92,6 +92,8 @@ function Cadastro () {
     </div>
     </div>
     </div>
+
+    </>
     );
   
   }
