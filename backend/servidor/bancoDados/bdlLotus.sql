@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `InstituloLotus`.`Denúncia` (
   `den_data_ocorrencia` VARCHAR(10) NOT NULL,
   `den_hora_ocorrencia` VARCHAR(5) NOT NULL,
   `den_data_denuncia` VARCHAR(10) NOT NULL,
-  `den_imagem` BLOB NULL,
+  `den_imagem` VARCHAR(15) NULL,
   `den_local` VARCHAR(100) NOT NULL,
   `den_cep` NVARCHAR(8) NOT NULL,
   `den_ponto_ref` VARCHAR(55) NOT NULL,
@@ -57,7 +57,7 @@ CREATE TABLE IF NOT EXISTS `InstituloLotus`.`Acompanhamento` (
   `Denúncia_den_protocolo` VARCHAR(8) NOT NULL REFERENCES `InstituloLotus`.`Denúncia` (`den_protocolo`) 
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  `Polícia_pol_distintivo` NVARCHAR(11) NOT NULL REFERENCES `InstituloLotus`.`Polícia` (`pol_distintivo`)
+  `Polícia_pol_cpf` NVARCHAR(11) NOT NULL REFERENCES `InstituloLotus`.`Polícia` (`pol_cpf`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   `aco_id` INT PRIMARY KEY AUTO_INCREMENT,

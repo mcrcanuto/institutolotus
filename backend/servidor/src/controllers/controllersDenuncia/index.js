@@ -1,5 +1,19 @@
 const knex = require("../../database/database");
 
+const path = require("path");
+const fs = require('fs');
+
+//multer
+const multer = require('multer');
+const storageDenuncia = multer.diskStorage({
+    destination : "./denunciaImgs",
+    filename : function (req, file, cb) {
+        const fileName = "dummy" + path.extname(file.originalname);
+        cb(null, fileName);
+    }
+})
+const uploadDenuncia = multer({storage : storageDenuncia});
+
 module.exports =  {
     async procurarDenuncias(req, res) {   
         try {
@@ -28,7 +42,7 @@ module.exports =  {
         try {
             let digitos = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
             
-            const {den_denunciante, den_imagem ,den_violencia, den_frequencia, den_data_ocorrencia, den_hora_ocorrencia, den_local, den_cep, den_ponto_ref, den_carac_local} = req.body;
+            const {den_denunciante, den_violencia, den_frequencia, den_data_ocorrencia, den_hora_ocorrencia, den_local, den_cep, den_ponto_ref, den_carac_local} = req.body;
             let protocolo = "";
             while(true) {
                 for (let i = 0; i < 8; i++) {
@@ -41,7 +55,6 @@ module.exports =  {
             }
 
             const den_protocolo = protocolo;
-            console.log(den_protocolo);
             
             const data = new Date();
             const den_data_denuncia = data.getDate() + "/" + (data.getMonth() + 1) + "/" + data.getFullYear();
@@ -51,7 +64,6 @@ module.exports =  {
                 den_violencia,
                 den_protocolo,
                 den_carac_local,
-                den_imagem,
                 den_cep,
                 den_data_denuncia,
                 den_ponto_ref,
@@ -82,5 +94,55 @@ module.exports =  {
             return res.status(400).json({error : error.message});
         }
 
-    }
+    },
+
+    async retornarImagens(req, res) {
+        const {filename} = req.params;
+
+        const imagePath = path.resolve(__dirname, '..', '..', '..', 'userProfile', filename);
+
+        fs.readFile(imagePath, (err, data) => {
+            if (err) {
+                return res.status(500).json({ error: 'Erro na eitura de imagem' });
+            }
+
+            res.setHeader('contentType',`image/${path.extname(filename)}`);
+
+            res.end(data);
+        });
+    },
+
+    async uploadImg(req, res) {
+        try {
+            const protocolo = req.headers['den_protocolo'];
+            
+            uploadDenuncia.single("imagem")(req, res, async function(error) {
+                if (error instanceof multer.MulterError) {
+                    return res.status(400).json({error : error.message})
+                  } else if (error) {
+                    return res.status(500).json({error : error.message})
+                  }
+
+                  if (!req.file) {
+                    return res.status(400).json({error: 'Nenhum arquivo enviado'});
+                  }
+    
+                  fs.renameSync(req.file.path, req.file.path.replace('dummy', protocolo));
+                try {
+                    await knex("Denúncia").update({
+                        den_imagem : `${protocolo}${path.extname(req.file.originalname)}`
+                    }).where("den_protocolo", protocolo);
+          
+                    return res.status(201).json({msg : "A imagem foi enviada com sucesso"});
+                }
+                catch(error) {
+                    return res.status(400).json({error: error.message});
+                }
+            })
+        }
+        catch(error) {
+            return res.status(400).json({error: error.message});
+        }
+    },
+
 }

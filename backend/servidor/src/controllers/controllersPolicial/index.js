@@ -28,7 +28,7 @@ module.exports = {
     async pesquisarPolicialCPF(req, res) {
         try {
             const {cpf} = req.params;
-            const result = await knex("Polícia").where("pol_distintivo", cpf);
+            const result = await knex("Polícia").where("pol_cpf", cpf);
 
             if(result != "") return res.status(201).json(result);
             return res.status(401).json({msg : "Não há polícial com esse cpf registrado no sistema."})

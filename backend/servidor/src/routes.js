@@ -22,6 +22,9 @@ routes.get("/denuncia/protocolo/:protocolo", controllersDenuncias.procurarDenunc
 routes.post("/denuncia", controllersDenuncias.criarDenuncia);
 routes.delete("/denuncia/:protocolo", controllersDenuncias.apagarDenuncia);
 
+routes.get("/denuncia/imagem/:filename", controllersDenuncias.retornarImagens);
+routes.put("/denuncia/imagem", controllersDenuncias.uploadImg);
+
 //rotas policial
 routes.get("/policial", controllersPolicial.pesquisarPoliciais);
 routes.get("/policial/login/:email/:senha", controllersPolicial.loginPolicial);
