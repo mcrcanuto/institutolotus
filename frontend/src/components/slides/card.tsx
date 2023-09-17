@@ -40,7 +40,7 @@ function Card(){
     <p className="preco">R$59,90</p>
     <p id='descricao'>Base Matte - Tonalidade N°2 
     <br></br><br></br>
-    <Link to="/denuncia">
+    <Link to="/comprar">
         <button>Comprar Agora</button>
         </Link>
     </p>
@@ -54,7 +54,7 @@ function Card(){
     
     <p id='descricao'>Efeito hidratante -  Tonalidade N° 15 
     <br></br><br></br>
-         <Link to="/denuncia">
+         <Link to="/comprar">
        <button>Comprar Agora</button>
         </Link>
     </p>
@@ -68,7 +68,7 @@ function Card(){
    
     <p id='descricao'>Paleta de Sombra com Cores Quentes 
     <br></br><br></br>
-        <Link to="/denuncia">
+        <Link to="/comprar">
         <button>Comprar Agora</button>
         </Link>
     </p>
@@ -82,7 +82,7 @@ function Card(){
     
     <p id='descricao'>Kit Siàge Cauterização dos Fios 
     <br></br><br></br>
-        <Link to="/denuncia">
+        <Link to="/comprar">
         <button>Comprar Agora</button>
         </Link>
     </p>
@@ -96,7 +96,7 @@ function Card(){
   
     <p id='descricao'>Hidratação por até 14 horas -  Algodão
     <br></br><br></br>
-        <Link to="/denuncia">
+        <Link to="/comprar">
         <button>Comprar Agora</button>
         </Link>
     </p>
@@ -110,7 +110,7 @@ function Card(){
  
     <p id='descricao'>Hidratação por até 14 horas -  Pitaya
     <br></br><br></br>
-       <Link to="/denuncia">
+       <Link to="/comprar">
         <button>Comprar Agora</button>
         </Link>
     </p>
@@ -124,7 +124,7 @@ function Card(){
  
     <p id='descricao'>Neutraliza a cor dos cabelos amarelados
     <br></br><br></br>
-        <Link to="/denuncia">
+        <Link to="/comprar">
         <button>Comprar Agora</button>
         </Link>
     </p>
@@ -138,7 +138,7 @@ function Card(){
 
     <p id='descricao'>Fragância de Ameixa, Frutos Silvestres e Anis 
     <br></br><br></br>
-       <Link to="/denuncia">
+       <Link to="/comprar">
         <button>Comprar Agora</button>
         </Link>
     </p>
@@ -153,7 +153,7 @@ function Card(){
 
     <p id='descricao' >Com aroma de melancia
     <br></br><br></br>
-       <Link to="/denuncia">
+       <Link to="/comprar">
         <button>Comprar Agora</button>
         </Link>
     </p>
@@ -167,7 +167,7 @@ function Card(){
 
     <p id='descricao'>Primer hidratante facial  de longa duração
     <br></br><br></br>
-       <Link to="/denuncia">
+       <Link to="/comprar">
         <button>Comprar Agora</button>
         </Link>
     </p>
@@ -181,7 +181,7 @@ function Card(){
 
     <p id='descricao'>Ação antioxidante e clareadora 
     <br></br><br></br>
-       <Link to="/denuncia">
+       <Link to="/comprar">
         <button>Comprar Agora</button>
         </Link>
     </p>
@@ -195,7 +195,7 @@ function Card(){
 
     <p id='descricao'>Aumenta o volume e comprimento dos fios
     <br></br><br></br>
-        <Link to="/denuncia">
+        <Link to="/comprar">
         <button>Comprar Agora</button>
         </Link>
     </p>

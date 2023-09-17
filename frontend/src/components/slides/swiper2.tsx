@@ -25,10 +25,6 @@ function Slide2(){
     }
   };
   
-
-
-
-
   return(
     
      <>
@@ -44,42 +40,47 @@ function Slide2(){
       
       <Carousel responsive={responsive}>
   <div className="cardswiper">
-    <img src="./../imgs/carousel/1.png" className="img" alt="Base Bruna Tavares"></img>
+    <img src="./../imgs/carousel/1.png" className="imagemcardswiper" ></img>
   </div>
 
   <div className="cardswiper">
-  <img src="./../imgs/carousel/2.png" className="img" alt="Batom Payot"></img>
+  <img src="./../imgs/carousel/2.png" className="imagemcardswiper" ></img>
   </div>
 
   <div className="cardswiper">
-    <img src="./../imgs/carousel/3.png" className="img" alt="Batom Payot"></img>
+    <img src="./../imgs/carousel/3.png" className="imagemcardswiper"></img>
   </div>
 
   <div className="cardswiper">
-  <img src="./../imgs/carousel/4.png" className="img" alt="Batom Payot"></img>
+  <img src="./../imgs/carousel/4.png" className="imagemcardswiper" ></img>
   </div>
 
   <div className="cardswiper">
-  <img src="./../imgs/carousel/5.png" className="img" alt="Batom Payot"></img>
+  <img src="./../imgs/carousel/5.png" className="imagemcardswiper" ></img>
   </div>
 
   <div className="cardswiper">
-  <img src="./../imgs/carousel/6.png" className="img" alt="Batom Payot"></img>
+  <img src="./../imgs/carousel/6.png" className="imagemcardswiper" ></img>
   </div>
 
   <div className="cardswiper">
-  <img src="./../imgs/carousel/7.png" className="img" alt="Batom Payot"></img>
+  <img src="./../imgs/carousel/7.png" className="imagemcardswiper" ></img>
   </div>
 
   <div className="cardswiper">
-  <img src="./../imgs/carousel/8.png" className="img" alt="Batom Payot"></img>
+  <img src="./../imgs/carousel/8.png" className="imagemcardswiper" ></img>
   </div>
+
+  <div className="cardswiper">
+  <img src="./../imgs/carousel/.png" className="imagemcardswiper"></img>
+  </div>
+   
 
   </Carousel>
 
       <h1 id="mantenha">Mantenha-se radiante o dia todo com as novidades da loja. 
               <br></br>E comprando pelo WhatsApp, você ganha 10% de desconto na sua primeira compra!</h1>
-      <br></br>
+      <br></br> <br></br>
    </>
 
   )

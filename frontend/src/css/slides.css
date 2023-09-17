@@ -69,15 +69,25 @@
   text-align: center;
 }
   }
-
+.backdenuncia{
+  font-size: 7vh;
+  color: black;
+}
 
       @media screen and (max-width: 1024px) {
+        
+        .imagemcardswiper{
+          width: 100%;
+       
+   
+        }
+        
+        
         .cardswiper {
           text-align: center;
           font-family: Inter;
           margin-left: 3vw;
           margin-right: 3vw;
-          width: 9%;
         }
     
         .slide-item{
@@ -93,7 +103,7 @@
           text-align: center;
         }
         #conheca{
-          color: #068399;
+          color: #5C286F;
           text-align: center;
         }
         #mantenha{

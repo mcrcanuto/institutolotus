@@ -2,6 +2,9 @@ import { ChangeEvent, useEffect, useState } from 'react'
 import './../css/denuncia.css'
 import axios from 'axios';
 
+import { IoIosArrowBack } from "react-icons/Io"
+import {Link } from "react-router-dom"
+
 function Denuncia() {
   const [denunciaInfo, setDenuncia] = useState({ //atributos da denúncia
     den_denunciante : "",
@@ -146,8 +149,11 @@ function Denuncia() {
     <div className="container-login">
     <div className="wrap-login">
     <div className="login-form">
+    <Link to="/">
+   <IoIosArrowBack className="backdenuncia"/>
+   </Link>
         <div className='login-form-title'>
-          <h1>DENUNCIE A OCORRÊNCIA DE VIOLÊNCIA CONTRA A MULHER</h1>
+          <h1 id='denuncie'>DENUNCIE A OCORRÊNCIA DE VIOLÊNCIA CONTRA A MULHER</h1>
         </div>
         <div className='crime'>
           <fieldset className='login-form-title11'>Sobre o Crime</fieldset>

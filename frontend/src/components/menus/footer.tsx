@@ -40,7 +40,7 @@ function Footer() {
           <li><h3>REDES SOCIAIS</h3></li>
           
             <li>
-            <a id="ponto">.................</a>
+            
               <a href="faceboock.com"><BsFacebook/></a>
             <a id="ponto">...</a>
             <a href="https://www.instagram.com/carla_da_silva98/"><GrInstagram/></a>
@@ -50,22 +50,6 @@ function Footer() {
            <a href=""><BsTwitter/></a></li>
 
           </ul>
-        </div>
-      </div>
-
-      <div className="footerh-bottom">
-        <div className="socialh">
-          <a href="#">
-            <img src="images/facebook-icon.png" alt="" />
-          </a>
-
-          <a href="#">
-            <img src="images/twtter-icon.png" alt="" />
-          </a>
-
-          <a href="#">
-            <img src="images/dribbble-icon.png" alt="" />
-          </a>
         </div>
       </div>
     </div>

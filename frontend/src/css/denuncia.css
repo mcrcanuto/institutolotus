@@ -4,7 +4,26 @@
   box-sizing: border-box;
   font-family: verdana;
  }
+
  
+ @media screen and (max-width: 3000px), (min-width: 1024px){
+  #denuncie{
+    font-size: 4vh;
+  }
+  }
+
+  @media screen and (max-width: 1024px){
+    #denuncie{
+      font-size: 3vh;
+    }
+    }
+    @media screen and (max-width: 924px){
+      #denuncie{
+        font-size: 2.5vh;
+      }
+      }
+
+
  .container {
      width: 100%;
      margin: 0 auto;
