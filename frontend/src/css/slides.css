@@ -9,39 +9,101 @@
     margin: 0 auto;
   }
   
-  .title{
-    text-align: center;
-    margin: 24px;
-  }
-  
   .slide-item{
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  
-  /*swiper2*/
-  .container2{
-    width: 90vw;
-    top: 90vh;
-    left: 5vw;
-    position: absolute;
-  }
-  
-  .title2{
-    text-align: center;
-    margin: 24px;
-  }
-  
-  .slide-item2{
-    object-fit: cover;
-  }
-
-  image{
-    width: 52vw;
-  }
 
   div.swiper-button-prev,
-div.swiper-button-next {
-   color:rgb(0, 0, 0);
+  div.swiper-button-next {
+     color:rgb(0, 0, 0);
+  }
+  
+  
+
+  /*slide 2 feito com card então card 2 neeé*/
+  
+  
+ 
+
+  .react-multi-carousel-list  {
+    width: 88vw;
+    display: flex;
+    align-items: center;
+    left: 5vw;
+  }
+
+  
+
+  @media screen and (max-width: 3000px), (min-width: 1024px) {
+    
+    .cardswiper {
+      text-align: center;
+      font-family: Inter;
+      margin-left: 3vw;
+      margin-right: 3vw;
+      width: 79%;
+      max-width: 1440px;
+    }
+    #itemcardswiper{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    #cuide{
+  font-size: 3vh;
+  font-family: inter,arial;
+  font-weight: normal;
+  text-align: center;
 }
+#conheca{
+  color: #5C286F;
+  text-align: center;
+}
+#mantenha{
+  font-size: 3vh;
+  font-family: inter,arial;
+  font-weight: normal;
+  text-align: center;
+}
+  }
+
+
+      @media screen and (max-width: 1024px) {
+        .cardswiper {
+          text-align: center;
+          font-family: Inter;
+          margin-left: 3vw;
+          margin-right: 3vw;
+          width: 9%;
+        }
+    
+        .slide-item{
+          width: 100%;
+          height: 70%;
+          
+        }
+        
+        #cuide{
+          font-size: 3vh;
+          font-family: inter,arial;
+          font-weight: normal;
+          text-align: center;
+        }
+        #conheca{
+          color: #068399;
+          text-align: center;
+        }
+        #mantenha{
+          font-size: 3vh;
+          font-family: inter,arial;
+          font-weight: normal;
+          text-align: center;
+        }
+          }
+
+
+
+

@@ -1,61 +1,87 @@
 import "./../../css/slides.css"
 
-import {Swiper, SwiperSlide} from "swiper/react"
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 function Slide2(){
 
-
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1
+    }
+  };
   
-const data = [
-  {id: "1", image:"./../imgs/carousel/1.png"},
-  {id: "2", image:"./../imgs/carousel/2.png"},
-  {id: "3", image:"./../imgs/carousel/3.png"},
-  {id: "4", image:"./../imgs/carousel/4.png"},
-  {id: "5", image:"./../imgs/carousel/5.png"},
-  {id: "6", image:"./../imgs/carousel/6.png"},
-  {id: "7", image:"./../imgs/carousel/7.png"},
-  {id: "8", image:"./../imgs/carousel/8.png"},
-  {id: "8", image:"./../imgs/carousel/9.png"},
-]
+
 
 
 
   return(
-    <div className="container2" >
-      <p></p>
-      <p></p>
-      <p></p>
-      <p></p>
-      <p><br></br></p>
-      <p><br></br></p>
-      <p><br></br></p>
-      
-      <h1 className="frase">Cuide de você, cuide do seu corpo, cuide da sua beleza. Tudo o que você precisa está em nossa loja de 
-        cosméticos!<br></br>
-        No Instituto Lótus, todos os produtos são de procedência vegana, pois toda vida merece respeito!
-        
+    
+     <>
+      <h1 id="cuide">Cuide de si, cuide do seu corpo e realce a sua beleza. 
+      <br></br>
+      Na nossa loja de cosméticos, você encontrará tudo o que precisa!
       </h1>
-      <h1>CONHEÇA AS NOSSAS NOVIDADES </h1>
+
+<br></br>
+
+      <h1 id="conheca">CONHEÇA AS NOSSAS NOVIDADES </h1>
+      <br></br>
       
-      <Swiper
-      slidesPerView={3}
-      pagination={{clickable: true}}
-      navigation
-      loop={true}
-      >
-        {data.map( (item) => (
-          <SwiperSlide key={item.id} >
-            <img
-            src={item.image}
-            alt="Slider2"
-            className="slide-item2"
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-      <h1 className='frase'>Mantenha-se radiante o dia todo com as novidades da loja. 
+      <Carousel responsive={responsive}>
+  <div className="cardswiper">
+    <img src="./../imgs/carousel/1.png" className="img" alt="Base Bruna Tavares"></img>
+  </div>
+
+  <div className="cardswiper">
+  <img src="./../imgs/carousel/2.png" className="img" alt="Batom Payot"></img>
+  </div>
+
+  <div className="cardswiper">
+    <img src="./../imgs/carousel/3.png" className="img" alt="Batom Payot"></img>
+  </div>
+
+  <div className="cardswiper">
+  <img src="./../imgs/carousel/4.png" className="img" alt="Batom Payot"></img>
+  </div>
+
+  <div className="cardswiper">
+  <img src="./../imgs/carousel/5.png" className="img" alt="Batom Payot"></img>
+  </div>
+
+  <div className="cardswiper">
+  <img src="./../imgs/carousel/6.png" className="img" alt="Batom Payot"></img>
+  </div>
+
+  <div className="cardswiper">
+  <img src="./../imgs/carousel/7.png" className="img" alt="Batom Payot"></img>
+  </div>
+
+  <div className="cardswiper">
+  <img src="./../imgs/carousel/8.png" className="img" alt="Batom Payot"></img>
+  </div>
+
+  </Carousel>
+
+      <h1 id="mantenha">Mantenha-se radiante o dia todo com as novidades da loja. 
               <br></br>E comprando pelo WhatsApp, você ganha 10% de desconto na sua primeira compra!</h1>
-    </div>
+      <br></br>
+   </>
+
   )
 }
 

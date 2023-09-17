@@ -31,7 +31,7 @@ const [classOn, setClassOn] = useState(false);
               <Link to="/quemsomos">QUEM SOMOS</Link> 
               </li>
               <li>
-                <a href="/"><GrInstagram/>SIGA-NOS NO INSTAGRAM</a>  
+                <a href="/">SIGA-NOS NO INSTAGRAM</a>  
               </li>
             </ul>
           </nav>

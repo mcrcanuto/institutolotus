@@ -1,25 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
-  h1 {
-    margin: 1rem auto 4rem;
-    font-size: 5vh;
-    font-weight: bolder;
-    font-family: Inter, Arial;
-    color: #000;
-  }
-
-  h2{
-    font-family: Inter;
-    background-color: #272727;
-  }
    
   #nome{
-    font-size: 18px;
+    font-size: 3vh;
+    background-color: #DBC8EA; 
+    font-weight: normal;
   }
-  
-  .pbranco{
-    color: white;
-   
+  .frase{
+    background-color: transparent;
+    color: #272727;
+    font-size: 2.5vh;
+   }
+   .preco {
+    color:#5C286F;
+    font-size: 22px;
+    font-family: inter,arial;
+    font-weight: bolder;
+  }
+  #descricao{
+    font-size: 2vh;
+    font-weight: normal;
   }
   
   .product--image {
@@ -38,21 +38,12 @@
     width: 79%;
     max-width: 1440px;
   }
-  
-  .price {
-    color: grey;
-    font-size: 22px;
-  }
-  h2{
-    color:#DBC8EA;
-  }
-  
   .card button {
     border: none;
     outline: 0;
     padding: 15px;
     color: white;
-    background-color: #7e0097dc;
+    background-color: #5C286F;
     text-align: center;
     cursor: pointer;
     width: 100%;
@@ -70,11 +61,14 @@
     align-items: center;
     left: 5vw;
   }
- .frase{
-  background-color: transparent;
-  color: #272727;
-  font-size: 2.5vh;
- }
- .desconto{
+
+
+ #desconto{
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 99.1vw;
+  height: 90vh;
   width: 100%;
- }
+  height: 100%;
+  object-fit: cover;
+}
