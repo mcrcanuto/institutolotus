@@ -1,5 +1,6 @@
 const knex = require("../../database/database");
 const jwt = require("jsonwebtoken");
+const bcrypt = require('bcrypt');
 
 module.exports = {
     async pesquisarPoliciais(req, res) {
@@ -62,11 +63,14 @@ module.exports = {
 
     async criarPolicial(req, res) {
         try {
-            const {pol_nome, pol_sobrenome, pol_email, pol_cpf, pol_senha} = req.body;
+            const {pol_nome, pol_sobrenome, pol_email, pol_cpf, senha} = req.body;
 
             if (await knex("Polícia").where("pol_cpf", pol_cpf) != "") {
                 return res.status(401).json({msg : "Esse polícial já esta registrado"});
             }
+
+            const pol_senha = bcrypt.hashSync(senha, 10);
+
             await knex("Polícia").insert({
                     pol_nome,
                     pol_sobrenome,
@@ -102,7 +106,7 @@ module.exports = {
                         const policial = {nome : consult[0].pol_nome, sobrenome : consult[0].pol_sobrenome, email: consult[0].pol_email, pol_cpf: consult[0].pol_cpf}
                             
                         const token = jwt.sign( //criação de token
-                            user,
+                            policial,
                             "chave",
                             {expiresIn: '3h'}
                         );
@@ -128,17 +132,28 @@ module.exports = {
     async atualizarPolicial(req, res) {
         try {
             const {cpf} = req.params;
-            const {pol_nome, pol_sobrenome, pol_email, pol_cpf, pol_senha} = req.body;
+            const {pol_nome, pol_sobrenome, pol_email, pol_cpf, senha} = req.body;
 
             const consult = await knex("Polícia").where("pol_cpf", cpf);
             if(consult != "") {
-                await knex("Polícia").update({
-                    pol_nome,
-                    pol_sobrenome,
-                    pol_email,
-                    pol_cpf,
-                    pol_senha
-                }).where("pol_cpf", cpf);
+                if (senha) {
+                    const pol_senha = bcrypt.hashSync(senha, 10);
+                    await knex("Polícia").update({
+                        pol_nome,
+                        pol_sobrenome,
+                        pol_email,
+                        pol_cpf,
+                        pol_senha
+                    }).where("pol_cpf", cpf);
+                }
+                else {
+                    await knex("Polícia").update({
+                        pol_nome,
+                        pol_sobrenome,
+                        pol_email,
+                        pol_cpf
+                    }).where("pol_cpf", cpf); 
+                }
 
                 const policial = {nome : consult[0].pol_nome, sobrenome : consult[0].pol_sobrenome, email: consult[0].pol_email, pol_cpf: consult[0].pol_cpf}
                 
@@ -149,7 +164,7 @@ module.exports = {
                 );
                 return res.status(201).json({token : token});
             }
-            return res.status(401).json({msg : "Este polícial não está registrado no sistema"});
+            else return res.status(401).json({msg : "Este polícial não está registrado no sistema"});
         }
         catch(error) {
             return res.status(400).json({error : error.message});

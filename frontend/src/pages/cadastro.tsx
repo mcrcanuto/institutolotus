@@ -28,7 +28,7 @@ function Cadastro () {
       pol_sobrenome : cadInfo.sobreNome,
       pol_email : cadInfo.email,
       pol_cpf : cadInfo.cpf,
-      pol_senha : cadInfo.senha
+      senha : cadInfo.senha
     }).then((res) => {
       localStorage.setItem('token', res.data.token); //coloca o item dentro do localStorage
       navigate("/perfilpolicial"); //navega para outra página
@@ -65,7 +65,7 @@ function Cadastro () {
     <div className="wrap-input">
     <input className='input' placeholder="Cpf" type="text" required  
     pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2})|(\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2})"
-    onChange={handleChange} name="cpf" value={cadInfo.cpf}/>
+    onChange={handleChange} name="cpf" maxLength={11} value={cadInfo.cpf}/>
     <span className="focus-input" ></span>
     </div>
 
