@@ -1,0 +1,144 @@
+#titulo-denuncia{
+    text-align: center;
+    font-family: inter,arial;
+    color: #000000;
+    font-size: 6vh;
+    font-weight: bolder;
+}
+
+#titulo-agressor{
+    text-align: center;
+    font-family: inter,arial;
+    color: #000000;
+    font-size: 4vh;
+    font-weight: normal;
+}
+
+
+#titulo-c-a{
+    margin-left: 8%;
+    font-family: inter,arial;
+    color: #5C286F;
+    font-size: 5vh;
+    font-weight: 500;
+    
+}
+
+#tipocoment{
+    font-size: 3vh;
+    margin-left: 2%;
+    margin-top: 1%;
+    font-weight: 200;
+    font-family: inter,arial;
+    color: #30113b;
+    font-weight: bolder
+}
+#data{
+    font-size: 2vh;
+    margin-left: 2%;
+    margin-top: 1%;
+    font-weight: 200;
+    font-family: inter,arial;
+    color: #08000a;
+    font-weight: bold;
+  }
+#coment{
+    font-size: 2.5vh;
+    margin-left: 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-family: inter,arial;
+}
+
+
+#TelaStatus {
+    width: 85%;
+    margin-left: 8%;
+    box-shadow: 0 5px 10px 0px rgba(141, 125, 125, 0.76);
+    
+  }
+
+#divcomentario{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-bottom: rgba(0, 0, 0, 0.336) 1px solid;
+  }
+
+
+  #label-tipo-comentario{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 8%;
+    font-family: inter,arial;
+    font-size: 2.5vh;
+  }
+  #select-tipo-comentario{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 0.2%;
+    border-bottom: rgba(0, 0, 0, 0.336) 2px solid;
+  }
+
+
+
+  .mb-5 {
+    margin-bottom: 1rem!important;
+    width: 100%;
+    
+}
+
+.input-group-comentario {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    font-size: 15px;
+
+}
+#botaocomentar{
+    width:5vw;
+    border: none;
+    background-color:#08000a;
+    color: aliceblue;
+    font-size: 4.5vh;
+    height: 3.5vw;
+    cursor: pointer;
+
+   }
+   #botaocomentar:hover{
+    width:5vw;
+    border: none;
+    background-color:#30113b;
+    color: aliceblue;
+    font-size: 4.5vh;
+    height: 3.5vw;
+    cursor: pointer;
+
+   }
+
+
+   .form-comentario{  
+    color: black;
+    line-height: 1.2;
+    border: rebeccapurple;
+    display: block;
+    width: 75%;
+    margin-left: 8%;
+    height: 3.5vw;
+    background-color:rgba(211, 210, 210, 0.76);
+    padding: 0 5px;
+    font-size: 2.5vh;
+    border-bottom: 2px solid #adadad;
+    margin-bottom: 37px;
+  }
+   .markdown {
+    --ifm-h1-vertical-rhythm-top: 3;
+    --ifm-h2-vertical-rhythm-top: 2;
+    --ifm-h3-vertical-rhythm-top: 1.5;
+    --ifm-heading-vertical-rhythm-top: 1.25;
+    --ifm-h1-vertical-rhythm-bottom: 1.25;
+    --ifm-heading-vertical-rhythm-bottom: 1;
+}

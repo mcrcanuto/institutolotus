@@ -2,10 +2,10 @@ import React from "react";
 import Footer from "../components/menus/footer";
 import Menu from "../components/menus/Menu";
 import Submenu from "../components/menus/submenu";
-import "./../css/status.css"
+import "./../css/meuspedidos.css"
 
 
-function Status(){
+function MeusPedidos(){
 return(
 
 
@@ -28,4 +28,4 @@ return(
 }
 
 
-export default Status;
+export default MeusPedidos;
