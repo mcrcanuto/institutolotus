@@ -1,13 +1,78 @@
-import React from "react";
+import React, { ChangeEvent, useEffect, useState } from "react";
 import MenuPolicial from "../components/menus/MenuPolicial"
 import FooterPolicial from "../components/menus/FooterPolicial";
 import "./../css/atualizar.css"
 import "./../css/geral.css"
 
 import {LuSendHorizonal} from "react-icons/lu"
+import { useNavigate, useParams } from "react-router-dom";
+import axios from "axios";
+import decode from "../components/codigos/decoder";
 
 
 function Atualizar(){
+  const {protocolo} = useParams(); //parâmetro contento protocolo da denúncia
+  const navigate = useNavigate(); // uso de navegador
+  const [comentarios, setComentarios] = useState([]); // lista com os comentários registrados
+  const [policial, setPolicial] = useState(decode(localStorage.getItem("token"))); //policial pelo token
+  const [nComentario, setNCom] = useState({ 
+    Polícia_pol_cpf : "",
+    Denúncia_den_protocolo : "",
+    aco_status : "Denúncia Visualizada",
+    aco_comentario : "",
+  }); // Objeto para criação de um comentário novo
+
+  useEffect(() => {
+    if(protocolo) {
+      setNCom(prev => ({...prev, Denúncia_den_protocolo : protocolo}));
+      getComentarios();
+    }
+  }, 
+  [protocolo]);
+
+  useEffect(() => {
+    if(policial.pol_cpf) setNCom(prev => ({...prev, Polícia_pol_cpf : policial.pol_cpf}));
+  }, [policial])
+
+  async function getComentarios() {
+    await axios.get(`http://localhost:3344/acompanhamento/denuncia/${protocolo}`).then((res) => {
+      setComentarios(res.data);
+    }).catch((error) => {
+      console.log(error);
+    });
+  }
+
+  async function postComentario() {
+    console.log(nComentario)
+    await axios.post(`http://localhost:3344/acompanhamento`, {
+      Polícia_pol_cpf : nComentario.Polícia_pol_cpf,
+      Denúncia_den_protocolo : nComentario.Denúncia_den_protocolo,
+      aco_status : nComentario.aco_status,
+      aco_comentario : nComentario.aco_comentario
+    }).then((res) => {
+      navigate(0);
+    }).catch((error) => {
+      console.log(error);
+    })
+  }
+
+  const handleChange = (e:ChangeEvent<HTMLInputElement>) => {
+    setNCom(prev => ({...prev, [e.target.name] : e.target.value}));
+  }
+
+  const renderComentarios = comentarios.map(item => {
+    return <div id="divcomentario" key={item.aco_id}>
+
+    <p id="tipocoment">{item.aco_status}</p>
+    <p id="data">Data:28/09/2023</p>
+   
+    <p id="coment">
+      {item.aco_comentario}
+    </p>
+    </div>
+  })
+
+
 return(
 
 
@@ -18,7 +83,7 @@ return(
 
     <br></br>
 
-<p id="titulo-denuncia">Denúncia de Violência Física - X54POA54</p>
+<p id="titulo-denuncia">Denúncia de Violência Física - {protocolo}</p>
 <p id="titulo-agressor">Agressor: Zé da Silva</p>
 
   <br></br><br></br>
@@ -27,44 +92,15 @@ return(
 
 <div id="TelaStatus" >
 
-
-    <div id="divcomentario">
-
-        <p id="tipocoment">Denúncia em Investigação</p>
-        <p id="data">Data:28/09/2023</p>
-       
-    <p id="coment">Você deve estar se perguntando por que não conseguiu encontrar 
-nenhum produto na nossa loja, certo? Bem, a razão é simples e muito especial...
-Instituto Lótus é uma plataforma dedicada a proteger e 
-apoiar mulheres que enfrentam situações difíceis por causa da violência de gênero em Volta Redonda - RJ. Nosso disfarce 
-como uma plataforma de cosméticos é uma medida especial para garantir a segurança daqueles 
-que nos procuram, especialmente as mulheres que 
-vivem sob o mesmo teto que seus agressores.
-</p>
-
-</div>
-<div id="divcomentario">
-        <p id="tipocoment">Denúncia Visualizada</p>
-        <p id="data">Data:10/09/2023</p>
-       
-    <p id="coment">Você deve estar se perguntando por que não conseguiu encontrar 
-nenhum produto na nossa loja, certo? Bem, a razão é simples e muito especial...
-Instituto Lótus é uma plataforma dedicada a proteger e 
-apoiar mulheres que enfrentam situações difíceis por causa da violência de gênero em Volta Redonda - RJ. Nosso disfarce 
-como uma plataforma de cosméticos é uma medida especial para garantir a segurança daqueles 
-que nos procuram, especialmente as mulheres que 
-vivem sob o mesmo teto que seus agressores.
-</p>
-
-</div>
+  {(comentarios.length > 0) ? renderComentarios : <h1>Essa denúncia não possuí comentários</h1>}
 
 </div>
 
 
 <br></br><br></br><br></br><br></br>
-<form>
+<div>
 <label id="label-tipo-comentario">Escolha um tipo de comentário:</label>
-  <select name="Comentários" id="select-tipo-comentario" required>
+  <select id="select-tipo-comentario" onChange={handleChange} name="aco_status" value={nComentario.aco_status} required>
   <option value="Denúncia Visualizada">Denúncia Visualizada</option>
   <option value="Denúncia em investigação">Denúncia em investigação</option>
   <option value="Denúncia Finalizada">Denúncia Finalizada</option>
@@ -75,12 +111,12 @@ vivem sob o mesmo teto que seus agressores.
 <div className="input-group-comentario mb-5">
     
   <textarea  className="form-comentario" placeholder="Escrever comentário" 
-  aria-label="Recipient's username" aria-describedby="basic-addon2"/>
+  aria-label="Recipient's username" aria-describedby="basic-addon2" name="aco_comentario" onChange={handleChange}/>
   <div className="input-group-append">
-  <button id="botaocomentar"><LuSendHorizonal/></button>
+  <button id="botaocomentar" onClick={postComentario}><LuSendHorizonal/></button>
   </div>
   </div>
-  </form>
+  </div>
 
 
 

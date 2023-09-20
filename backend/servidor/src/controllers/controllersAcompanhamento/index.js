@@ -43,14 +43,14 @@ module.exports = {
 
     async criarAcompanhamento(req, res) {
         try {
-            const {Polícia_pol_distintivo, Denúncia_den_protocolo, aco_status, aco_comentario} = req.body;
+            const {Polícia_pol_cpf, Denúncia_den_protocolo, aco_status, aco_comentario} = req.body;
 
-            const consult = await knex("Polícia").where("pol_distintivo", Polícia_pol_distintivo);
+            const consult = await knex("Polícia").where("pol_cpf", Polícia_pol_cpf);
             if (consult != "") {
                 const pol_nome = consult[0].pol_nome;
                 if (await knex("Denúncia").where("den_protocolo", Denúncia_den_protocolo) != "") {
                     await knex("Acompanhamento").insert({
-                        Polícia_pol_distintivo,
+                        Polícia_pol_cpf,
                         Denúncia_den_protocolo,
                         aco_status,
                         aco_comentario,

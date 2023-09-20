@@ -39,7 +39,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         <Route Component={ConfirmaSaida} path="/quermesmosair?"/>
         <Route Component={ConfirmaExcluirConta} path="/querexcluirsuaconta?"/>
         <Route Component={MeusPedidos} path="/meuspedidos"/>
-        <Route Component={Atualizar} path="/atualizarstatus"/>
+        <Route Component={Atualizar} path="/atualizarstatus/:protocolo"/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
