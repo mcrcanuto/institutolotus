@@ -26,25 +26,30 @@ function Menu() {
           <div className="menulat">
             
       <ul>
-          <li className="marginli">  
+
+      <li className="marginli">
+          <Link to="/meuspedidos">
           <button id="pedidosm">
           <BiClipboard className="iconempedido" />Meus Pedidos
           </button>
+          </Link>
           </li>
 
+
           <li className="marginli">
-          <Link to="/denuncia">
+          <Link to="/comprar">
           <button id="pedidosf">
           <TiShoppingCart className="iconefpedido" />Fazer Pedido
           </button>
           </Link>
           </li>
+
       </ul>
-          </div>
+          </div> 
       </header>
     </>
-  );
-}
+  )
+  }
 
 
 export default Menu;

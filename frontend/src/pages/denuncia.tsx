@@ -36,7 +36,8 @@ function Denuncia() {
     agr_possui_porte : "",
     agr_sexo : "",
     agr_tipo_fisico : "",
-    agr_tipo_cabelo : ""
+    agr_tipo_cabelo : "",
+    Denuncia_den_protocolo : ""
   });
 
   const handleChange = (e:ChangeEvent<HTMLInputElement>) => { //evento de mudança para informações de denúncia
@@ -75,13 +76,13 @@ function Denuncia() {
       agr_possui_porte : "",
       agr_sexo : "",
       agr_tipo_fisico : "",
-      agr_tipo_cabelo : ""
+      agr_tipo_cabelo : "",
+      Denuncia_den_protocolo : ""
     })
   }
 
   function denunciarOprt() {
     postDenuncia();
-    postAgressor();
   }
 
   async function postDenuncia() {
@@ -108,20 +109,10 @@ function Denuncia() {
     await axios.post(`http://localhost:3344/agressor`, { //criar agressors
       agr_endereco : agressorInfo.agr_endereco,
       agr_idade : agressorInfo.agr_idade,
-      agr_nome : agressorInfo.agr_nome
+      agr_nome : agressorInfo.agr_nome,
+      Denuncia_den_protocolo : agressorInfo.Denuncia_den_protocolo
     }).then((res) => {
-      setkeys(prev => ({...prev, idAgressor : res.data.id, fazerRelacionamento : true}));
-    }).catch((error) => {
-      console.log(error);
-    })
-  }
-
-  async function postRelacionamento() { //cria um relacionamento entre a denúncia e o agressor
-    await axios.post(`http://localhost:3344/relacionamento`, {
-      protocolo : keys.protocoloDenuncia, 
-      agr_id : keys.idAgressor
-    }).then((res) => {
-      alert(res.data.msg);
+      alert("OIiiii")
     }).catch((error) => {
       console.log(error);
     })
@@ -139,8 +130,8 @@ function Denuncia() {
 
   useEffect(() => {
     if(keys.fazerRelacionamento) {
+      postAgressor();
       postImage();
-      postRelacionamento();
     }
   }, [keys.fazerRelacionamento])
 

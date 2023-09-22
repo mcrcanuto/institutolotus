@@ -46,6 +46,7 @@ module.exports = {
             const {Polícia_pol_cpf, Denúncia_den_protocolo, aco_status, aco_comentario} = req.body;
 
             const consult = await knex("Polícia").where("pol_cpf", Polícia_pol_cpf);
+            const aco_date = new Date();
             if (consult != "") {
                 const pol_nome = consult[0].pol_nome;
                 if (await knex("Denúncia").where("den_protocolo", Denúncia_den_protocolo) != "") {
@@ -53,6 +54,7 @@ module.exports = {
                         Polícia_pol_cpf,
                         Denúncia_den_protocolo,
                         aco_status,
+                        aco_data : aco_date,
                         aco_comentario,
                         pol_nome
                     });

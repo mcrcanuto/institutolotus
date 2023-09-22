@@ -15,7 +15,19 @@ return(
     <Submenu/>
     </React.Fragment>
 
-<p>oiiiiii statussss</p>
+
+    <div className="Container">
+    <div className="container-login">
+    <div className="wrap-login">
+      <h3>Insira aqui o protocolo da sua denúncia</h3>
+      <input type="text" />
+    </div>
+    </div>
+    </div>
+   
+    <React.Fragment>
+    <Footer/>
+    </React.Fragment>
 
     
 

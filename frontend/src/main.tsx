@@ -12,6 +12,7 @@ import Cadastro from "./pages/cadastro.tsx"
 import EditarPerfil from "./pages/editarperfil.tsx"
 import ConfirmaExcluirConta from './pages/ConfirmaExcluirConta.tsx'
 import MeusPedidos from "./pages/meuspedidos.tsx"
+import LojasProximas from "./pages/lojasproximas.tsx"
 import Atualizar from "./pages/atualizarstatus.tsx"
 import "./css/geral.css"
 
@@ -39,6 +40,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         <Route Component={ConfirmaSaida} path="/quermesmosair?"/>
         <Route Component={ConfirmaExcluirConta} path="/querexcluirsuaconta?"/>
         <Route Component={MeusPedidos} path="/meuspedidos"/>
+        <Route Component={LojasProximas} path="/lojasproximas"/>
         <Route Component={Atualizar} path="/atualizarstatus/:protocolo"/>
       </Routes>
     </BrowserRouter>

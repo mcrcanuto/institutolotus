@@ -24,10 +24,25 @@ module.exports = {
         }
     },
 
+    async procurarAgressorProtocolo(req, res) {
+        try {
+            const {protocolo} = req.params;
+
+            const result = await knex("Agressor").where("Denuncia_den_protocolo", protocolo);
+            if (result  != "") return res.status(201).json(result);
+            return res.status(401).json({msg : "Essa Denúncia não está registrada no sistema."});
+
+        }
+        catch(error) {
+            return res.status(400).json({error : error.message})
+        }
+    },
+
     async criarAgressor(req, res) {
         try {
             const {agr_nome, agr_idade, agr_sexo, agr_estatura, agr_tipo_fisico, agr_cor_pele, agr_cor_cabelo, 
-                agr_cor_olhos, agr_tipo_cabelo, agr_carac_espec, agr_possui_porte, agr_possibili_fuga, agr_endereco} = req.body;
+                agr_cor_olhos, agr_tipo_cabelo, agr_carac_espec, agr_possui_porte, agr_possibili_fuga, agr_endereco,
+            Denuncia_den_protocolo} = req.body;
 
             let digitos = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 
@@ -59,7 +74,8 @@ module.exports = {
                 agr_possui_porte,
                 agr_sexo,
                 agr_tipo_fisico,
-                agr_tipo_cabelo
+                agr_tipo_cabelo,
+                Denuncia_den_protocolo
             });
 
             return res.status(201).json({id : agr_id})

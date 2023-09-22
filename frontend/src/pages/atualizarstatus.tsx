@@ -8,6 +8,7 @@ import {LuSendHorizonal} from "react-icons/lu"
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import decode from "../components/codigos/decoder";
+import dateDisplayer from "../components/codigos/dataDisplayer";
 
 
 function Atualizar(){
@@ -36,7 +37,10 @@ function Atualizar(){
 
   async function getComentarios() {
     await axios.get(`http://localhost:3344/acompanhamento/denuncia/${protocolo}`).then((res) => {
-      setComentarios(res.data);
+      let sorted = res.data.sort(function(a, b) {
+        return b.aco_data - a.aco_data;
+    })
+    setComentarios(sorted);
     }).catch((error) => {
       console.log(error);
     });
@@ -64,7 +68,7 @@ function Atualizar(){
     return <div id="divcomentario" key={item.aco_id}>
 
     <p id="tipocoment">{item.aco_status}</p>
-    <p id="data">Data:28/09/2023</p>
+    <p id="data">{dateDisplayer(item.aco_data)}</p>
    
     <p id="coment">
       {item.aco_comentario}

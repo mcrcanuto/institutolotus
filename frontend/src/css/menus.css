@@ -249,16 +249,16 @@ header nav ul li a{
   margin-top: -6.5vh;
 }
 
-  #pedidosm{
+  .pedidosm{
     background-color:#DBC8EA ;
     border-width: 0px;
     font-family: Comfortaa, Inter, Arial;
-    margin-left: 435%;
-  cursor: pointer;
+    margin-left: 5%;
+   cursor: pointer;
     width: 12vw;
     font-size: 2.5vh;
   }
-  #pedidosf{
+  .pedidosf{
     background-color:#DBC8EA ;
     border-width: 0px;
     font-family: Comfortaa, Inter, Arial;

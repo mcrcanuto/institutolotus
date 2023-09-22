@@ -14,7 +14,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema InstituloLotus
 -- -----------------------------------------------------
-drop database InstituloLotus;
+drop database if exists InstituloLotus;
 CREATE SCHEMA IF NOT EXISTS `InstituloLotus` DEFAULT CHARACTER SET utf8 ;
 USE `InstituloLotus` ;
 
@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS `InstituloLotus`.`Denúncia` (
   `den_frequencia` VARCHAR(45) NOT NULL,
   `den_data_ocorrencia` VARCHAR(10) NOT NULL,
   `den_hora_ocorrencia` VARCHAR(5) NOT NULL,
-  `den_data_denuncia` VARCHAR(10) NOT NULL,
+  `den_data_denuncia` DATE NOT NULL,
   `den_imagem` VARCHAR(15) NULL,
   `den_local` VARCHAR(100) NOT NULL,
   `den_cep` NVARCHAR(8) NOT NULL,
@@ -63,6 +63,7 @@ CREATE TABLE IF NOT EXISTS `InstituloLotus`.`Acompanhamento` (
   `aco_id` INT PRIMARY KEY AUTO_INCREMENT,
   `pol_nome` VARCHAR(45) NULL,
   `aco_status` VARCHAR(200) NULL,
+  `aco_data` DATE NULL,
   `aco_comentario` VARCHAR(500) NULL)
 ENGINE = InnoDB;
 
@@ -84,22 +85,11 @@ CREATE TABLE IF NOT EXISTS `InstituloLotus`.`Agressor` (
   `agr_carac_espec` VARCHAR(45) NULL,
   `agr_possui_porte` VARCHAR(45) NULL,
   `agr_possibili_fuga` VARCHAR(45) NULL,
-  `agr_endereco` VARCHAR(45) NULL)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `InstituloLotus`.`Denúncia_has_Agressor`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `InstituloLotus`.`Denúncia_has_Agressor` (
-  `Denúncia_den_protocolo` VARCHAR(8) NOT NULL REFERENCES `InstituloLotus`.`Denúncia` (`den_protocolo`) 
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  `Agressor_agr_id` VARCHAR(5) NOT NULL REFERENCES `InstituloLotus`.`Agressor` (`agr_id`)
+  `agr_endereco` VARCHAR(45) NULL,
+  `Denuncia_den_protocolo` VARCHAR(8) NOT NULL REFERENCES `InstituloLotus`.`Denúncia` (`den_protocolo`) 
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
-
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;

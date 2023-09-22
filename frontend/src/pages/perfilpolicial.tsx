@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import MenuPolicial from "../components/menus/MenuPolicial"
 import FooterPolicial from "../components/menus/FooterPolicial"
 import "./../css/perfilpolicial.css"
 import "./../css/geral.css"
 import {FiSearch} from "react-icons/fi"
 import {Link} from "react-router-dom"
+import decode from "../components/codigos/decoder";
 
 
 
 function PerfilPolicial(){
+  const [policial, setPolicial] = useState(decode(localStorage.getItem("token")));
+
 return(
 <>
 
@@ -20,7 +23,7 @@ return(
 
 <br></br><br></br>
     <div className="usuario">
-  <p id="conectado">Conectado(a) como </p>
+  <p id="conectado">Conectado(a) como {policial.nome}</p>
 </div>
 <br></br>
 

@@ -55,7 +55,9 @@ function EditarPerfil () {
           senha : polUpdate.senha
         }
       }
-        await axios.put(`http://localhost:3344/policial/${policial.pol_cpf}`, data).then((res) => {
+        await axios.put(`http://localhost:3344/policial/${policial.pol_cpf}`, data, {headers : {
+          Authorization : "Bearer " + localStorage.getItem("token")
+        }}).then((res) => {
           alert(res.data.token);
           localStorage.setItem("token", res.data.token);
         }).catch((error) => {
@@ -64,7 +66,8 @@ function EditarPerfil () {
     }
 
     async function queryPolicial() {
-      await axios.get(`http://localhost:3344/policial/cpf/${policial.pol_cpf}`).then((res) => {
+      await axios.get(`http://localhost:3344/policial/cpf/${policial.pol_cpf}`, {headers : {
+        Authorization : "Bearer " + localStorage.getItem("token")}}).then((res) => {
         setGet(res.data);
       }).catch((error) => {
         console.log(error);

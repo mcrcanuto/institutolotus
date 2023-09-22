@@ -57,7 +57,7 @@ module.exports =  {
             const den_protocolo = protocolo;
             
             const data = new Date();
-            const den_data_denuncia = data.getDate() + "/" + (data.getMonth() + 1) + "/" + data.getFullYear();
+            const den_data_denuncia = data;
             
             await knex("Denúncia").insert({
                 den_denunciante,

@@ -1,5 +1,4 @@
 import  {useState} from 'react';
-import { GrInstagram } from 'react-icons/gr';
 import '../../css/menus.css';
 import {Link} from "react-router-dom"
 
@@ -25,8 +24,12 @@ const [classOn, setClassOn] = useState(false);
               <Link to="/produtos">PRODUTOS</Link>
               </li>
               <li>
-                <a href="/">LOJAS PRÓXIMAS</a>
-              </li>
+                <Link to="/lojasproximas">
+                LOJAS PRÓXIMAS
+                </Link>
+                </li>
+
+
               <li>
               <Link to="/quemsomos">QUEM SOMOS</Link> 
               </li>
