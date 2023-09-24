@@ -31,6 +31,7 @@ CREATE TABLE IF NOT EXISTS `InstituloLotus`.`Denúncia` (
   `den_data_denuncia` DATE NOT NULL,
   `den_imagem` VARCHAR(15) NULL,
   `den_local` VARCHAR(100) NOT NULL,
+  `den_status` VARCHAR(20) DEFAULT "Aberta",
   `den_cep` NVARCHAR(8) NOT NULL,
   `den_ponto_ref` VARCHAR(55) NOT NULL,
   `den_carac_local` VARCHAR(100) NOT NULL

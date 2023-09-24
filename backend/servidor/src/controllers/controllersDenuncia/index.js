@@ -17,7 +17,7 @@ const uploadDenuncia = multer({storage : storageDenuncia});
 module.exports =  {
     async procurarDenuncias(req, res) {   
         try {
-            const result = await knex("Denúncia");
+            const result = await knex("Denúncia").join("Agressor", "den_protocolo", "Denuncia_den_protocolo");
             return res.status(201).json(result);
         }
         catch(error) {
@@ -29,7 +29,7 @@ module.exports =  {
         try {
             const {protocolo} = req.params;
 
-            const result = await knex("Denúncia").where("den_protocolo", protocolo);
+            const result = await knex("Denúncia").where("den_protocolo", protocolo).join("Agressor", "den_protocolo", "Denuncia_den_protocolo");
             if(result) return res.status(201).json(result);
             return res.status(401).json({msg : "Não existe denúncia com esse protocolo"});
         }

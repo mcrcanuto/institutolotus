@@ -37,7 +37,6 @@ function Denuncia() {
     agr_sexo : "",
     agr_tipo_fisico : "",
     agr_tipo_cabelo : "",
-    Denuncia_den_protocolo : ""
   });
 
   const handleChange = (e:ChangeEvent<HTMLInputElement>) => { //evento de mudança para informações de denúncia
@@ -77,7 +76,6 @@ function Denuncia() {
       agr_sexo : "",
       agr_tipo_fisico : "",
       agr_tipo_cabelo : "",
-      Denuncia_den_protocolo : ""
     })
   }
 
@@ -99,7 +97,7 @@ function Denuncia() {
       den_data_ocorrencia : denunciaInfo.den_data_ocorrencia
     }).then((res) => {
       localStorage.setItem("denuncia", res.data.protocolo); //Guardar protocolo denúncia no localStorage
-      setkeys(prev => ({...prev, protocoloDenuncia : res.data.protocolo}));
+      setkeys(prev => ({...prev, protocoloDenuncia : res.data.protocolo, fazerRelacionamento : true}));
     }).catch((error) => {
       console.log(error);
     })
@@ -110,7 +108,7 @@ function Denuncia() {
       agr_endereco : agressorInfo.agr_endereco,
       agr_idade : agressorInfo.agr_idade,
       agr_nome : agressorInfo.agr_nome,
-      Denuncia_den_protocolo : agressorInfo.Denuncia_den_protocolo
+      Denuncia_den_protocolo : localStorage.getItem("denuncia")
     }).then((res) => {
       alert("OIiiii")
     }).catch((error) => {
@@ -132,6 +130,7 @@ function Denuncia() {
     if(keys.fazerRelacionamento) {
       postAgressor();
       postImage();
+      setkeys(prev => ({...prev, fazerRelacionamento : false}));
     }
   }, [keys.fazerRelacionamento])
 

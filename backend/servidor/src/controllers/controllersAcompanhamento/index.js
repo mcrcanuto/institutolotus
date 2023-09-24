@@ -58,6 +58,12 @@ module.exports = {
                         aco_comentario,
                         pol_nome
                     });
+
+                    if(aco_status == "Denúncia Finalizada") {
+                        await knex("Denúncia").update({
+                           den_status : "Finalizada"
+                        }).where("den_protocolo", Denúncia_den_protocolo);
+                    }
                     return res.status(201).json({msg : "Acompanhamento enviado"});
                 }
                 return res.status(401).json({msg : "Não existe essa denúncia no banco de dados"});

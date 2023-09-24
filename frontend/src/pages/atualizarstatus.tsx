@@ -15,6 +15,7 @@ function Atualizar(){
   const {protocolo} = useParams(); //parâmetro contento protocolo da denúncia
   const navigate = useNavigate(); // uso de navegador
   const [comentarios, setComentarios] = useState([]); // lista com os comentários registrados
+  const [denuncia, setDenuncia] = useState([]); // lista com a denúncia
   const [policial, setPolicial] = useState(decode(localStorage.getItem("token"))); //policial pelo token
   const [nComentario, setNCom] = useState({ 
     Polícia_pol_cpf : "",
@@ -27,6 +28,7 @@ function Atualizar(){
     if(protocolo) {
       setNCom(prev => ({...prev, Denúncia_den_protocolo : protocolo}));
       getComentarios();
+      getDenuncia();
     }
   }, 
   [protocolo]);
@@ -44,6 +46,14 @@ function Atualizar(){
     }).catch((error) => {
       console.log(error);
     });
+  }
+
+  async function getDenuncia() {
+    await axios.get(`http://localhost:3344/denuncia/protocolo/${protocolo}`).then((res) => {
+      setDenuncia(res.data[0]); 
+    }).catch((error) => {
+      console.log(error);
+    }); 
   }
 
   async function postComentario() {
@@ -87,8 +97,8 @@ return(
 
     <br></br>
 
-<p id="titulo-denuncia">Denúncia de Violência Física - {protocolo}</p>
-<p id="titulo-agressor">Agressor: Zé da Silva</p>
+<p id="titulo-denuncia">{denuncia.den_violencia} - {protocolo}</p>
+<p id="titulo-agressor">Agressor: {denuncia.agr_nome}</p>
 
   <br></br><br></br>
 
