@@ -97,6 +97,7 @@ function Denuncia() {
       den_data_ocorrencia : denunciaInfo.den_data_ocorrencia
     }).then((res) => {
       localStorage.setItem("denuncia", res.data.protocolo); //Guardar protocolo denúncia no localStorage
+      navigate("/protocolo"); //navega para outra página
       setkeys(prev => ({...prev, protocoloDenuncia : res.data.protocolo, fazerRelacionamento : true}));
     }).catch((error) => {
       console.log(error);
