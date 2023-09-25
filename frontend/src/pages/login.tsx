@@ -46,12 +46,12 @@ function Login() {
     </span>
     
     <div className="wrap-input">
-    <input className='input' type="email" onChange={handleChange} name="email"/>
-    <span className="focus-input" data-placeholder="Email"></span>
+    <input className='input' type="email" onChange={handleChange} name="email" placeholder="Email"/>
+    <span className="focus-input" ></span>
     </div>
     <div className="wrap-input">
-    <input className='input'type="password"  onChange={handleChange} name="senha"/>
-    <span className="focus-input" data-placeholder="Password"></span>
+    <input className='input'type="password"  onChange={handleChange} name="senha" placeholder="Senha"/>
+    <span className="focus-input" ></span>
     </div>
 
   <div className="container-login-form-btn">

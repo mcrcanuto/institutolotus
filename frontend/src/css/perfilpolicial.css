@@ -132,7 +132,7 @@ div {
   }
 
   .row {
-    height: 50vh;
+    height: 30vh;
     overflow-y: scroll;
   }
 
@@ -252,6 +252,7 @@ div {
     color: aliceblue;
     font-family: inter,arial;
     font-weight: 200;
+    text-align: center;
 }
   .den-andamento{
     -webkit-box-shadow: 0 4px 6px -6px #222;
@@ -317,6 +318,7 @@ div {
   color: aliceblue;
   font-family: inter,arial;
   font-weight: 200;
+  text-align: center;
 }
 .den-finalizada{
     -webkit-box-shadow: 0 4px 6px -6px #222;

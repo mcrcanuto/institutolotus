@@ -15,6 +15,7 @@ import MeusPedidos from "./pages/meuspedidos.tsx"
 import LojasProximas from "./pages/lojasproximas.tsx"
 import Atualizar from "./pages/atualizarstatus.tsx"
 import Protocolo from "./pages/protocolo.tsx"
+import Status from "./pages/status.tsx"
 import "./css/geral.css"
 
 import {register} from "swiper/element/bundle"
@@ -44,6 +45,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         <Route Component={LojasProximas} path="/lojasproximas"/>
         <Route Component={Atualizar} path="/atualizarstatus/:protocolo"/>
         <Route Component={Protocolo} path="/protocolo"/>
+        <Route Component={Status} path="/status"/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

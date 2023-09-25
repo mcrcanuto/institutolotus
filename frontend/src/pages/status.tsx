@@ -17,7 +17,9 @@ return(
 
 <p>oiiiiii statussss</p>
 
-    
+<React.Fragment>
+    <Footer/>
+    </React.Fragment>
 
 </>
        

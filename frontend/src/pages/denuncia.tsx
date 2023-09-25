@@ -164,7 +164,7 @@ function Denuncia() {
             <input className='input' type="text" onChange={handleChange} name="den_violencia" value={denunciaInfo.den_violencia} placeholder="Tipos de violência" required list='violencia'/>
             <span className="focus-input"></span>
             <datalist id='violencia'>
-              <option className='tipoViolencia' value="Violência física (espancamento, tortura e outros tipos de agressão física)"></option>
+              <option className='tipoViolencia' value="Violência física"></option>
               <option className='tipoViolencia' value="Violência psicológica (ameaça, manipulação, ridicularização, humilhação...)"></option>
               <option className='tipoViolencia' value="Violência sexual (estupro, impedir uso de contraceptivos, forçar aborto...)"></option>
               <option className='tipoViolencia' value="Violência patrimonial (controle do dinheiro, furto, extorsão, estelionato...)"></option>
