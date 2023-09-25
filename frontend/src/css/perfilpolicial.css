@@ -130,7 +130,11 @@ div {
     width: 50%;
     padding: 25px;
   }
-  
+
+  .row {
+    height: 50vh;
+    overflow-y: scroll;
+  }
 
   .rolarpolicial:after {
     content: "";

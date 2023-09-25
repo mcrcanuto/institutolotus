@@ -3,9 +3,10 @@ import './../css/denuncia.css'
 import axios from 'axios';
 
 import { IoIosArrowBack } from "react-icons/Io"
-import {Link } from "react-router-dom"
+import {Link, useNavigate } from "react-router-dom"
 
 function Denuncia() {
+  const navigate = useNavigate();
   const [denunciaInfo, setDenuncia] = useState({ //atributos da denúncia
     den_denunciante : "",
     den_violencia : "",
@@ -97,7 +98,7 @@ function Denuncia() {
       den_data_ocorrencia : denunciaInfo.den_data_ocorrencia
     }).then((res) => {
       localStorage.setItem("denuncia", res.data.protocolo); //Guardar protocolo denúncia no localStorage
-      navigate("/protocolo"); //navega para outra página
+       //navega para outra página
       setkeys(prev => ({...prev, protocoloDenuncia : res.data.protocolo, fazerRelacionamento : true}));
     }).catch((error) => {
       console.log(error);
@@ -111,7 +112,8 @@ function Denuncia() {
       agr_nome : agressorInfo.agr_nome,
       Denuncia_den_protocolo : localStorage.getItem("denuncia")
     }).then((res) => {
-      alert("OIiiii")
+      alert("Denúncia criada")
+      navigate("/protocolo");
     }).catch((error) => {
       console.log(error);
     })

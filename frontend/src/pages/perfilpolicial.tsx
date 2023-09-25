@@ -45,7 +45,7 @@ function PerfilPolicial(){
   }, [denuncias])
 
   const renderDenunciasAbertas = denunciasAbertas.map(item => {
-    if (item.den_protocolo.match(pesquisa) || pesquisa == "") {
+    if (item.den_violencia.match(pesquisa) || item.agr_nome.match(pesquisa) || pesquisa == "") {
       return <div className="den-andamento" key={item.den_protocolo}>
         <p className="agressao-andamento">{item.den_violencia}</p>
         <p className="autor-andamento">Agressor: {item.agr_nome}/ protocolo: {item.den_protocolo}</p>
@@ -62,7 +62,7 @@ function PerfilPolicial(){
   })
 
   const renderDenunciasFinalizadas = denunciasFinalizadas.map(item => {
-    if (item.den_protocolo.match(pesquisa) || pesquisa == "") {
+    if (item.den_violencia.match(pesquisa) || item.agr_nome.match(pesquisa) || pesquisa == "") {
       return <div className="den-finalizada" key={item.den_protocolo}>
         <p className="agressao-finalizada">{item.den_violencia}</p>
         <p className="autor-finalizada">Agressor: {item.agr_nome}/ protocolo: {item.den_protocolo}</p>
@@ -76,6 +76,7 @@ function PerfilPolicial(){
     else {
       return <div key={item.den_protocolo}></div>
     }
+     console.log(item.den_violencia.match(pesquisa))
   })
 
   const handlePesquisa = (e:ChangeEvent<HTMLInputElement>) => {
@@ -101,7 +102,7 @@ return(
 <section className="oipolicial">
 
     <div className="input-group mb-3">
-  <input type="text" className="form-control" placeholder="Pesquisar uma denúncia por protocolo" 
+  <input type="text" className="form-control" placeholder="Pesquisar uma denúncia" 
   aria-label="Recipient's username" aria-describedby="basic-addon2" onChange={handlePesquisa}/>
   <div className="input-group-append">
   <button id="botaopolpesquisar"><FiSearch/></button>
@@ -113,17 +114,21 @@ return(
     <div className="rolarpolicial">
 
   <div className="colunapolicial" >
-  <h2 className="andamento">DENÚNCIAS EM ANDAMENTO</h2>
-  {(denunciasAbertas.length > 0) ? renderDenunciasAbertas : <h3>Não existem denúncias Abertas</h3>}
-  
-</div>
+    <h2 className="andamento">DENÚNCIAS EM ANDAMENTO</h2>
+    <div className="row">
+      {(denunciasAbertas.length > 0) ? renderDenunciasAbertas : <h3>Não existem denúncias Abertas</h3>}
+    </div>
+
+  </div>
 
 
-<div className="colunapolicial" >
-<h2 className="finalizada">DENÚNCIAS FINALIZADAS</h2>
-  {(denunciasFinalizadas.length > 0) ? renderDenunciasFinalizadas : <h3>Não existem denúncias Finalizadas</h3>}
+  <div className="colunapolicial" >
+    <h2 className="finalizada">DENÚNCIAS FINALIZADAS</h2>
+    <div className="row">
+      {(denunciasFinalizadas.length > 0) ? renderDenunciasFinalizadas : <h3>Não existem denúncias Finalizadas</h3>}
+    </div>
 
-</div>
+  </div>
 </div>
          <br></br><br></br><br></br><br></br>
 

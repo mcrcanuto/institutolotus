@@ -2,10 +2,11 @@ import { BiClipboard} from "react-icons/bi";
 import {TiShoppingCart} from "react-icons/ti"
 import './../../css/pop.css'
 import "../../css/menus.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 function Menu() {  
+  const navigate = useNavigate();
   return (
     <>
       <header className="menucima" >
@@ -28,11 +29,11 @@ function Menu() {
       <ul>
 
       <li className="marginli">
-          <Link to="/meuspedidos">
-          <button id="pedidosm">
+        
+          <button id="pedidosm" onClick={() => {navigate("/meuspedidos")}}>
           <BiClipboard className="iconempedido" />Meus Pedidos
           </button>
-          </Link>
+        
           </li>
 
 

@@ -6,6 +6,7 @@ import "./../css/meuspedidos.css"
 
 
 function MeusPedidos(){
+
 return(
 
 
@@ -16,11 +17,13 @@ return(
     </React.Fragment>
 
 
-    <div className="Container">
-    <div className="container-login">
-    <div className="wrap-login">
-      <h3>Insira aqui o protocolo da sua denúncia</h3>
-      <input type="text" />
+    <div className="coringa">
+    <div className="containermeuspedidos">
+    <div className="wrapmeuspedidos">
+      <h3 className="h3mp">Insira aqui o protocolo da sua denúncia para conferir as atualizações</h3>
+      <input type="text" id='textmp' />
+      <br />
+      <button className="botaomp">PROCURAR</button>
     </div>
     </div>
     </div>
