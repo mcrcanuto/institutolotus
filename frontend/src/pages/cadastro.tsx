@@ -63,7 +63,7 @@ function Cadastro () {
     </div>
 
     <div className="wrap-input">
-    <input className='input' placeholder="Cpf" type="text" required  
+    <input className='input' placeholder="CPF" type="text" required  
     pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2})|(\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2})"
     onChange={handleChange} name="cpf" maxLength={11} value={cadInfo.cpf}/>
     <span className="focus-input" ></span>

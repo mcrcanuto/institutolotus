@@ -189,7 +189,7 @@
   
   }
   .IL{
-    font-size: 5vh;
+    font-size: 3.5vh;
     color: #ffffff;
     text-decoration:none ;
     float: left;
@@ -205,3 +205,6 @@
     font-size: 3.5vh;
     color:#5C286F;
   }
+#conectadomenu{
+  background-color: #ff9902;
+}

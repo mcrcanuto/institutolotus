@@ -1,7 +1,11 @@
 import { ChangeEvent, useEffect, useState } from 'react'
 import './../css/denuncia.css'
 import axios from 'axios';
-
+import React from "react";
+import Zap from "../components/popup/zapzap";
+import Menu from "./../components/menus/Menu"
+import Submenu from "./../components/menus/submenu"
+import Footer from "./../components/menus/footer"
 import { IoIosArrowBack } from "react-icons/Io"
 import {Link, useNavigate } from "react-router-dom"
 
@@ -112,7 +116,7 @@ function Denuncia() {
       agr_nome : agressorInfo.agr_nome,
       Denuncia_den_protocolo : localStorage.getItem("denuncia")
     }).then((res) => {
-      alert("Denúncia criada")
+      alert("Denúncia criad")
       navigate("/protocolo");
     }).catch((error) => {
       console.log(error);
@@ -138,6 +142,13 @@ function Denuncia() {
   }, [keys.fazerRelacionamento])
 
   return (
+  <>
+    <React.Fragment>
+    <Menu/>
+    <Submenu/>
+    <Zap/>
+    </React.Fragment>
+
     <div className="Container">
     <div className="container-login">
     <div className="wrap-login">
@@ -164,11 +175,11 @@ function Denuncia() {
             <input className='input' type="text" onChange={handleChange} name="den_violencia" value={denunciaInfo.den_violencia} placeholder="Tipos de violência" required list='violencia'/>
             <span className="focus-input"></span>
             <datalist id='violencia'>
-              <option className='tipoViolencia' value="Violência física"></option>
-              <option className='tipoViolencia' value="Violência psicológica (ameaça, manipulação, ridicularização, humilhação...)"></option>
-              <option className='tipoViolencia' value="Violência sexual (estupro, impedir uso de contraceptivos, forçar aborto...)"></option>
-              <option className='tipoViolencia' value="Violência patrimonial (controle do dinheiro, furto, extorsão, estelionato...)"></option>
-              <option className='tipoViolencia' value="Violência moral (acusar de traição, fazer críticas falsas, expor vida íntima...)"></option>
+              <option className='tipoViolencia' value="Violência Física "></option>
+              <option className='tipoViolencia' value="Violência Psicológica "></option>
+              <option className='tipoViolencia' value="Violência Sexual "></option>
+              <option className='tipoViolencia' value="Violência Patrimonial "></option>
+              <option className='tipoViolencia' value="Violência Moral "></option>
             </datalist>
             </div>
             <div className="wrap-input">
@@ -301,6 +312,14 @@ function Denuncia() {
     </div>
     </div>
     </div>
+
+
+     <React.Fragment>
+    <Footer/>
+    </React.Fragment>
+
+    </>
+
   )
 }
 

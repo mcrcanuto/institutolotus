@@ -4,7 +4,7 @@ import Submenu from "../components/menus/submenu.tsx";
 import Footer from "../components/menus/footer.tsx";
 import {Link} from "react-router-dom";
 
-
+import Zap from "../components/popup/zapzap";
 
 import "./../css/pop.css"
 import "./../css/geral.css";
@@ -22,6 +22,7 @@ return (
 <React.Fragment>
   <Menu/>
   <Submenu/>
+   <Zap/>
 </React.Fragment>
 
 

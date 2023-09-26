@@ -17,8 +17,8 @@ function LojasProximas() {
         <Submenu/>
         </React.Fragment>
         <div id="divtitulo-maps">
-        <p id="titulo-maps">Veja A Delegacia Da Mulher Mais Próxima De Você</p>
-        <br></br>
+        <p id="titulo-maps">Veja a Delegacia Da Mulher mais próxima de você</p>
+        <br />
         </div>
         <React.Fragment>
         <Maps/>

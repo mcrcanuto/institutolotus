@@ -19,7 +19,7 @@ const [taOn, setTaOn] = useState(false);
       
    
        
-    <Link to="/">
+    <Link to="/perfilpolicial">
          <p className='IL'>INSTITUTO LÓTUS</p>
           </Link>
        
@@ -54,12 +54,15 @@ const [taOn, setTaOn] = useState(false);
           </nav>
 
           </div>
+      
         </div>
+        <br></br>
+        <div id="conectadomenu">vixi</div>
 
       </header>
 
-      )
-    }
+      );
+      };
     
 export default MenuPolicial;
 

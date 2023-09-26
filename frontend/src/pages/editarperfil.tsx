@@ -1,10 +1,12 @@
 import "./../css/geral.css"
 import "./../css/editarperfil.css"
-import { IoIosArrowBack } from "react-icons/Io"
 import {Link } from "react-router-dom"
 import { ChangeEvent, useEffect, useState } from "react";
 import axios from "axios";
 import decode from "../components/codigos/decoder";
+import React from "react";
+import MenuPolicial from "../components/menus/MenuPolicial";
+import FooterPolicial from "../components/menus/FooterPolicial";
 
 function EditarPerfil () {
 
@@ -80,79 +82,120 @@ function EditarPerfil () {
         sobreNome : getPolicial[0].pol_sobrenome,
         cpf : getPolicial[0].pol_cpf,
         email : getPolicial[0].pol_email,
-        senha : getPolicial[0].pol_senha
+        senha : getPolicial[0].pol_senha,
       })
     }
 
-    return  (
-        <div className="Container">
-            
-   
 
-        <div className="container-login">
+
+
+    return  (
+<>
+
+<React.Fragment>
+  <MenuPolicial/>
+</React.Fragment>
+
+<br></br><br></br>
+
+<div className="roweditar">
+  <div className="columneditar">
+
+  <div className="wrap-editar-esquerda">
+
+<span className="editar-esquerda-title">Minha Conta</span>
+
+<br></br>
+
+<div className="wrap-input-editar-esquerda">
+<p id="nomesobrenome">Nome Sobrenome</p>
+<br></br>
+<p id="editar-email">email@email.com</p>
+<br ></br>
+<br></br>
+
+<p id="editar-den-andamento"> 0 Denúncias em Andamento</p>
+
+<p id="editar-den-finalizada">0 Denúncias Finalizadas</p>
+
+<br></br>
+
+<span className="focus-input"></span>
+</div>
+<div className="wrap-input-editar-esquerda">
+</div>
+</div>
+</div>
+
+
+
+  <div className="columneditar">
+    
   
-        <div className="wrap-login">
-            
-        <Link to="/perfilpolicial">
-   <IoIosArrowBack className="back"/>
-   </Link>
+        <div className="wrap-editar-direita">
+
    
         <form className="login-form">
 
-        <span className="login-form-title2">Editar Perfil</span>
-        <span className="login-form-title"></span>
-        
-        <span className="login-form-title">Dados Pessoais</span>
+        <span className="editar-title">Editar Perfil</span>        
+        <span className="editar-subtitle">Dados Pessoais</span>
      
 
         <div className="wrap-input">
-        <input className='input' type="name" required  placeholder="Nome" name="nome" value={polUpdate.nome || ""} onChange={handleChange}/>
+        <input className='inputeditar' type="name" required  placeholder="Nome" name="nome" value={polUpdate.nome || ""} onChange={handleChange}/>
         <span className="focus-input" ></span>
         </div>
 
         <div className="wrap-input">
-        <input className='input'type="name"  required  placeholder="Sobrenome" name="sobreNome" value={polUpdate.sobreNome || ""} onChange={handleChange}/>
+        <input className='inputeditar'type="name"  required  placeholder="Sobrenome" name="sobreNome" value={polUpdate.sobreNome || ""} onChange={handleChange}/>
         <span className="focus-input"></span>
         </div>
 
         <div className="wrap-input">
-    <input className='input' type="name" required placeholder="Cpf" name="cpf" value={polUpdate.cpf || ""} onChange={handleChange}/>
+    <input className='inputeditar' type="name" required placeholder="Cpf" name="cpf" value={polUpdate.cpf || ""} onChange={handleChange}/>
     <span className="focus-input" ></span>
     </div>
 
-        <span className="login-form-title">Dados de Login</span>
+        <span className="editar-subtitle">Dados de Login</span>
       
     
         <div className="wrap-input">
-        <input className='input' type="email" required  placeholder="Email" value={polUpdate.email} name="email" onChange={handleChange}/>
+        <input className='inputeditar' type="email" required  placeholder="Email" value={polUpdate.email} name="email" onChange={handleChange}/>
         <span className="focus-input" ></span>
         </div>
     
         <div className="wrap-input">
-        <input className='input' type="password" required  placeholder="Senha"  name="senha" onChange={handleChange}/>
+        <input className='inputeditar' type="password" required  placeholder="Senha"  name="senha" onChange={handleChange}/>
         <span className="focus-input" ></span>
         </div>
 
         <div className="container-login-form-btn">
-      <button className="login-form-btn" onClick={updatePolicial}>Salvar Edições</button>
+      <button  onClick={updatePolicial}>Salvar Edições</button>
      </div>
 
      
      
         <div className="container-login-form-btn2">
-      <button className="sim" type="reset" onClick={reverterMudanças}>Cancelar</button>
+      <button  type="reset" onClick={reverterMudanças}>Cancelar</button>
      </div>
         </form>
 
         <div >
           <Link to="/querexcluirsuaconta?">
-      <button id="apagarconta">Apagar Conta</button>
+      <button >Apagar Conta</button>
       </Link>
      </div>    
         </div>
         </div>
         </div>
-        );
+
+
+  <React.Fragment>
+  <FooterPolicial/>
+</React.Fragment>
+
+        </>
+          );
 };
 
 export default EditarPerfil;

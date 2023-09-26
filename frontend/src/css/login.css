@@ -61,15 +61,15 @@
        position: relative;
        border-bottom: 2px solid #adadad;
        margin-bottom: 37px;
+          font-family: inter,arial;
    }
    
    .input {
        font-size: 15px;
-       color: beige;
+       color: rgb(0, 0, 0);
        line-height: 1.2;
        border: rebeccapurple;
        display: block;
-   
        width: 100%;
        height: 35px;
        font-family: inter,arial;
@@ -82,7 +82,7 @@
        display: block;
        width: 100%;
        height: 100%;
-   
+       font-family: inter,arial;
        top: 0;
        left: 0;
        pointer-events: none;
@@ -136,6 +136,7 @@
    }
    
    
+
    .container-login-form-btn{
        display: flex;
        flex-wrap: wrap;
@@ -157,6 +158,7 @@
        height: 30px;
        background-color: rgb(73, 35, 77);
        font-family: inter,arial;
+       cursor: pointer;
    }
    
    .login-form-btn-a {
@@ -175,6 +177,7 @@
        margin-top: 20px;
        text-decoration: none;
        font-family: inter,arial;
+       cursor: pointer;
    }
    .login-form-btn-a:active {
      text-decoration: none;
@@ -201,4 +204,5 @@
     height: 30px;
     background-color: rgb(73, 35, 77);
     font-family: inter,arial;
+ 
 }

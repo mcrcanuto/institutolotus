@@ -45,7 +45,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         <Route Component={LojasProximas} path="/lojasproximas"/>
         <Route Component={Atualizar} path="/atualizarstatus/:protocolo"/>
         <Route Component={Protocolo} path="/protocolo"/>
-        <Route Component={Status} path="/status"/>
+        <Route Component={Status} path="/meustatus"/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

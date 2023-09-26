@@ -38,9 +38,11 @@ function Menu() {
 
 
           <li className="marginli">
+        
           <button id="pedidosf" onClick={() => {navigate("/comprar")}}>
           <TiShoppingCart className="iconefpedido" />Fazer Pedido
           </button>
+     
           </li>
 
       </ul>

@@ -6,6 +6,7 @@ import Formas from "../components/formas";
 import Leis from "./../components/leis"
 import Footer from "../components/menus/footer";
 import "./../css/geral.css"
+import Zap from "../components/popup/zapzap";
 
 function Produtos(){
     
@@ -15,6 +16,7 @@ function Produtos(){
       	<React.Fragment>
 			      <Menu/>
 			     <Submenu/>
+           <Zap/>
             <Formas/>
             <Leis/>
             <Footer/>

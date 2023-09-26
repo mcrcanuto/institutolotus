@@ -3,6 +3,7 @@ import React from "react";
 import Menu from "./components/menus/Menu";
 import Submenu from "./components/menus/submenu";
 import Footer from "./components/menus/footer";
+import Zap from "./components/popup/zapzap";
 import "./css/geral.css"
 import "./css/produtos.css"
 
@@ -13,18 +14,20 @@ function Produtos(){
     return(
 
       <div>
+
+         <Zap/>
+
+
       	<React.Fragment>
 			<Menu/>
 			<Submenu/>
             </React.Fragment>
 			
-
-
-           <div id="container">
-            <p id="text">CONHEÇA AS LEIS QUE<br></br> PROTEGEM A MULHER</p>
-           </div>
       
 
+           
+      
+       
 
 <h2>
 Leis de proteção à mulher: Lei Carolina Dieckman (Lei 12.737/2012)

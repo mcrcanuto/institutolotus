@@ -4,6 +4,97 @@
     box-sizing: border-box;
    }
    
+   .columneditar {
+    float: left;
+    width: 50%;
+  }
+  
+  
+  /* Clear floats after the columns */
+  .roweditar:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+/*Esquerda*/
+
+.wrap-editar-esquerda {
+    width: 590px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 15px 55px 33px 45px;
+    margin-left: 5%;
+    box-shadow: 0 5px 10px 0px rgba(141, 125, 125, 0.76);
+ }
+ 
+ .editar-esquerda-title{
+    display: block;
+    font-size: 30px;
+    font-family: sans-serif;
+    color:rgb(21, 1, 39);  
+    height: 45px;
+    line-height: 1.2;
+    text-align: center;
+ }
+
+ #nomesobrenome{
+    text-align: center;
+ }
+
+ #editar-den-andamento{
+    text-align: center;
+    width: 9vw;
+    display: block;
+    float: left;
+    margin-left: 25%;
+ }
+
+ #editar-den-finalizada{
+    text-align: center;
+    width: 7.5vw;
+    display: block;
+    float: right;
+    margin-right: 25%;
+ }
+ #editar-email{
+    text-align: center;
+ }
+
+
+/*Direita*/
+
+ .wrap-editar-direita {
+    width: 590px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 15px 55px 33px 55px;
+    box-shadow: 0 5px 10px 0px rgba(141, 125, 125, 0.76);
+ }
+
+ .editar-title {
+    display: block;
+    font-size: 4.5vh;
+    font-family: sans-serif;
+    color: rgb(21, 1, 39); 
+    height: 45px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.editar-subtitle {
+ display: block;
+ font-size: 3.5vh;
+ font-family: sans-serif;
+ color:rgb(21, 1, 39);  
+ height: 45px;
+ line-height: 1.2;
+ text-align: center;
+}
+
+
    .Container {
        width: 100%;
        margin: 0 auto;
@@ -38,9 +129,9 @@
        width: 100%;
    }
    
-   .login-form-title2 {
+   .editar-title {
        display: block;
-       font-size: 40px;
+       font-size: 4.5vh;
        font-family: sans-serif;
        color: rgb(21, 1, 39); 
        height: 45px;
@@ -48,9 +139,9 @@
        text-align: center;
    }
 
-   .login-form-title {
+   .editar-subtitle {
     display: block;
-    font-size: 30px;
+    font-size: 3.5vh;
     font-family: sans-serif;
     color:rgb(21, 1, 39);  
     height: 45px;
@@ -63,19 +154,17 @@
        width: 100%;
        position: relative;
        border-bottom: 2px solid #adadad;
-       margin-bottom: 37px;
+     
    }
    
-   .input {
+   .inputeditar {
        font-size: 15px;
        color: rgb(0, 0, 0);
        line-height: 1.2;
        border: rebeccapurple;
        display: block;
-   
        width: 100%;
        height: 35px;
-   
        background-color:rgba(211, 210, 210, 0.76);
        padding: 0 5px;
    }
@@ -88,7 +177,7 @@
    
        top: 0;
        left: 0;
-       pointer-events: none;
+      cursor: none;
        color: blueviolet;
    }
    
@@ -126,15 +215,15 @@
         -moz-transition: all 0.4s;
    }
    
-   .input:focus {
+   .inputeditar:focus {
        outline: 0;
    }
    
-   .input:focus + .focus-input::after{
+   .inputeditar:focus + .focus-input::after{
        top: -15px;
    }
    
-   .input:focus + .focus-input::before{
+   .inputeditar:focus + .focus-input::before{
        width: 100%;
    }
    
@@ -209,18 +298,6 @@
     background-color: #581d31;
 }
 
-
-
-
    .login-form:hover {
        cursor: pointer;
-   }
-   
-   .back{
-    font-size: 8vh;
-    color: rgb(51, 46, 50);
-    top: 38vh;
-
-    position: absolute;
-
    }

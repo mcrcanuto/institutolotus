@@ -15,9 +15,12 @@ return(
     <Submenu/>
     </React.Fragment>
 
-<p>oiiiiii statussss</p>
 
-<React.Fragment>
+<br></br><br></br><br></br>
+<p>oiiiiii statussss</p>
+<br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+
+   <React.Fragment>
     <Footer/>
     </React.Fragment>
 
