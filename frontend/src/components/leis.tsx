@@ -8,9 +8,9 @@ function Leis () {
     return(
 <>
 
-<div>
-      <img src="./../imgs/leis.png" className="imagem"/>
-    </div>
+
+      <img src="./../imgs/leis.png" className="imagemleis"/>
+
 
 
 <div className="lista-violencia">

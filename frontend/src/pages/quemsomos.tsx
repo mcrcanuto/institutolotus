@@ -26,11 +26,9 @@ return (
 </React.Fragment>
 
 
-<div>
-      <img src="./../imgs/quemsomos.png" className="imagem"/>
-      <Link to="/login">
-      </Link>
-    </div>
+
+      <img src="./../imgs/quemsomos.png" className="imagemquemsomos"/>
+
 
 
     <div className="rolar">

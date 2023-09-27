@@ -122,8 +122,8 @@ function EditarPerfil () {
 
 <span className="focus-input"></span>
 </div>
-<div className="wrap-input-editar-esquerda">
-</div>
+
+
 </div>
 </div>
 
@@ -141,32 +141,32 @@ function EditarPerfil () {
         <span className="editar-subtitle">Dados Pessoais</span>
      
 
-        <div className="wrap-input">
+        <div className="wrap-input-editar">
         <input className='inputeditar' type="name" required  placeholder="Nome" name="nome" value={polUpdate.nome || ""} onChange={handleChange}/>
-        <span className="focus-input" ></span>
+      
         </div>
 
-        <div className="wrap-input">
+        <div className="wrap-input-editar">
         <input className='inputeditar'type="name"  required  placeholder="Sobrenome" name="sobreNome" value={polUpdate.sobreNome || ""} onChange={handleChange}/>
-        <span className="focus-input"></span>
+      
         </div>
 
-        <div className="wrap-input">
+        <div className="wrap-input-editar">
     <input className='inputeditar' type="name" required placeholder="Cpf" name="cpf" value={polUpdate.cpf || ""} onChange={handleChange}/>
-    <span className="focus-input" ></span>
+    
     </div>
 
         <span className="editar-subtitle">Dados de Login</span>
       
     
-        <div className="wrap-input">
+        <div className="wrap-input-editar">
         <input className='inputeditar' type="email" required  placeholder="Email" value={polUpdate.email} name="email" onChange={handleChange}/>
-        <span className="focus-input" ></span>
+        
         </div>
     
-        <div className="wrap-input">
+        <div className="wrap-input-editar">
         <input className='inputeditar' type="password" required  placeholder="Senha"  name="senha" onChange={handleChange}/>
-        <span className="focus-input" ></span>
+       
         </div>
 
         <div className="container-login-form-btn">
@@ -187,8 +187,10 @@ function EditarPerfil () {
      </div>    
         </div>
         </div>
+        
         </div>
 
+        <br></br><br></br>
 
   <React.Fragment>
   <FooterPolicial/>

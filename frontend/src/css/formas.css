@@ -59,10 +59,7 @@ body{
     width: 77px;
 }
 
-div {
-    display: block;
-    background-color: transparent;
-}
+
 
 .list-violence .content .icon:before {
     background:#5C286F;
@@ -132,13 +129,10 @@ ul {
     background: transparent;
 }
 
-.imagem{
-    max-width: 1440px;
+.imagemformas{
     margin: 0 auto;
     width: 99.1vw;
-    height: 90vh;
-    width: 100%;
-    height: 100%;
+    height: 35vh;
     object-fit: cover;
 }
 

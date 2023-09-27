@@ -36,7 +36,7 @@
      flex-wrap: wrap;
      align-items: center;
      justify-content: center;
-     padding: 15%;    
+    
      background-color: rgb(231, 224, 214);
  }
  
@@ -45,7 +45,7 @@
     background-color: white;
     border-radius: 10px;
     overflow: hidden;
-    padding: 77px 55px 33px 55px;
+    padding: 5.5vw 5vw 3.8vw 5vw;
     box-shadow: 0 5px 10px 0px rgba(141, 125, 125, 0.76);
  }
  

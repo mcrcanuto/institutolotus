@@ -8,9 +8,8 @@ function Formas () {
     return(
 <>
 
-<div>
-      <img src="./../imgs/formas.png" className="imagem"/>
-    </div>
+      <img src="./../imgs/formas.png" className="imagemformas"/>
+
 
 
 <div className="list-violence">
