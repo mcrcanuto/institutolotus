@@ -48,10 +48,10 @@ function PerfilPolicial(){
     if (item.den_violencia.match(pesquisa) || item.agr_nome.match(pesquisa) || pesquisa == "") {
       return <div className="den-andamento" key={item.den_protocolo}>
         <p className="agressao-andamento">{item.den_violencia}</p>
-        <p className="autor-andamento">Agressor: {item.agr_nome}/ protocolo: {item.den_protocolo}</p>
+        <p className="autor-andamento">Agressor: {item.agr_nome} <br></br> Protocolo: {item.den_protocolo}</p>
       
         <Link to={`/atualizarstatus/${item.den_protocolo}`}>
-        <button className="visualizar"> Visualizar Status</button>
+        <button className="visualizar"> Visualizar Denúncia</button>
         </Link>
         <br></br>
     </div>
@@ -65,10 +65,10 @@ function PerfilPolicial(){
     if (item.den_violencia.match(pesquisa) || item.agr_nome.match(pesquisa) || pesquisa == "") {
       return <div className="den-finalizada" key={item.den_protocolo}>
         <p className="agressao-finalizada">{item.den_violencia}</p>
-        <p className="autor-finalizada">Agressor: {item.agr_nome}/ protocolo: {item.den_protocolo}</p>
+        <p className="autor-finalizada">Agressor: {item.agr_nome} <br></br> Protocolo: {item.den_protocolo}</p>
       
         <Link to={`/atualizarstatus/${item.den_protocolo}`}>
-        <button className="visualizar"> Visualizar Status</button>
+        <button className="visualizar"> Visualizar Denúncia</button>
         </Link>
         <br></br>
     </div>
@@ -92,11 +92,8 @@ return(
 		</React.Fragment>
 
 
-<br></br><br></br>
-    <div className="usuario">
-</div>
-<br></br>
 
+<br></br>
 
 <section className="oipolicial">
 
@@ -115,7 +112,7 @@ return(
   <div className="colunapolicial" >
     <h2 className="andamento">DENÚNCIAS EM ANDAMENTO</h2>
     <div className="row">
-      {(denunciasAbertas.length > 0) ? renderDenunciasAbertas : <h3>Não existem denúncias Abertas</h3>}
+      {(denunciasAbertas.length > 0) ? renderDenunciasAbertas : <h3 id="naoexiste">Não existem denúncias em andamento</h3>}
     </div>
 
   </div>
@@ -124,12 +121,12 @@ return(
   <div className="colunapolicial" >
     <h2 className="finalizada">DENÚNCIAS FINALIZADAS</h2>
     <div className="row">
-      {(denunciasFinalizadas.length > 0) ? renderDenunciasFinalizadas : <h3>Não existem denúncias Finalizadas</h3>}
+      {(denunciasFinalizadas.length > 0) ? renderDenunciasFinalizadas : <h3 id="naoexiste">Não existem denúncias finalizadas</h3>}
     </div>
 
   </div>
 </div>
-         <br></br><br></br><br></br><br></br>
+       
 
 
 

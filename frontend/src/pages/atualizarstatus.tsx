@@ -89,18 +89,53 @@ function Atualizar(){
 
 return(
 
-
-<>
+<div>
     <React.Fragment>
     <MenuPolicial/>
     </React.Fragment>
 
     <br></br>
+    <br></br>
 
-<p id="titulo-denuncia">{denuncia.den_violencia} - {protocolo}</p>
-<p id="titulo-agressor">Agressor: {denuncia.agr_nome}</p>
+    <p id="titulo_denuncia">Denúncia</p>
 
-  <br></br><br></br>
+    <div className="rowfichario">
+
+  <div className="colunafichario">
+  <p id="subtitulo_denuncia">Sobre a ocorrência</p>
+ 
+  <p id="informacoes_denuncia">Tipo de Violência: {denuncia.den_violencia}</p>
+<p id="informacoes_denuncia">Protocolo da denúncia: {protocolo}</p>
+<p id="informacoes_denuncia">Tipo de denunciante: {denuncia.den_denunciante}</p>
+<p id="informacoes_denuncia">Frequência do ocorrido: {denuncia.den_frequencia}</p>
+<p id="informacoes_denuncia">Data da ocorrência: {denuncia.den_data_ocorrencia}</p>
+<p id="informacoes_denuncia">Horário da ocorrência: {denuncia.den_hora_ocorrencia}</p>
+<p id="informacoes_denuncia">Descrição do ocorrido:</p>
+<p id="informacoes_denuncia">Bairro:</p>
+<p id="informacoes_denuncia">Cep: {denuncia.den_cep}</p>
+<p id="informacoes_denuncia">Descrição do local: {denuncia.den_local}</p>
+<p id="informacoes_denuncia">Ponto de referência: {denuncia.den_carac_local}</p>
+</div>
+
+
+<div className="colunafichario">
+<p id="subtitulo_denuncia">Sobre o agressor</p>
+
+  <p id="informacoes_denuncia">Nome do agressor: {denuncia.agr_nome}</p>
+<p id="informacoes_denuncia">Apelido do agressor: {denuncia.agr_apelido}</p>
+<p id="informacoes_denuncia">Idade do agressor: {denuncia.agr_idade}</p>
+<p id="informacoes_denuncia">O agressor mora na mesma residência que a vítima: {denuncia.agr_nome}</p>
+<p id="informacoes_denuncia">Se mora em residência diferente, qual o local: {denuncia.agr_nome} </p>
+<p id="informacoes_denuncia">Ponto de referência da residência do agressor: {denuncia.agr_nome} </p>
+<p id="informacoes_denuncia">Local de trabalho do agressor : {denuncia.agr_nome}</p>
+<p id="informacoes_denuncia">O agressor tem algum relacionamento com a vítima: {denuncia.agr_nome} Se sim, qual: {denuncia.agr_nome}</p>
+
+</div>
+</div>
+
+<br></br>
+
+
 
   <p id="titulo-c-a">Comentários Antigos </p>
 
@@ -130,14 +165,15 @@ return(
   <button id="botaocomentar" onClick={postComentario}><LuSendHorizonal/></button>
   </div>
   </div>
-  </div>
+  </div>  
 
 
 
 <React.Fragment>
     <FooterPolicial/>
     </React.Fragment>
-</>
+<div/>
+</div>
         
 )
 }

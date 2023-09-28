@@ -1,19 +1,75 @@
-#titulo-denuncia{
+/*div fichario*/
+
+
+.colunafichario{
+  float: left;
+  width: 50%;
+  padding: 45px;
+  background-color: aqua;
+ 
+
+}
+
+
+
+/* Clear floats after the columns */
+.rowfichario:after {
+  content: "";
+  display: table;
+  clear: both;
+  
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 1040px) {
+  .colunafichario {
+    width: 100%;
+  }
+  @media screen and (max-width: 650px) {
+    .colunafichario {
+      width: 50%;
+    }
+}
+}
+
+
+
+#titulo_denuncia{
     text-align: center;
     font-family: inter,arial;
-    color: #000000;
+    color:#30113b;
     font-size: 6vh;
     font-weight: bolder;
 }
 
-#titulo-agressor{
-    text-align: center;
-    font-family: inter,arial;
-    color: #000000;
-    font-size: 4vh;
-    font-weight: normal;
+#subtitulo_denuncia{
+  margin-left: 8%;
+  font-family: inter,arial;
+  color: #000000;
+  font-size: 6vh;
+  font-weight: bolder;
 }
 
+#informacoes_denuncia{
+    font-family: inter,arial;
+    color: #000000;
+    font-size: 3vh;
+    font-weight: normal;
+    margin-left: 8%;
+}
+
+.articledenuncia{
+  float: left;
+  margin-left: 8%;
+}
+
+.articleagressor{
+  float: right;
+  margin-right: 8%;
+}
+
+
+/*parte dos comentários*/
 
 #titulo-c-a{
     margin-left: 8%;

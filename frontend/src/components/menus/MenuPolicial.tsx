@@ -14,6 +14,7 @@ const MenuPolicial = () => {
 const [policial] = useState(decode(localStorage.getItem("token")));
 const [taOn, setTaOn] = useState(false);
       
+
   return (
     <header className='oii'>
     <div className="container">
@@ -23,6 +24,7 @@ const [taOn, setTaOn] = useState(false);
     <Link to="/perfilpolicial">
          <p className='IL'>INSTITUTO LÓTUS</p>
           </Link>
+       
        
    
 
@@ -38,18 +40,30 @@ const [taOn, setTaOn] = useState(false);
            <nav>
             <ul className='ha'>
               <li>
-        
-              </li>
-              <li>
               <Link to="/editarperfil"><FaUserEdit className="icones"/></Link>
               </li>
+
               <li className='sair'>
                 <Link to="/quermesmosair?"><BiLogOut className="icones"/></Link>
               </li>
+
               <li>
-              
-               <FaRegBell className="icones"/>
-          
+                
+  <Popup className="popupnotifica" trigger={<button id='notifica'> <FaRegBell className="icones"/></button>} position="bottom">
+    
+    <div id='conteudonotifica'>
+      
+        <p className="agressao-andamentonotifica">Violência Física</p>
+        <p className="autor-andamentonotifica">Agressor:  <br></br> Protocolo: </p>
+      
+        <Link to="/atualizarstatus">
+        <button className="visualizarnotifica"> Visualizar</button>
+        </Link>
+        <br></br>
+      </div>
+      
+  </Popup>
+
               </li>
             </ul>
           </nav>
@@ -58,9 +72,10 @@ const [taOn, setTaOn] = useState(false);
       
         </div>
         <br></br>
-        <div id="conectadomenu">Conectado(a) como {policial.nome}</div>
+        <div id="usuario"><p id='conectado'>Conectado(a) como {policial.nome}</p></div>
 
       </header>
+
 
       );
       };
