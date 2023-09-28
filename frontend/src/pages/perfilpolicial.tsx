@@ -94,7 +94,6 @@ return(
 
 <br></br><br></br>
     <div className="usuario">
-  <p id="conectado">Conectado(a) como {policial.nome}</p>
 </div>
 <br></br>
 

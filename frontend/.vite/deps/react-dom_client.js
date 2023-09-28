@@ -1,39 +1,23 @@
-import {
-  require_react_dom
-} from "./chunk-RVSLBP3T.js";
-import "./chunk-ST3U5LCA.js";
-import {
-  __commonJS
-} from "./chunk-DFKQJ226.js";
+import { useState } from 'react'
+import './css/denuncia.css'
 
-// node_modules/react-dom/client.js
-var require_client = __commonJS({
-  "node_modules/react-dom/client.js"(exports) {
-    var m = require_react_dom();
-    if (false) {
-      exports.createRoot = m.createRoot;
-      exports.hydrateRoot = m.hydrateRoot;
-    } else {
-      i = m.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
-      exports.createRoot = function(c, o) {
-        i.usingClientEntryPoint = true;
-        try {
-          return m.createRoot(c, o);
-        } finally {
-          i.usingClientEntryPoint = false;
-        }
-      };
-      exports.hydrateRoot = function(c, h, o) {
-        i.usingClientEntryPoint = true;
-        try {
-          return m.hydrateRoot(c, h, o);
-        } finally {
-          i.usingClientEntryPoint = false;
-        }
-      };
-    }
-    var i;
-  }
-});
-export default require_client();
-//# sourceMappingURL=react-dom_client.js.map
+function App() {
+  const [] = useState(0)
+
+  return (
+    <div className='formulario'>
+      <form>
+        <div className='h1'>
+          <h1>DENUNCIE A OCORRÊNCIA DE VIOLÊNCIA CONTRA A MULHER</h1>
+        </div>
+        <div className='crime'>
+          <fieldset className='titCrime'>Sobre o crime</fieldset>
+          <div className='label'>
+            RG do denunciante: <input type="text" />
+            <br /><br />
+            Tipo de violência: <input type="text" list='violencia'/>
+            <datalist id='violencia'>
+              <option value="Violência física(espancamento, tortura e outros tipos de agressão física)"></option>
+              <option value="Violência psicológica(ameaça, manipulação, ridicularização, humilhação...)"></option>
+              <option value="Violência sexual(estupro, impedir uso de contraceptivos, forçar aborto...)"></option>
+              <option value="Violência patrimonial(controle 

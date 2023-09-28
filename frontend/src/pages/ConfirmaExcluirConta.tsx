@@ -6,9 +6,11 @@ import decode from "../components/codigos/decoder";
 
 function ConfirmaExcluirConta(){
 
-const [policial, setPolicial] = useState(decode(localStorage.getItem("token")));
+const [policial] = useState(decode(localStorage.getItem("token")));
 async function apagarPolicial() {
-      await axios.delete(`http://localhost:3344/policial/${policial.pol_cpf}`, {headers : {Authorization : "Bearer " + localStorage.getItem("token")}}).then((res) => {
+      await axios.delete(`http://localhost:3344/policial/${policial.pol_cpf}`, {headers : {
+        Authorization : "Bearer " + localStorage.getItem("token")
+      }}).then((res) => {
         alert(res.data.msg);
       }).catch((error) => {
         console.log(error);

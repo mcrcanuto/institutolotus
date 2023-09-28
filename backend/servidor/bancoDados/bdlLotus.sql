@@ -47,7 +47,9 @@ CREATE TABLE IF NOT EXISTS `InstituloLotus`.`Polícia` (
   `pol_nome` VARCHAR(15) NULL,
   `pol_sobrenome` VARCHAR(30) NULL,
   `pol_email` VARCHAR(100) NULL,
-  `pol_senha` VARCHAR(60) NULL)
+  `pol_senha` VARCHAR(60) NULL,
+  `pol_denF` INT DEFAULT 0,
+  `pol_den_andamento` INT DEFAULT 0)
 ENGINE = InnoDB;
 
 

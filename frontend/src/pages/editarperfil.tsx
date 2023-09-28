@@ -30,17 +30,17 @@ function EditarPerfil () {
 
     useEffect(() => {
       if(getPolicial.length > 0)setPolUpdate(prev => ({...prev,
-        nome : getPolicial[0].pol_nome,
-        sobreNome : getPolicial[0].pol_sobrenome,
-        cpf : getPolicial[0].pol_cpf,
-        email : getPolicial[0].pol_email,
-        senha : getPolicial[0].pol_senha
+        nome : getPolicial.pol_nome,
+        sobreNome : getPolicial.pol_sobrenome,
+        cpf : getPolicial.pol_cpf,
+        email : getPolicial.pol_email,
+        senha : getPolicial.pol_senha
       }))
     }, [getPolicial])
 
     async function updatePolicial() {
       let data;
-      if (polUpdate.senha == getPolicial[0].pol_senha || polUpdate.senha == "") {
+      if (polUpdate.senha == getPolicial.pol_senha || polUpdate.senha == "") {
         data = {
           pol_nome : polUpdate.nome,
           pol_sobrenome : polUpdate.sobreNome,
@@ -69,8 +69,9 @@ function EditarPerfil () {
 
     async function queryPolicial() {
       await axios.get(`http://localhost:3344/policial/cpf/${policial.pol_cpf}`, {headers : {
-        Authorization : "Bearer " + localStorage.getItem("token")}}).then((res) => {
-        setGet(res.data);
+        Authorization : "Bearer " + localStorage.getItem("token")
+      }}).then((res) => {
+        setGet(res.data[0]);
       }).catch((error) => {
         console.log(error);
       })
@@ -78,11 +79,11 @@ function EditarPerfil () {
 
     function reverterMudanças() {
       setPolUpdate({
-        nome : getPolicial[0].pol_nome,
-        sobreNome : getPolicial[0].pol_sobrenome,
-        cpf : getPolicial[0].pol_cpf,
-        email : getPolicial[0].pol_email,
-        senha : getPolicial[0].pol_senha,
+        nome : getPolicial.pol_nome,
+        sobreNome : getPolicial.pol_sobrenome,
+        cpf : getPolicial.pol_cpf,
+        email : getPolicial.pol_email,
+        senha : getPolicial.pol_senha,
       })
     }
 
@@ -108,15 +109,16 @@ function EditarPerfil () {
 <br></br>
 
 <div className="wrap-input-editar-esquerda">
-<p id="nomesobrenome">Nome Sobrenome</p>
+<p id="nomesobrenome">{`${getPolicial.pol_nome} ${getPolicial.pol_sobrenome}`}</p>
 <br></br>
-<p id="editar-email">email@email.com</p>
+<p id="editar-email">{getPolicial.pol_email}</p>
 <br ></br>
+<p id="editar-email">{getPolicial.pol_cpf}</p>
 <br></br>
 
 <p id="editar-den-andamento"> 0 Denúncias em Andamento</p>
 
-<p id="editar-den-finalizada">0 Denúncias Finalizadas</p>
+<p id="editar-den-finalizada">{getPolicial.pol_denF || ""} Denúncias Finalizadas</p>
 
 <br></br>
 

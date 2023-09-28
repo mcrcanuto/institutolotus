@@ -29,7 +29,7 @@ routes.put("/denuncia/imagem", controllersDenuncias.uploadImg);
 routes.get("/policial", controllersPolicial.pesquisarPoliciais);
 routes.get("/policial/login/:email/:senha", controllersPolicial.loginPolicial);
 routes.get("/policial/nome/:nome", controllersPolicial.pesquisarPolicialNome);
-routes.get("/policial/cpf/:cpf", auth ,controllersPolicial.pesquisarPolicialCPF);
+routes.get("/policial/cpf/:cpf", auth, controllersPolicial.pesquisarPolicialCPF);
 routes.get("/policial/denuncia/:protocolo", controllersPolicial.pesquisarPoliciaisDenuncia);
 routes.post("/policial", controllersPolicial.criarPolicial);
 routes.put("/policial/:cpf", auth ,controllersPolicial.atualizarPolicial);

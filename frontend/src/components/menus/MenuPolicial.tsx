@@ -7,10 +7,11 @@ import{FaUserEdit} from "react-icons/fa"
 
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
+import decode from '../codigos/decoder';
 
 
 const MenuPolicial = () => {
-
+const [policial] = useState(decode(localStorage.getItem("token")));
 const [taOn, setTaOn] = useState(false);
       
   return (
@@ -57,7 +58,7 @@ const [taOn, setTaOn] = useState(false);
       
         </div>
         <br></br>
-        <div id="conectadomenu">vixi</div>
+        <div id="conectadomenu">Conectado(a) como {policial.nome}</div>
 
       </header>
 

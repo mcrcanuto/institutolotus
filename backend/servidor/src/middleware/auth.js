@@ -2,9 +2,9 @@ const jwt = require("jsonwebtoken");
 
 function verifyToken (req, res, next) {
     try {
-        const tokenHeader = req.headers['Authorization']; 
+        const tokenHeader = req.headers["authorization"]; 
         const token = tokenHeader && tokenHeader.split(' ')[1];
-        
+        console.log(tokenHeader)
         if (!token) {
             return res.status(403).json({msg : "O policial precisa ter um token de acesso."});
         }

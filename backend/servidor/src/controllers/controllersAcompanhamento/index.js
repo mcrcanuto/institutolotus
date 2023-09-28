@@ -60,10 +60,23 @@ module.exports = {
                     });
 
                     if(aco_status == "Denúncia Finalizada") {
-                        await knex("Denúncia").update({
-                           den_status : "Finalizada"
-                        }).where("den_protocolo", Denúncia_den_protocolo);
+                        const denuncia = knex("Denuncia").where("den_protocolo", Denúncia_den_protocolo);
+                        if( denuncia.den_status != "Finalizada") {
+                            await knex("Denúncia").update({
+                               den_status : "Finalizada"
+                            }).where("den_protocolo", Denúncia_den_protocolo);                            
+                        }
                     }
+                    if (aco_status == "Denúncia Finalizada") {
+                        const acompanhamentos = await knex("Acompanhamento").where("Denúncia_den_protocolo", Denúncia_den_protocolo)
+                        for (let i = 0; i < acompanhamentos.length; i++) {
+                            const policia = await knex("Polícia").where("pol_cpf", acompanhamentos[i].Polícia_pol_cpf);
+                            await knex("Polícia").update({
+                                pol_denF : policia[0].pol_denF + 1
+                            }).where("pol_cpf", acompanhamentos[i].Polícia_pol_cpf);
+                        }
+                    }
+                    
                     return res.status(201).json({msg : "Acompanhamento enviado"});
                 }
                 return res.status(401).json({msg : "Não existe essa denúncia no banco de dados"});
