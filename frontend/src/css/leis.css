@@ -3,6 +3,9 @@
 body{
   background-color:#f1f1f1;
 }
+#leis{
+    background-color:#fff;
+  }
 
 @media screen and (min-width: 679px){
 .contem {
@@ -137,7 +140,7 @@ ul {
 .imagemleis{
     margin: 0 auto;
     width: 99.1vw;
-    height: 35vh;
+    height: 39vh;
     object-fit: cover;
 }
 

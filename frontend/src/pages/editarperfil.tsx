@@ -192,7 +192,7 @@ function EditarPerfil () {
         
         </div>
 
-        <br></br><br></br>
+    
 
   <React.Fragment>
   <FooterPolicial/>

@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: verdana;
+   }
+   
+   .Containeracompanhamento {
+      margin: 0;
+      display: flex;
+      place-items: center;
+      min-width: 32vw;
+      min-height: 100vh;
+   }
+   
+   .containeracompanhamento {
+       width: 230%;
+       min-height: 100vh;
+       display: flex;
+       flex-wrap: wrap;
+       align-items: center;
+       justify-content: center;
+       padding: 15%;    
+       background-color: rgb(231, 224, 214);
+   }
+   
+   .wrapacompanhamento  {
+      width: 55vw;
+      background-color: white;
+      border-radius: 1vw;
+      overflow: hidden;
+      padding: 5.5vw 5vw 3.8vw 5vw;
+      box-shadow: 0 0.5vw 1vw 0vw rgba(141, 125, 125, 0.76);
+      margin-top: -15vh;
+   }
+   
+  .h2acompanhamento{
+    margin-top: -5vh;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 50vw;
+    color: #000000;
+    text-align: center;
+  }
+  #statusacompa{
+    margin-top: -0.5vh;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 50vw;
+    color: #5c286f;
+    text-align: center;
+    font-size: 3vh;
+  }
+  
+  .textprot{
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 2.5vh;
+    margin-left: -1vw;
+  }
+  
+  ol.progress[data-steps="2"] li {
+    width: 49%;
+  }
+  ol.progress[data-steps="3"] li {
+    width: 33%;
+  }
+  ol.progress[data-steps="4"] li {
+    width: 24%;
+  }
+  ol.progress[data-steps="5"] li {
+    width: 19%;
+  }
+  ol.progress[data-steps="6"] li {
+    width: 16%;
+  }
+  ol.progress[data-steps="7"] li {
+    width: 14%;
+  }
+  ol.progress[data-steps="8"] li {
+    width: 12%;
+  }
+  ol.progress[data-steps="9"] li {
+    width: 11%;
+  }
+  .progress {
+    width: 100%;
+    list-style: none;
+    list-style-image: none;
+    margin: 20px 0 20px 20;
+    padding: 0;
+  }
+  .progress li {
+    float: left;
+    text-align: center;
+    position: relative;
+    margin-left: 3vw;
+  }
+  .progress .name {
+    display: block;
+    vertical-align: bottom;
+    text-align: center;
+    margin-bottom: 1em;
+    color: black;
+    opacity: 0.3;
+  }
+  .progress .step {
+    color: black;
+    border: 3px solid silver;
+    background-color: silver;
+    border-radius: 50%;
+    line-height: 1.2;
+    width: 1.5em;
+    height: 1.5em;
+    display: inline-block;
+    z-index: 0;
+  }
+  .progress .step span {
+    opacity: 0.3;
+  }
+  .progress .active .name,
+  .progress .active .step span {
+    opacity: 1;
+  }
+  .progress .step:before {
+    content: "";
+    display: block;
+    background-color: silver;
+    height: 0.4em;
+    width: 50%;
+    position: absolute;
+    bottom: 0.6em;
+    left: 0;
+    z-index: -1;
+  }
+  .progress .step:after {
+    content: "";
+    display: block;
+    background-color: silver;
+    height: 0.4em;
+    width: 50%;
+    position: absolute;
+    bottom: 0.6em;
+    right: 0;
+    z-index: -1;
+  }
+  .progress li:first-of-type .step:before {
+    display: none;
+  }
+  .progress li:last-of-type .step:after {
+    display: none;
+  }
+  .progress .done .step,
+  .progress .done .step:before,
+  .progress .done .step:after,
+  .progress .active .step,
+  .progress .active .step:before {
+    background-color: yellowgreen;
+  }
+  .progress .done .step,
+  .progress .active .step {
+    border: 3px solid yellowgreen;
+  }

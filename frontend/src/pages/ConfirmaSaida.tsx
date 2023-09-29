@@ -1,6 +1,8 @@
 import { Link, useNavigate } from "react-router-dom"
 import { IoIosArrowBack } from "react-icons/Io"
 
+import "./../css/perfilpolicial.css"
+
 function ConfirmaSaida() {
 
         const navigate = useNavigate();
@@ -25,19 +27,20 @@ function ConfirmaSaida() {
                                         <div className="wrap-login">
 
                                                 <Link to="/perfilpolicial">
-                                                        <IoIosArrowBack className="back" />
+                                                        <IoIosArrowBack className="voltarsair" />
                                                 </Link>
 
-                                                <form className="login-form">
+                                            <br></br>  <br></br>
 
-                                                        <span className="login-form-title2">Quer mesmo sair?</span>
+                                                        <span id="quermesmosair">Quer mesmo sair?</span>
                                                         <span className="login-form-title"></span>
 
                                                         <div className="container-login-form-btn">
                                                                 <button className="login-form-btn3" onClick={() => {logOut()}}>Sim</button>
+                                                           
                                                         </div>
 
-                                                </form>
+                                               
                                         </div>
                                 </div>
                         </div>

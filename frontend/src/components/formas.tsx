@@ -6,9 +6,13 @@ import { RiMoneyDollarCircleLine } from "react-icons/ri"
 
 function Formas () {
     return(
-<>
+<div id="formas">
+
+
+
 
       <img src="./../imgs/formas.png" className="imagemformas"/>
+
 
 
 
@@ -127,7 +131,7 @@ injúria.</p></div>
         </div>
         </div>
 
-</>
+</div>
     )
 }
 

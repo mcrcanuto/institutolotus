@@ -10,6 +10,7 @@ html, body {
   height: 100%;
   width: 100%;
   font-family: 'Inter', sans-serif;
+  background-color: #fff;
 }
 
 
@@ -52,7 +53,7 @@ html, body {
 .form-control{  
   color: black;
   line-height: 1.2;
-  border: rebeccapurple;
+  border: #663399;
   display: block;
   width: 75%;
   margin-left: 8%;
@@ -351,7 +352,10 @@ div {
   color: rgb(0, 0, 0);
   font-weight: normal;
   font-family: inter, arial;
-  font-size: 3vh;
+  font-size: 2.5vh;
+  background-color:#fff ;
+  box-shadow: 0 4px 6px -6px #222;
+
   text-align: center;
 }
 
@@ -374,4 +378,14 @@ body::-webkit-scrollbar {
   
   }
  
-
+/*css do confirmar saída*/
+#quermesmosair{
+  font-family: inter,arial;
+  font-size: 4vh;
+  color: black;
+  font-weight: normal;
+  margin-left: 26%;
+}
+.voltarsair{
+  font-size: 8vh;
+}

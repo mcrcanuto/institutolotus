@@ -294,9 +294,9 @@ function Denuncia() {
               </div>
 
               <div className='container-login-form-btn'>
-                <button type='reset' className="login-form-btn2" onClick={clear}>Limpar</button>
+                <button type='reset' className="botaolimpar" onClick={clear}>Limpar</button>
                 <p className='btnSpace'>espaço</p>
-                <button type='submit' className="login-form-btn2" onClick={denunciarOprt}>Enviar</button>
+                <button type='submit' className="botaoenviar" onClick={denunciarOprt}>Enviar</button>
               </div>
               <br />
             </div>

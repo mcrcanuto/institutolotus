@@ -6,7 +6,7 @@ import {BsHospital, BsFillHouseFill} from "react-icons/bs"
 
 function Leis () {
     return(
-<>
+<div id="leis">
 
 
       <img src="./../imgs/leis.png" className="imagemleis"/>
@@ -109,7 +109,7 @@ podem ser maridos/esposas, companheiros/as, namorados/as (que morem juntos ou n√
 
 
 
-</>
+</div>
     )
 }
 

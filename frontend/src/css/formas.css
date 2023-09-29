@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
-
-body{
-    background-color:#f1f1f1;
+#formas{
+    background-color:#fff;
   }
 
 @media screen and (min-width: 679px){
@@ -20,6 +19,7 @@ body{
 @media screen and (min-width: 679px){
 .list-violence .content {
     padding-left: 80px;
+    
 }}
 @media screen and (min-width: 679px){
 .list-violence .content {
@@ -107,7 +107,6 @@ ul {
     
 }
 
-
 .list-violence .content .list ul li:before {
     content: '';
     border: 1px solid rgb(64, 3, 70);
@@ -135,6 +134,9 @@ ul {
     height: 35vh;
     object-fit: cover;
 }
+
+
+
 
 .nossasenhora{
     font-size: 3vh;

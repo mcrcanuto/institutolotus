@@ -16,9 +16,38 @@ return(
     </React.Fragment>
 
 
-<br></br><br></br><br></br>
-<p>oiiiiii statussss</p>
-<br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+    <div className="Containeracompanhamento">
+    <div className="containeracompanhamento">
+    <div className="wrapacompanhamento">
+      <h2 className='h2acompanhamento'>Denúncia: XXXXXXXXXX</h2>
+      <h2 id='statusacompa'>status: Vizualisada</h2>
+      <br />
+      <ol className="progress" data-steps="4">
+  <li className="done">
+    <span className="name">Enviada</span>
+    <span className="step"><span>1</span></span>
+  </li>
+  <li className="done">
+    <span className="name">Vizualisada</span>
+    <span className="step"><span>2</span></span>
+  </li>
+  <li className="active">
+    <span className="name">Finalizada</span>
+    <span className="step"><span>3</span></span>
+  </li>
+</ol>
+<br /><br /><br /><br />
+    <div className='comente'>
+      <fieldset>
+        ola eu sou a porra da giovana <br />
+        jsuxhua <br />
+        cbwkjhn
+      </fieldset>
+    </div>
+      
+    </div>
+    </div>
+    </div>
 
    <React.Fragment>
     <Footer/>

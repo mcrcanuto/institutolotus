@@ -17,7 +17,7 @@ import { BsPatchQuestionFill, BsFillPatchExclamationFill} from "react-icons/bs"
 function QuemSomos(){
  
 return (
-  <>
+  <div id="quemsomos">
 
 <React.Fragment>
   <Menu/>
@@ -96,7 +96,7 @@ nossa cidade, gerando uma maior rapidez no recebimento delas, pois são eles que
 </React.Fragment>
 
 
-    </>
+    </div>
 )
 }
       
