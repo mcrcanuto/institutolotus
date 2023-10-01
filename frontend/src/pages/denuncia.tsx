@@ -116,7 +116,7 @@ function Denuncia() {
       agr_nome: agressorInfo.agr_nome,
       Denuncia_den_protocolo: localStorage.getItem("denuncia")
     }).then((res) => {
-      alert("Denúncia criad")
+      alert("Denúncia criada")
       navigate("/protocolo");
     }).catch((error) => {
       console.log(error);

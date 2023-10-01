@@ -99,21 +99,18 @@ function EditarPerfil () {
 
 <br></br><br></br>
 
-<div className="roweditar">
-  <div className="columneditar">
+<div className="rolarpolicial">
 
+<div className="colunapolicial" >
+  <h2 className="minhaconta">Minha Conta</h2>
+  <div className="rowminhaconta">
   <div className="wrap-editar-esquerda">
-
-<span className="editar-esquerda-title">Minha Conta</span>
-
-<br></br>
-
-<div className="wrap-input-editar-esquerda">
+    <br></br>
 <p id="nomesobrenome">{`${getPolicial.pol_nome} ${getPolicial.pol_sobrenome}`}</p>
 <br></br>
-<p id="editar-email">{getPolicial.pol_email}</p>
+<p id="editar-email">Email: {getPolicial.pol_email}</p>
 <br ></br>
-<p id="editar-email">{getPolicial.pol_cpf}</p>
+<p id="editar-email"> CPF:{getPolicial.pol_cpf}</p>
 <br></br>
 
 <p id="editar-den-andamento"> 0 Denúncias em Andamento</p>
@@ -124,75 +121,76 @@ function EditarPerfil () {
 
 <span className="focus-input"></span>
 </div>
-
+  </div>
 
 </div>
-</div>
 
 
-
-  <div className="columneditar">
-    
-  
-        <div className="wrap-editar-direita">
+<div className="colunapolicial" >
+  <h2 className="editarinfo">Editar Informações </h2>
+  <div className="roweditarinfo">
+     
+  <div className="wrap-editar-direita">
 
    
-        <form className="login-form">
+<form className="login-form">
 
-        <span className="editar-title">Editar Perfil</span>        
-        <span className="editar-subtitle">Dados Pessoais</span>
-     
-
-        <div className="wrap-input-editar">
-        <input className='inputeditar' type="name" required  placeholder="Nome" name="nome" value={polUpdate.nome || ""} onChange={handleChange}/>
       
-        </div>
+<span className="editar-subtitle">Dados Pessoais</span>
 
-        <div className="wrap-input-editar">
-        <input className='inputeditar'type="name"  required  placeholder="Sobrenome" name="sobreNome" value={polUpdate.sobreNome || ""} onChange={handleChange}/>
-      
-        </div>
 
-        <div className="wrap-input-editar">
-    <input className='inputeditar' type="name" required placeholder="Cpf" name="cpf" value={polUpdate.cpf || ""} onChange={handleChange}/>
-    
-    </div>
+<div className="wrap-input-editar">
+<input className='inputeditar' type="name" required  placeholder="Nome" name="nome" value={polUpdate.nome || ""} onChange={handleChange}/>
 
-        <span className="editar-subtitle">Dados de Login</span>
-      
-    
-        <div className="wrap-input-editar">
-        <input className='inputeditar' type="email" required  placeholder="Email" value={polUpdate.email} name="email" onChange={handleChange}/>
-        
-        </div>
-    
-        <div className="wrap-input-editar">
-        <input className='inputeditar' type="password" required  placeholder="Senha"  name="senha" onChange={handleChange}/>
-       
-        </div>
+</div>
 
-        <div className="container-login-form-btn">
-      <button  onClick={updatePolicial}>Salvar Edições</button>
-     </div>
+<div className="wrap-input-editar">
+<input className='inputeditar'type="name"  required  placeholder="Sobrenome" name="sobreNome" value={polUpdate.sobreNome || ""} onChange={handleChange}/>
 
-     
-     
-        <div className="container-login-form-btn2">
-      <button  type="reset" onClick={reverterMudanças}>Cancelar</button>
-     </div>
-        </form>
+</div>
 
-        <div >
-          <Link to="/querexcluirsuaconta?">
-      <button >Apagar Conta</button>
-      </Link>
-     </div>    
-        </div>
-        </div>
-        
-        </div>
+<div className="wrap-input-editar">
+<input className='inputeditar' type="name" required placeholder="Cpf" name="cpf" value={polUpdate.cpf || ""} onChange={handleChange}/>
 
-    
+</div>
+
+<span className="editar-subtitle">Dados de Login</span>
+
+
+<div className="wrap-input-editar">
+<input className='inputeditar' type="email" required  placeholder="Email" value={polUpdate.email} name="email" onChange={handleChange}/>
+
+</div>
+
+<div className="wrap-input-editar">
+<input className='inputeditar' type="password" required  placeholder="Senha"  name="senha" onChange={handleChange}/>
+
+</div>
+
+
+<div className="container-login-form-btn">
+<button className="salvar"  onClick={updatePolicial}>Salvar Edições</button>
+
+<button className="cancelar" type="reset" onClick={reverterMudanças}>Cancelar</button>
+
+<Link to="/querexcluirsuaconta?">
+<button className="apagar" >Apagar Conta</button>
+</Link>
+
+</div>
+
+
+</form>
+
+   
+</div>
+</div>
+</div>
+</div>
+
+
+
+
 
   <React.Fragment>
   <FooterPolicial/>

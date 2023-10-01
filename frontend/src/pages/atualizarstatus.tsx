@@ -97,14 +97,19 @@ return(
     <br></br>
     <br></br>
 
-    <p id="titulo_denuncia">Denúncia</p>
 
-    <div className="rowfichario">
+    <div className="rolarpolicial">
 
-  <div className="colunafichario">
-  <p id="subtitulo_denuncia">Sobre a ocorrência</p>
- 
-  <p id="informacoes_denuncia">Tipo de Violência: {denuncia.den_violencia}</p>
+    <p id="titulo_denuncia">Denúncia de {denuncia.den_violencia} <br></br> {protocolo}</p>
+
+<div className="colunapolicial" >
+
+  <h2 className="sobre">Sobre a ocorrência</h2>
+  <div className="rowcomentario">
+  <div className="wrap-comentario-esquerda">
+   
+
+<p id="informacoes_denuncia">Tipo de Violência: {denuncia.den_violencia}</p>
 <p id="informacoes_denuncia">Protocolo da denúncia: {protocolo}</p>
 <p id="informacoes_denuncia">Tipo de denunciante: {denuncia.den_denunciante}</p>
 <p id="informacoes_denuncia">Frequência do ocorrido: {denuncia.den_frequencia}</p>
@@ -115,13 +120,23 @@ return(
 <p id="informacoes_denuncia">Cep: {denuncia.den_cep}</p>
 <p id="informacoes_denuncia">Descrição do local: {denuncia.den_local}</p>
 <p id="informacoes_denuncia">Ponto de referência: {denuncia.den_carac_local}</p>
+
+<br></br>
+
+<span className="focus-input"></span>
+</div>
+  </div>
 </div>
 
 
-<div className="colunafichario">
-<p id="subtitulo_denuncia">Sobre o agressor</p>
 
-  <p id="informacoes_denuncia">Nome do agressor: {denuncia.agr_nome}</p>
+<div className="colunapolicial" >
+  <h2 className="sobre">Sobre o agressor</h2>
+  <div className="rowcomentario">
+  <div className="wrap-comentario-direita">
+ 
+
+    <p id="informacoes_denuncia">Nome do agressor: {denuncia.agr_nome}</p>
 <p id="informacoes_denuncia">Apelido do agressor: {denuncia.agr_apelido}</p>
 <p id="informacoes_denuncia">Idade do agressor: {denuncia.agr_idade}</p>
 <p id="informacoes_denuncia">O agressor mora na mesma residência que a vítima: {denuncia.agr_nome}</p>
@@ -130,10 +145,18 @@ return(
 <p id="informacoes_denuncia">Local de trabalho do agressor : {denuncia.agr_nome}</p>
 <p id="informacoes_denuncia">O agressor tem algum relacionamento com a vítima: {denuncia.agr_nome} Se sim, qual: {denuncia.agr_nome}</p>
 
+<br></br>
+
+<span className="focus-input"></span>
 </div>
+  </div>
 </div>
 
-<br></br>
+
+</div>
+
+   
+<br></br><br></br><br></br><br></br><br></br><br></br>
 
 
 
