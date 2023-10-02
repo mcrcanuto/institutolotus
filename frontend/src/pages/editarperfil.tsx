@@ -113,7 +113,7 @@ function EditarPerfil () {
 <p id="editar-email"> CPF:{getPolicial.pol_cpf}</p>
 <br></br>
 
-<p id="editar-den-andamento"> 0 Denúncias em Andamento</p>
+<p id="editar-den-andamento"> {getPolicial.pol_den_andamento || ""} Denúncias em Andamento</p>
 
 <p id="editar-den-finalizada">{getPolicial.pol_denF || ""} Denúncias Finalizadas</p>
 

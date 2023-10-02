@@ -49,7 +49,7 @@ function Cadastro () {
     </span>
     
     <div className="wrap-input">
-    <input className='input' type="text" placeholder="Nome" required  onChange={handleChange} name="nome" value={cadInfo.nome}/>
+    <input className='input' required type="text" placeholder="Nome" onChange={handleChange} name="nome" value={cadInfo.nome}/>
     <span className="focus-input"  ></span>
     </div>
     <div className="wrap-input">

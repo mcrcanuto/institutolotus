@@ -76,7 +76,6 @@ function PerfilPolicial(){
     else {
       return <div key={item.den_protocolo}></div>
     }
-     console.log(item.den_violencia.match(pesquisa))
   })
 
   const handlePesquisa = (e:ChangeEvent<HTMLInputElement>) => {

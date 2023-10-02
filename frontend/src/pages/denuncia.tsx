@@ -148,167 +148,160 @@ function Denuncia() {
         <Submenu />
         <Zap />
       </React.Fragment>
-
-      <div className="Container">
-        <div className="container-login">
-          <div className="wrap-login">
-            <div className="login-form">
+      <div className="container">
+        <div className='container-form'>
+          <div className="container-login">
+            <div className='btnvolta'>
               <Link to="/">
                 <IoIosArrowBack className="backdenuncia" />
               </Link>
-              <div className='login-form-title'>
-                <h1 id='denuncie'>DENUNCIE A OCORRÊNCIA DE VIOLÊNCIA CONTRA A MULHER</h1>
-              </div>
-              <div className='crime'>
-                <article className='ocorrencia'>
-                  <fieldset className='login-form-title11'>Sobre a Ocorrência</fieldset>
-                  <br />
-                  <div className='wrap-input'>
-                    <div className="wrap-input">
-                      <input className='input' type="text" onChange={handleChange} name="den_denunciante" value={denunciaInfo.den_denunciante} placeholder="Como denunciante, eu sou..." required list='denunciante' />
-                      <span className="focus-input"></span>
-                      <datalist id='denunciante'>
-                        <option className='tipoDenunciante' value="Vítima"></option>
-                        <option className='tipoDenunciante' value="Testemunha"></option>
-                      </datalist>
-                    </div>
-                    <div className="wrap-input">
-                      <input className='input' type="text" onChange={handleChange} name="den_violencia" value={denunciaInfo.den_violencia} placeholder="Tipos de violência" required list='violencia' />
-                      <span className="focus-input"></span>
-                      <datalist id='violencia'>
-                        <option className='tipoViolencia' value="Violência Física "></option>
-                        <option className='tipoViolencia' value="Violência Psicológica "></option>
-                        <option className='tipoViolencia' value="Violência Sexual "></option>
-                        <option className='tipoViolencia' value="Violência Patrimonial "></option>
-                        <option className='tipoViolencia' value="Violência Moral "></option>
-                      </datalist>
-                    </div>
-                    <div className="wrap-input">
-                      <input className='input' type="text" onChange={handleChange} name="den_frequencia" value={denunciaInfo.den_frequencia} placeholder="Frequência do ocorrido" required list='frequencia' />
-                      <span className="focus-input"></span>
-                      <datalist id="frequencia">
-                        <option>Diariamente</option>
-                        <option>Toda semana</option>
-                        <option>Todo mês</option>
-                        <option>Apenas uma vez</option>
-                      </datalist>
-                    </div>
-                    <div className="wrap-input">
-                      <p className='text'>Data da Ocorrência: </p>   <input onChange={handleChange} name="den_data_ocorrencia" value={denunciaInfo.den_data_ocorrencia} className='input' type="date" required />
-                    </div>
-                    <div className='wrap-input'>
-                      <p className='text'>Hora da Ocorrência: </p> <input className='input' onChange={handleChange} name="den_hora_ocorrencia" value={denunciaInfo.den_hora_ocorrencia} type='time' required />
-                    </div>
-                    <div>
-                      <textarea className='input' placeholder="Descrição do ocorrido" required />
-                      <span className="focus-input"></span>
-                    </div>
-                  </div>
-                  <br />
-                    <fieldset className='login-form-title1'>Sobre o Local</fieldset>
-                    <br />
-                    <div>
-                      <div className="wrap-input">
-                        <input className='input' type="text" placeholder="Bairro" required />
-                        <span className="focus-input"></span>
-                      </div>
-
-                      <div className="wrap-input">
-                        <input className='input' type="text" placeholder="Digite seu CEP" onChange={handleChange} name="den_cep" value={denunciaInfo.den_cep} required />
-                        <span className="focus-input"></span>
-                        <p className='text'><input type="checkbox" name="" />Não sei meu CEP</p>
-                      </div>
-                      <div className="wrap-input">
-                        <input className='input' type="text" placeholder="Descrição do Local" onChange={handleChange} name="den_local" value={denunciaInfo.den_local} required />
-                        <span className="focus-input"></span>
-                      </div>
-                      <div className="wrap-input">
-                        <input className='input' type="text" placeholder="Ponto de Referência" onChange={handleChange} name="den_ponto_ref" value={denunciaInfo.den_ponto_ref} required />
-                        <span className="focus-input"></span>
-                      </div>
-                    </div>
-                </article>
-                <br />
-                <fieldset className='login-form-title1'>Sobre o Agressor</fieldset>
-                <br />
-                <article className='agressor'>
-                  <div className="wrap-input">
-                    <input className='input' type="text" placeholder="Nome do Agressor" onChange={handleChangeAgr} name="agr_nome" value={agressorInfo.agr_nome} required />
-                    <span className="focus-input"></span>
-                  </div>
-                  <div className="wrap-input">
-                    <input className='input' type="text" placeholder="Apelido do Agressor" required />
-                    <span className="focus-input"></span>
-                  </div>
-                  <div className="wrap-input">
-                    <input className='input' type="number" placeholder="Idade do Agressor" onChange={handleChangeAgr} name="agr_idade" value={agressorInfo.agr_idade} required />
-                    <span className="focus-input"></span>
-                  </div>
-                  <div className="wrap-input">
-                    <input className='input' type="text" placeholder="O agressor mora na mesma residência que a vítima?" required list='locAgr' />
-                    <span className="focus-input"></span>
-                    <datalist id="locAgr">
-                      <option>Sim</option>
-                      <option>Não</option>
-                    </datalist>
-                  </div>
-                  <div className="wrap-input">
-                    <input className='input' placeholder="Se a resposta for não, qual o endereço do agressor?" onChange={handleChangeAgr} name="agr_endereco" value={agressorInfo.agr_endereco} type="text" required />
-                    <span className="focus-input"></span>
-                  </div>
-                  <div className="wrap-input">
-                    <input className='input' placeholder="Ponto de referência/Características" type="text" required />
-                    <span className="focus-input"></span>
-                  </div>
-                  <div className="wrap-input">
-                    <input className='input' placeholder="Local de trabalho do agressor" type="text" required />
-                    <span className="focus-input"></span>
-                  </div>
-                  <div className="wrap-input">
-                    <input className='input' type="text" placeholder="O agressor tem algum tipo de relacionamento com a vítima?" required list='relAgr' />
-                    <span className="focus-input"></span>
-                    <datalist id="relAgr">
-                      <option>Sim</option>
-                      <option>Não</option>
-                    </datalist>
-                  </div>
-                  <div className="wrap-input">
-                    <input className='input' type="text" placeholder="Se sim, qual?" required list='sitAgr' />
-                    <span className="focus-input"></span>
-                    <datalist id="sitAgr">
-                      <option value="Colega de trabalho"></option>
-                      <option value="Amigo"></option>
-                      <option value="Irmão"></option>
-                      <option value="Namorado"></option>
-                      <option value="Marido"></option>
-                      <option value="Parente"></option>
-                    </datalist>
-                  </div>
-                </article>
-                <div className="wrap-input1">
-                  <p className='text'> Selecionar arquivos - Use para enviar provas como fotos de marcas de agressão.</p>
-                  <br />
-                  <input className='input1' type="file" onChange={handleImage} />
-                  <span className="focus-input" data-placeholder=""></span> <br /><br />
-                </div>
-              </div>
-
-              <div className='container-login-form-btn'>
-                <button type='reset' className="botaolimpar" onClick={clear}>Limpar</button>
-                <p className='btnSpace'>espaço</p>
-                <button type='submit' className="botaoenviar" onClick={denunciarOprt}>Enviar</button>
-              </div>
-              <br />
             </div>
+            <div className='login-form-title'>
+              <h1 id='denuncie'>DENUNCIE A OCORRÊNCIA DE VIOLÊNCIA CONTRA A MULHER</h1>
+            </div>
+            <div className='crime'>
+              <article className='ocorrencia'>
+                <fieldset className='login-form-title11'>Sobre a Ocorrência</fieldset>
+                <br />
+                <div className='wrap-input'>
+                  <div className="wrap-input">
+                    <input className='input' type="text" onChange={handleChange} name="den_denunciante" value={denunciaInfo.den_denunciante} placeholder="Como denunciante, eu sou..." required list='denunciante' />
+                    <span className="focus-input"></span>
+                    <datalist id='denunciante'>
+                      <option className='tipoDenunciante' value="Vítima"></option>
+                      <option className='tipoDenunciante' value="Testemunha"></option>
+                    </datalist>
+                  </div>
+                  <div className="wrap-input">
+                    <input className='input' type="text" onChange={handleChange} name="den_violencia" value={denunciaInfo.den_violencia} placeholder="Tipos de violência" required list='violencia' />
+                    <span className="focus-input"></span>
+                    <datalist id='violencia'>
+                      <option className='tipoViolencia' value="Violência Física "></option>
+                      <option className='tipoViolencia' value="Violência Psicológica "></option>
+                      <option className='tipoViolencia' value="Violência Sexual "></option>
+                      <option className='tipoViolencia' value="Violência Patrimonial "></option>
+                      <option className='tipoViolencia' value="Violência Moral "></option>
+                    </datalist>
+                  </div>
+                  <div className="wrap-input">
+                    <input className='input' type="text" onChange={handleChange} name="den_frequencia" value={denunciaInfo.den_frequencia} placeholder="Frequência do ocorrido" required list='frequencia' />
+                    <span className="focus-input"></span>
+                    <datalist id="frequencia">
+                      <option>Diariamente</option>
+                      <option>Toda semana</option>
+                      <option>Todo mês</option>
+                      <option>Apenas uma vez</option>
+                    </datalist>
+                  </div>
+                  <div className="wrap-input">
+                    <p className='text'>Data da Ocorrência: </p>   <input onChange={handleChange} name="den_data_ocorrencia" value={denunciaInfo.den_data_ocorrencia} className='input' type="date" required />
+                  </div>
+                  <div className='wrap-input'>
+                    <p className='text'>Hora da Ocorrência: </p> <input className='input' onChange={handleChange} name="den_hora_ocorrencia" value={denunciaInfo.den_hora_ocorrencia} type='time' required />
+                  </div>
+                  <div>
+                    <textarea className='input' placeholder="Descrição do ocorrido" required />
+                    <span className="focus-input"></span>
+                  </div>
+                </div>
+                <div>
+                  <div className="wrap-input">
+                    <input className='input' type="text" placeholder="Bairro" required />
+                    <span className="focus-input"></span>
+                  </div>
+                  <div className="wrap-input">
+                    <input className='input' type="text" placeholder="Digite seu CEP" onChange={handleChange} name="den_cep" value={denunciaInfo.den_cep} required />
+                    <span className="focus-input"></span>
+                    <p className='text'><input type="checkbox" name="" />Não sei meu CEP</p>
+                  </div>
+                  <div className="wrap-input">
+                    <input className='input' type="text" placeholder="Descrição do Local" onChange={handleChange} name="den_local" value={denunciaInfo.den_local} required />
+                    <span className="focus-input"></span>
+                  </div>
+                  <div className="wrap-input">
+                    <input className='input' type="text" placeholder="Ponto de Referência" onChange={handleChange} name="den_ponto_ref" value={denunciaInfo.den_ponto_ref} required />
+                    <span className="focus-input"></span>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div className='agressor'>
+              <fieldset className='login-form-title1'>Sobre o Agressor</fieldset>
+              <br />
+              <article>
+                <div className="wrap-input">
+                  <input className='input' type="text" placeholder="Nome do Agressor" onChange={handleChangeAgr} name="agr_nome" value={agressorInfo.agr_nome} required />
+                  <span className="focus-input"></span>
+                </div>
+                <div className="wrap-input">
+                  <input className='input' type="text" placeholder="Apelido do Agressor" required />
+                  <span className="focus-input"></span>
+                </div>
+                <div className="wrap-input">
+                  <input className='input' type="number" placeholder="Idade do Agressor" onChange={handleChangeAgr} name="agr_idade" value={agressorInfo.agr_idade} required />
+                  <span className="focus-input"></span>
+                </div>
+                <div className="wrap-input">
+                  <input className='input' type="text" placeholder="O agressor mora na mesma residência que a vítima?" required list='locAgr' />
+                  <span className="focus-input"></span>
+                  <datalist id="locAgr">
+                    <option>Sim</option>
+                    <option>Não</option>
+                  </datalist>
+                </div>
+                <div className="wrap-input">
+                  <input className='input' placeholder="Se a resposta for não, qual o endereço do agressor?" onChange={handleChangeAgr} name="agr_endereco" value={agressorInfo.agr_endereco} type="text" required />
+                  <span className="focus-input"></span>
+                </div>
+                <div className="wrap-input">
+                  <input className='input' placeholder="Ponto de referência/Características" type="text" required />
+                  <span className="focus-input"></span>
+                </div>
+                <div className="wrap-input">
+                  <input className='input' placeholder="Local de trabalho do agressor" type="text" required />
+                  <span className="focus-input"></span>
+                </div>
+                <div className="wrap-input">
+                  <input className='input' type="text" placeholder="O agressor tem algum tipo de relacionamento com a vítima?" required list='relAgr' />
+                  <span className="focus-input"></span>
+                  <datalist id="relAgr">
+                    <option>Sim</option>
+                    <option>Não</option>
+                  </datalist>
+                </div>
+                <div className="wrap-input">
+                  <input className='input' type="text" placeholder="Se sim, qual?" required list='sitAgr' />
+                  <span className="focus-input"></span>
+                  <datalist id="sitAgr">
+                    <option value="Colega de trabalho"></option>
+                    <option value="Amigo"></option>
+                    <option value="Irmão"></option>
+                    <option value="Namorado"></option>
+                    <option value="Marido"></option>
+                    <option value="Parente"></option>
+                  </datalist>
+                </div>
+              </article>
+            </div>
+            <div className="wrap-input1">
+              <p className='text'> Selecionar arquivos - Use para enviar provas como fotos de marcas de agressão.</p>
+              <br />
+              <input className='input1' type="file" onChange={handleImage} />
+              <br /><br />
+              <span className="focus-input" data-placeholder=""></span>
+            </div>
+            <div className='container-login-form-btn'>
+              <button type='reset' className="botaolimpar" onClick={clear}>Limpar</button>
+              <p className='btnSpace'>espaço</p>
+              <button type='submit' className="botaoenviar" onClick={denunciarOprt}>Enviar</button>
+            </div>
+            <br />
           </div>
         </div>
       </div>
-
-
       <React.Fragment>
         <Footer />
       </React.Fragment>
-
     </>
 
   )

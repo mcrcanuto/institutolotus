@@ -31,13 +31,12 @@
  
  .container-login {
      width: 98.93vw;
-     min-height: 100vh;
+     min-height: 50vh;
      display: flex;
      flex-wrap: wrap;
-     align-items: center;
      justify-content: center;
-     padding: 1%;
      background-color: rgb(231, 224, 214);
+     
  }
  
  .wrap-login  {
@@ -50,11 +49,11 @@
  }
  
  .login-form {
-     width: 100%;
+    width: 100%;
  }
 
  .login-form-title {
-  display: block;
+  display: block; 
   font-size: 6px;
   font-family: verdana;
   color: rgb(81, 42, 117); 
@@ -148,7 +147,8 @@ fieldset{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-bottom: 13px;
+  padding-bottom: 20px;
+  width: 30%;
 }
 
 .login-form-btn {
@@ -183,7 +183,7 @@ fieldset{
 }
 
 .botaolimpar {
-  font-size: 15px;
+  font-size: 13px;
   border: none;
   border-radius: 10px;
   color: rgb(250, 248, 252);
@@ -192,14 +192,14 @@ fieldset{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 15%;
+  width: 32%;
   height: 30px;
   background-color: rgb(108, 98, 109);
   cursor:pointer;
 }
 
 .botaoenviar{
-  font-size: 15px;
+  font-size: 13px;
   border: none;
   border-radius: 10px;
   color: rgb(250, 248, 252);
@@ -208,7 +208,7 @@ fieldset{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 15%;
+  width: 32%;
   height: 30px;
   background-color: rgb(73, 35, 77);
   cursor:pointer;
@@ -264,16 +264,44 @@ fieldset{
   border-bottom: 2px solid #adadad;
   margin-bottom: 37px;
   text-align: center;
+  margin-top: 5%;
 }
 
 .btnSpace {
   visibility: hidden;
 }
 
-.ocorrencia {
-  text-align: left;
+#ocorrencia {
+  flex-direction: column;
 }
 
-.agressor {
-  text-align: right;  
+#agressor {
+  flex-direction: column;  
+}
+
+.crime{
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+  margin-top:  10%;
+  margin-right: 50px;
+  width: 47%;
+
+}
+
+.agressor{
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+  width: 47%;
+  padding-top: 70px;  
+  margin-top: -30px;
+}
+
+IoIosArrowBack {
+  padding-right: 15%;
+}
+
+.btnvolta {
+  padding-right: 100%;
 }
