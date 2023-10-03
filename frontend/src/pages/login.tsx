@@ -1,19 +1,19 @@
 import { ChangeEvent, useState } from 'react';
 import './../css/login.css'
-import {Link, useNavigate} from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import axios from "axios";
 
 
 function Login() {
 
   const [loginInfo, setInfo] = useState({
-      senha:  "",
-      email : ""
+    senha: "",
+    email: ""
   });
   const navigate = useNavigate();
 
-  const handleChange = (e:ChangeEvent<HTMLInputElement>) => {
-    setInfo(prev => ({...prev, [e.target.name] : e.target.value}));
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setInfo(prev => ({ ...prev, [e.target.name]: e.target.value }));
   }
 
   async function login() {
@@ -26,51 +26,50 @@ function Login() {
   }
 
   return (
-  
 
     <div className="Container">
 
 
 
-    <div className="container-login">
+      <div className="container-login">
 
-    
 
-    <div className="wrap-login">
 
-      
-    <div className="login-form" >
-    <span className="login-form-title">Entrar como policial</span>
-    <span className="login-form-title">
-    
-    </span>
-    
-    <div className="wrap-input">
-    <input className='input' type="email" onChange={handleChange} name="email" placeholder="Email"/>
-    <span className="focus-input"></span>
-    </div>
-    <div className="wrap-input">
-    <input className='input'type="password"  onChange={handleChange} name="senha" placeholder="Senha"/>
-    <span className="focus-input"></span>
-    </div>
+        <div className="wrap-login">
 
-  <div className="container-login-form-btn">
-  <button className="login-form-btn" onClick={() => {login()}}>Entrar</button>
- </div>
 
- <div className="container-login-form-btn">
- <Link to="/cadastro">
-  <button className="login-form-btn-a" onClick={() => { navigate("/cadastro")}}>Criar Conta </button>
-  </Link>
- </div>
+          <div className="login-form" >
+            <span className="login-form-title">Entrar como policial</span>
+            <span className="login-form-title">
 
- 
- 
+            </span>
+
+            <div className="wrap-input">
+              <input className='input' type="email" onChange={handleChange} name="email" placeholder="Email" />
+              <span className="focus-input"></span>
+            </div>
+            <div className="wrap-input">
+              <input className='input' type="password" onChange={handleChange} name="senha" placeholder="Senha" />
+              <span className="focus-input"></span>
+            </div>
+
+            <div className="container-login-form-btn">
+              <button className="login-form-btn" onClick={() => { login() }}>Entrar</button>
+            </div>
+
+            <div className="container-login-form-btn">
+              <Link to="/cadastro">
+                <button className="login-form-btn-a" onClick={() => { navigate("/cadastro") }}>Criar Conta </button>
+              </Link>
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
     </div>
-    </div>
-    </div>
-    </div>
-  )  
+  )
 }
 
 export default Login;
