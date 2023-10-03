@@ -222,6 +222,9 @@ function Denuncia() {
                 </div>
               </article>
             </div>
+
+            <br></br><br></br><br></br>
+
             <div className='agressor'>
               <fieldset className='login-form-title1'>Sobre o Agressor</fieldset>
               <br />
