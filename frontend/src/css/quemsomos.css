@@ -47,25 +47,26 @@
   }
 
 .h2quemsomos{
-    font-size: 4vh;
+    font-size: 3.5vh;
     background-color:#5C286F;
-    color: aliceblue;
+    color:#5C286F;
     font-family: inter,arial;
     text-align: center;
 }
 .pquemsomos{
-    font-size: 3.5vh;
+    font-size: 3vh;
     font-family: inter,arial;
     text-align: justify;
+    color: black;
 }
 
 .para{
     background-color:transparent;
-    color:#000000;
-    font-weight: normal;
-    font-size: 3.5vh;
+    color:#2b0c36;
+    font-size: 3vh;
     font-family: inter,arial;
     text-align: center;
+    font-weight: normal;
 }
 .buttonquemsomos{
     font-size: 2.5vh;
@@ -80,41 +81,18 @@
     width: 50%;
     margin-left: 25%;
     height: 30px;
-    background-color: rgb(73, 35, 77);
+    background-color: rgb(157, 68, 167);
     cursor: pointer;
 }
-#entraradm{
-    color: #5d047544;
-    font-size: 9vh;
-    position: absolute;
-    bottom: 45vh;
-    display: flex;
-   margin-left: 80%;
-}
-#entraradm:hover{
-  color: #ffffff;
-  font-size: 9vh;
-  position: absolute;
-  bottom: 45vh;
-  display: flex;
- margin-left: 80%;
-}
-.buttonpolicial{
-    font-size: 3vh;
-    border: none;
-    border-radius: 10px;
-    color: rgba(250, 248, 252, 0.911);
-    line-height: 1.2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 25%;
-    margin-left: 40%;
-    background-color: rgb(0, 0, 0);
-    cursor: pointer;
+
+
+#entrarpolicial{
+margin-left: 45%;
+margin-top: 2%;
+width: 15vw;
+object-fit: cover;
   }
- 
   
-  #branco{
-    color: white;
-  }
+ #brancopquem{
+  color: transparent;
+ }

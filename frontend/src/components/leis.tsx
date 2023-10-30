@@ -15,7 +15,7 @@ function Leis () {
 
 <div className="lista-violencia">
 
-<div className="contem">
+<div className="contemleis">
 <div className="conteudo">
 <div className="icone"><AiOutlineWifi/></div>
 <div><h2 id="agua">LEI CAROLINA DIECKMAN</h2>
@@ -36,7 +36,7 @@ proteção à mulher.</p>
 </div>
 
 
-<div className="contem">
+<div className="contemleis">
 <div className="conteudo">
 <div className="icone"><LuCalendarClock/></div>
 <div><h2 id="agua"> LEI JOANNA MARANHÃO</h2>
@@ -54,7 +54,7 @@ justo para o seu agressor, que na época, por conta das antigas leis, já tinha 
 </div>
         
         
-<div className="contem">
+<div className="contemleis">
 <div className="conteudo">
 <div className="icone"><BsHospital/></div>
 <div><h2 id="agua">LEI DO MINUTO SEGUINTE</h2>
@@ -79,7 +79,7 @@ da violência sexual;
 </div>
 </div>
 
-<div className="contem">
+<div className="contemleis">
 <div className="conteudo">
 <div className="icone"><BsFillHouseFill/></div>
 <div><h2 id="agua">LEI MARIA DA PENHA</h2>

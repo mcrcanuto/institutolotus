@@ -8,15 +8,15 @@ body{
   }
 
 @media screen and (min-width: 679px){
-.contem {
+.contemleis {
     max-width: 1023px;
 }
-.contem {
+.contemleis {
     box-sizing: border-box;
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0 10px 0 0;
     width: 100%;
-    max-width: 678px;
+    max-width: 1078px;
 }
 }
 
@@ -36,11 +36,9 @@ body{
     background-repeat: repeat-y;
     display: flex;
     flex-direction: column;
-    padding-left: 60px;
     position: relative;
     z-index: 1;
 }
-
 
 
 .lista-violencia .conteudo .icone {
@@ -63,9 +61,11 @@ body{
     width: 77px;
 }
 
-div {
+div{
     display: block;
     background-color: transparent;
+    
+
 }
 
 .lista-violencia .conteudo .icone:before {
@@ -132,7 +132,7 @@ ul {
 
 #agua{
     color: rgb(64, 3, 70);
-    font-size: 3vw;
+    font-size: 2.5vw;
     font-family: inter, arial;
     background: transparent;
 }
@@ -147,4 +147,5 @@ ul {
 #meudeus{
     font-size: 3vh;
     text-align: justify;
+    color: black;
 }

@@ -71,15 +71,13 @@ nossa cidade, gerando uma maior rapidez no recebimento delas, pois são eles que
 </div>
   </div>
 
-  <div>
-  
-<p id="branco">.</p>
-<br></br><br></br><br></br><br></br><br></br><br></br>
+
+
+
 <Link to="/login" className="link">
-  <button className="buttonpolicial">Entrar como Policial</button>
+<img src="./../imgs/entrarcomo.png" id="entrarpolicial" />
   </Link>
   <br></br><br></br>
-</div>
 
 
 </div>

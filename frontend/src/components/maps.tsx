@@ -28,11 +28,7 @@ export default function Maps(){
           lng={-44.112148}
           text="Delagacia da Mulher de Volta Redonda"
         />
-        <AnyReactComponent
-          lat={-22.517722845115603}
-          lng={-44.1070110678421}
-          text="Delegacia 222"
-        />
+      
 
 
       </GoogleMapReact>
