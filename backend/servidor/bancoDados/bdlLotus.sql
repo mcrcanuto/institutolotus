@@ -30,11 +30,12 @@ CREATE TABLE IF NOT EXISTS `InstituloLotus`.`Denúncia` (
   `den_hora_ocorrencia` VARCHAR(5) NOT NULL,
   `den_data_denuncia` DATE NOT NULL,
   `den_imagem` VARCHAR(15) NULL,
-  `den_local` VARCHAR(100) NOT NULL,
-  `den_status` VARCHAR(20) DEFAULT "Aberta",
+  `den_bairro` VARCHAR(100) NOT NULL,
+  `den_status` VARCHAR(20) DEFAULT "Enviada",
   `den_cep` NVARCHAR(8) NOT NULL,
   `den_ponto_ref` VARCHAR(55) NOT NULL,
-  `den_carac_local` VARCHAR(100) NOT NULL
+  `den_desc_local` VARCHAR(200) NOT NULL,
+  `den_desc_ocorrido` VARCHAR(300) NOT NULL
 )
 ENGINE = InnoDB;
 
@@ -77,18 +78,20 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `InstituloLotus`.`Agressor` (
   `agr_id` VARCHAR(5) NOT NULL PRIMARY KEY,
   `agr_nome` VARCHAR(45) NULL,
+  `agr_apelido` VARCHAR(45) NULL,
   `agr_idade` VARCHAR(45) NULL,
-  `agr_sexo` VARCHAR(1) NULL,
+  `agr_sexo` VARCHAR(10) NULL,
   `agr_estatura` VARCHAR(45) NULL,
   `agr_tipo_fisico` VARCHAR(45) NULL,
   `agr_cor_pele` VARCHAR(45) NULL,
   `agr_cor_cabelo` VARCHAR(45) NULL,
   `agr_cor_olhos` VARCHAR(45) NULL,
   `agr_tipo_cabelo` VARCHAR(45) NULL,
-  `agr_carac_espec` VARCHAR(45) NULL,
-  `agr_possui_porte` VARCHAR(45) NULL,
-  `agr_possibili_fuga` VARCHAR(45) NULL,
-  `agr_endereco` VARCHAR(45) NULL,
+  `agr_endereco` VARCHAR(100) NULL,
+  `agr_mesma_residencia` VARCHAR(3) NULL,
+  `agr_pont_ref_end` VARCHAR(100) NULL,
+  `agr_local_trabalho` VARCHAR(100) NULL,
+  `agr_possui_relacionamento` VARCHAR(3) NULL,
   `Denuncia_den_protocolo` VARCHAR(8) NOT NULL REFERENCES `InstituloLotus`.`Denúncia` (`den_protocolo`) 
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)

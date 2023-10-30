@@ -41,7 +41,8 @@ module.exports = {
     async criarAgressor(req, res) {
         try {
             const {agr_nome, agr_idade, agr_sexo, agr_estatura, agr_tipo_fisico, agr_cor_pele, agr_cor_cabelo, 
-                agr_cor_olhos, agr_tipo_cabelo, agr_carac_espec, agr_possui_porte, agr_possibili_fuga, agr_endereco,
+                agr_cor_olhos, agr_tipo_cabelo, agr_carac_espec, agr_possui_relacionamento, agr_local_trabalho, agr_endereco,
+                agr_mesma_residencia, agr_pont_ref_end, 
             Denuncia_den_protocolo} = req.body;
 
             let digitos = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
@@ -67,6 +68,10 @@ module.exports = {
                 agr_cor_olhos,
                 agr_cor_pele,
                 agr_endereco,
+                agr_mesma_residencia,
+                agr_possui_relacionamento,
+                agr_pont_ref_end,
+                agr_local_trabalho,
                 agr_estatura,
                 agr_idade,
                 agr_nome,

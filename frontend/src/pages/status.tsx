@@ -67,7 +67,7 @@ function Status() {
         <div className="containeracompanhamento">
           <div className="wrapacompanhamento">
             <h2 className='h2acompanhamento'>Denúncia: {denuncia.den_protocolo || ""}</h2>
-            <h2 id='statusacompa'>status: {denuncia.den_status || ""}</h2>
+            <h2 id='statusacompa'>Status: {denuncia.den_status || ""}</h2>
             <br />
             <ol className="progress" data-steps="4">
               <li className="done">

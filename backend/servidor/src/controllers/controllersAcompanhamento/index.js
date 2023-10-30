@@ -85,7 +85,7 @@ module.exports = {
                                 status = "Investigação";
                                 break;
                         }
-                        if (denuncia[0].den_status == "Aberta") {
+                        if (denuncia[0].den_status == "Enviada") {
                             await knex("Denúncia").update({
                                 den_status: status
                             }).where("den_protocolo", Denúncia_den_protocolo);

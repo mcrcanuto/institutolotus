@@ -6,22 +6,22 @@ import Zap from "../components/popup/zapzap";
 import Menu from "./../components/menus/Menu"
 import Submenu from "./../components/menus/submenu"
 import Footer from "./../components/menus/footer"
-import { IoIosArrowBack } from "react-icons/Io"
-import { Link, useNavigate } from "react-router-dom"
+import {  useNavigate } from "react-router-dom"
 
 function Denuncia() {
   const navigate = useNavigate();
   const [denunciaInfo, setDenuncia] = useState({ //atributos da denúncia
     den_denunciante: "",
     den_violencia: "",
-    den_carac_local: "",
+    den_desc_local: "",
     den_imagem: "",
     den_cep: "",
     den_ponto_ref: "",
-    den_local: "",
+    den_bairro: "",
     den_frequencia: "",
     den_hora_ocorrencia: "",
-    den_data_ocorrencia: ""
+    den_data_ocorrencia: "",
+    den_desc_ocorrido:"",
   });
   const [keys, setkeys] = useState({ //chaves para criação da tabela de relacionamento
     fazerRelacionamento: false,
@@ -38,10 +38,15 @@ function Denuncia() {
     agr_idade: "",
     agr_nome: "",
     agr_possibili_fuga: "",
-    agr_possui_porte: "",
+    agr_possui_relacionamento:"",
     agr_sexo: "",
     agr_tipo_fisico: "",
     agr_tipo_cabelo: "",
+    agr_apelido:"",
+    agr_mesma_residencia:"",
+    agr_pont_ref_end:"",
+    agr_local_trabalho:"",
+   
   });
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => { //evento de mudança para informações de denúncia
@@ -57,15 +62,16 @@ function Denuncia() {
   function clear() { //limpa as informações
     setDenuncia({ //da denúncia
       den_denunciante: "",
-      den_violencia: "",
-      den_carac_local: "",
-      den_imagem: "",
-      den_cep: "",
-      den_ponto_ref: "",
-      den_local: "",
-      den_frequencia: "",
-      den_hora_ocorrencia: "",
-      den_data_ocorrencia: ""
+    den_violencia: "",
+    den_desc_local: "",
+    den_imagem: "",
+    den_cep: "",
+    den_ponto_ref: "",
+    den_bairro: "",
+    den_frequencia: "",
+    den_hora_ocorrencia: "",
+    den_data_ocorrencia: "",
+    den_desc_ocorrido:"",
     })
     setAgressor({ //do agressor
       agr_carac_espec: "",
@@ -77,10 +83,14 @@ function Denuncia() {
       agr_idade: "",
       agr_nome: "",
       agr_possibili_fuga: "",
-      agr_possui_porte: "",
+      agr_possui_relacionamento:"",
       agr_sexo: "",
       agr_tipo_fisico: "",
       agr_tipo_cabelo: "",
+      agr_apelido:"",
+      agr_mesma_residencia:"",
+      agr_pont_ref_end:"",
+      agr_local_trabalho:"",
     })
   }
 
@@ -92,14 +102,15 @@ function Denuncia() {
     await axios.post(`http://localhost:3344/denuncia`, { //criar denúncia
       den_denunciante: denunciaInfo.den_denunciante,
       den_violencia: denunciaInfo.den_violencia,
-      den_carac_local: denunciaInfo.den_carac_local,
+      den_desc_local: denunciaInfo.den_desc_local,
       den_imagem: denunciaInfo.den_imagem,
       den_cep: denunciaInfo.den_cep,
       den_ponto_ref: denunciaInfo.den_ponto_ref,
-      den_local: denunciaInfo.den_local,
+      den_bairro: denunciaInfo.den_bairro,
       den_frequencia: denunciaInfo.den_frequencia,
       den_hora_ocorrencia: denunciaInfo.den_hora_ocorrencia,
-      den_data_ocorrencia: denunciaInfo.den_data_ocorrencia
+      den_data_ocorrencia: denunciaInfo.den_data_ocorrencia,
+      den_desc_ocorrido: denunciaInfo.den_desc_ocorrido,
     }).then((res) => {
       localStorage.setItem("denuncia", res.data.protocolo); //Guardar protocolo denúncia no localStorage
       //navega para outra página
@@ -191,28 +202,28 @@ function Denuncia() {
                     </datalist>
                   </div>
                   <div className="wrap-input-denuncia">
-                    <p className='text'>Data da Ocorrência: </p>   <input onChange={handleChange} name="den_data_ocorrencia" value={denunciaInfo.den_data_ocorrencia} className='input' type="date" required />
+                    <p className='text'>Data da Ocorrência: </p>   <input onChange={handleChange} value={denunciaInfo.den_data_ocorrencia} className='input' type="date" required />
                   </div>
                   <div className='wrap-input-denuncia'>
                     <p className='text'>Hora da Ocorrência: </p> <input className='input' onChange={handleChange} name="den_hora_ocorrencia" value={denunciaInfo.den_hora_ocorrencia} type='time' required />
                   </div>
                   <div>
-                    <textarea className='input' placeholder="Descrição do ocorrido" required />
+                    <textarea className='input' placeholder="Descrição do ocorrido"  name="den_desc_local" required  value={denunciaInfo.den_desc_ocorrido} />
                     <span className="focus-input"></span>
                   </div>
                 </div>
                 <div>
                   <div className="wrap-input-denuncia">
-                    <input className='input' type="text" placeholder="Bairro" required />
+                    <input className='input' type="text" placeholder="Bairro" required  onChange={handleChange} name="den_bairro" value={denunciaInfo.den_bairro}/>
                     <span className="focus-input"></span>
                   </div>
                   <div className="wrap-input-denuncia">
                     <input className='input' type="text" placeholder="Digite seu CEP" onChange={handleChange} name="den_cep" value={denunciaInfo.den_cep} required />
                     <span className="focus-input"></span>
-                    <p className='text'><input type="checkbox" name="" />Não sei meu CEP</p>
+                    <p className='text'><input type="checkbox" name="den_naosabe_cep"/>Não sei meu CEP</p>
                   </div>
                   <div className="wrap-input-denuncia">
-                    <input className='input' type="text" placeholder="Descrição do Local" onChange={handleChange} name="den_local" value={denunciaInfo.den_local} required />
+                    <input className='input' type="text" placeholder="Descrição do Local" onChange={handleChange} name="den_local" value={denunciaInfo.den_desc_local} required />
                     <span className="focus-input"></span>
                   </div>
                   <div className="wrap-input-denuncia">
@@ -234,59 +245,129 @@ function Denuncia() {
                   <span className="focus-input"></span>
                 </div>
                 <div className="wrap-input-denuncia">
-                  <input className='input' type="text" placeholder="Apelido do Agressor" required />
+                  <input className='input' type="text" placeholder="Apelido do Agressor" name="agr_apelido"  onChange={handleChangeAgr} value={agressorInfo.agr_apelido} required />
                   <span className="focus-input"></span>
                 </div>
                 <div className="wrap-input-denuncia">
                   <input className='input' type="number" placeholder="Idade do Agressor" onChange={handleChangeAgr} name="agr_idade" value={agressorInfo.agr_idade} required />
                   <span className="focus-input"></span>
                 </div>
+
                 <div className="wrap-input-denuncia">
-                  <input className='input' type="text" placeholder="O agressor mora na mesma residência que a vítima?" required list='locAgr' />
+                  <input className='input' type="text"placeholder="Estatura do agressor" list='altura' onChange={handleChangeAgr} name="agr_estatura" value={agressorInfo.agr_estatura} required />
+                  <datalist id="altura">
+                    <option value="Baixa"></option>
+                    <option value="Mediana"></option>
+                    <option value="Alta"></option>
+                  </datalist>
+                  <span className="focus-input"></span>
+                </div>
+
+                <div className="wrap-input-denuncia">
+                <input className='input' type="text" placeholder="Qual o tipo físico do agressor?" required list='tipofisico' onChange={handleChangeAgr} value={agressorInfo.agr_tipo_fisico}/>
+                  <datalist id="tipofisico">
+                    <option value="Magro"></option>
+                    <option value="Médio"></option>
+                    <option value="Gordo"></option>
+                  </datalist>
+                  <span className="focus-input"></span>
+                </div>
+
+                <div className="wrap-input-denuncia">
+                <input className='input' type="text" placeholder="Qual a cor da pele do agressor?" required list='corpele' onChange={handleChangeAgr} value={agressorInfo.agr_cor_pele}/>
+                  <datalist id="corpele">
+                    <option value="Branco"></option>
+                    <option value="Amarelo"></option>
+                    <option value="Pardo"></option>
+                    <option value="Preto"></option>
+                  </datalist>
+                  <span className="focus-input"></span>
+                </div>
+
+                <div className="wrap-input-denuncia">
+                <input className='input' type="text" placeholder="Qual a cor do cabelo do agressor?" required list='corcabelo' onChange={handleChangeAgr} value={agressorInfo.agr_cor_cabelo}/>
+                  <datalist id="corcabelo">
+                    <option value="Castanho Claro"></option>
+                    <option value="Castanho Escuro"></option>
+                    <option value="Loiro claro"></option>
+                    <option value="Loiro médio"></option>
+                    <option value="Grisalho"></option>
+                    <option value="Ruivo"></option>
+                    <option value="Preto"></option>
+                    <option value="Outra cor"></option>
+                  </datalist>
+                  <span className="focus-input"></span>
+                </div>
+
+
+                <div className="wrap-input-denuncia">
+                <input className='input' type="text" placeholder="Qual o tipo de cabelo do agressor?" required list='tipocabelo' onChange={handleChangeAgr} value={agressorInfo.agr_tipo_cabelo}/>
+                  <datalist id="tipocabelo">
+                    <option value="Calvo"></option>
+                    <option value="Curto"></option>
+                    <option value="Médio"></option>
+                    <option value="Longo"></option>
+                    <option value="Raspado"></option>
+                  </datalist>
+                  <span className="focus-input"></span>
+                </div>
+              
+
+                <div className="wrap-input-denuncia">
+                <input className='input' type="text" placeholder="Qual a cor dos olhos do agressor?" required list='corolhos' onChange={handleChangeAgr} value={agressorInfo.agr_cor_olhos}/>
+                  <datalist id="corolhos">
+                    <option value="Verde"></option>
+                    <option value="Azul"></option>
+                    <option value="Castanho "></option>
+                    <option value="Preto"></option>
+                  </datalist>
+                  <span className="focus-input"></span>
+                </div>
+              
+          
+                <div className="wrap-input-denuncia">
+                  <input className='input' type="text" placeholder="O agressor mora na mesma residência que a vítima?"  onChange={handleChangeAgr} value={agressorInfo.agr_mesma_residencia} required list='locAgr' />
                   <span className="focus-input"></span>
                   <datalist id="locAgr">
                     <option>Sim</option>
                     <option>Não</option>
                   </datalist>
                 </div>
+                
                 <div className="wrap-input-denuncia">
-                  <input className='input' placeholder="Se a resposta for não, qual o endereço do agressor?" onChange={handleChangeAgr} name="agr_endereco" value={agressorInfo.agr_endereco} type="text" required />
+                  <input className='input' placeholder="Qual o endereço do agressor?" onChange={handleChangeAgr} name="agr_endereco" value={agressorInfo.agr_endereco} type="text" required />
                   <span className="focus-input"></span>
                 </div>
                 <div className="wrap-input-denuncia">
-                  <input className='input' placeholder="Ponto de referência/Características" type="text" required />
+                  <input className='input' placeholder="Ponto de referência do endereço acima"  onChange={handleChangeAgr} type="text" required value={agressorInfo.agr_pont_ref_end} />
                   <span className="focus-input"></span>
                 </div>
                 <div className="wrap-input-denuncia">
-                  <input className='input' placeholder="Local de trabalho do agressor" type="text" required />
+                  <input className='input' placeholder="Local de trabalho do agressor" onChange={handleChangeAgr} type="text"  value={agressorInfo.agr_local_trabalho} required />
                   <span className="focus-input"></span>
                 </div>
+            
                 <div className="wrap-input-denuncia">
-                  <input className='input' type="text" placeholder="O agressor tem algum tipo de relacionamento com a vítima?" required list='relAgr' />
-                  <span className="focus-input"></span>
-                  <datalist id="relAgr">
-                    <option>Sim</option>
-                    <option>Não</option>
-                  </datalist>
-                </div>
-                <div className="wrap-input-denuncia">
-                  <input className='input' type="text" placeholder="Se sim, qual?" required list='sitAgr' />
+                  <input className='input' type="text" placeholder="O agressor possui relacionamento com a vítima?" required list='sitAgr' onChange={handleChangeAgr} value={agressorInfo.agr_possui_relacionamento}/>
                   <span className="focus-input"></span>
                   <datalist id="sitAgr">
-                    <option value="Colega de trabalho"></option>
-                    <option value="Amigo"></option>
-                    <option value="Irmão"></option>
-                    <option value="Namorado"></option>
-                    <option value="Marido"></option>
-                    <option value="Parente"></option>
+                  <option value="Não possui"></option>
+                    <option value="Sim, colega de trabalho"></option>
+                    <option value="Sim, amigo"></option>
+                    <option value="Sim, irmão"></option>
+                    <option value="Sim, namorado"></option>
+                    <option value="Sim, marido"></option>
+                    <option value="Sim, parente"></option>
                   </datalist>
                 </div>
               </article>
+
+
             </div>
             <div className="wrap-input1">
               <p className='text'> Selecionar arquivos - Use para enviar provas como fotos de marcas de agressão.</p>
               <br />
-              <input className='input1' type="file" onChange={handleImage} />
+              <input className='input1' type="file" onChange={handleImage}  />
               <br /><br />
               <span className="focus-input" data-placeholder=""></span>
             </div>

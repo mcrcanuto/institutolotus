@@ -75,9 +75,16 @@
 #titulo_denuncia{
     text-align: center;
     font-family: inter,arial;
-    color:#30113b;
+    color:#30113be5;
     font-size: 4.5vh;
-    font-weight: bolder;
+    font-weight: 600;
+}
+
+#protocolo{
+  text-align: center;
+  font-family: inter,arial;
+  color:#000000e0;
+  font-size: 4.5vh;
 }
 
 #subtitulo_denuncia{
@@ -160,7 +167,13 @@
     border-bottom: rgba(0, 0, 0, 0.336) 1px solid;
   }
 
-
+#naoexiste{
+font-size: 3.5vh;
+font-weight: normal;
+color:black;
+font-family: inter,arial;
+text-align: left;
+} 
   #label-tipo-comentario{
     margin-top: 1%;
     margin-bottom: 1%;
@@ -224,7 +237,7 @@
     height: 3.5vw;
     background-color:rgba(211, 210, 210, 0.76);
     padding: 0 5px;
-    font-size: 2.5vh;
+    font-size: 3.5vh;
     border-bottom: 2px solid #adadad;
     margin-bottom: 37px;
   }

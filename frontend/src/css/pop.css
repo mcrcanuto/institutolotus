@@ -46,10 +46,10 @@
     cursor: pointer;
   }
   #compreicone{
-    font-size: 2.5vh;
+    font-size: 4vh;
   }
   }
-  @media (max-width: 620px){
+  @media (min-width: 620px){
     #compre{
       margin-left: 30%;
       font-size: 2.5vh;
@@ -67,6 +67,6 @@
       cursor: pointer;
     }
     #compreicone{
-      font-size: 2.5vh;
+      font-size: 4.5vh;
     }
     }

@@ -100,7 +100,8 @@ return(
 
     <div className="rolarpolicial">
 
-    <p id="titulo_denuncia">Denúncia de {denuncia.den_violencia} <br></br> {protocolo}</p>
+    <p id="titulo_denuncia">Denúncia de {denuncia.den_violencia} </p> 
+    <p id="protocolo"> {protocolo}</p>
 
 <div className="colunapolicial" >
 
@@ -115,11 +116,11 @@ return(
 <p id="informacoes_denuncia">Frequência do ocorrido: {denuncia.den_frequencia}</p>
 <p id="informacoes_denuncia">Data da ocorrência: {denuncia.den_data_ocorrencia}</p>
 <p id="informacoes_denuncia">Horário da ocorrência: {denuncia.den_hora_ocorrencia}</p>
-<p id="informacoes_denuncia">Descrição do ocorrido:</p>
-<p id="informacoes_denuncia">Bairro:</p>
+<p id="informacoes_denuncia">Descrição do ocorrido: {denuncia.den_desc_ocorrido}</p>
+<p id="informacoes_denuncia">Bairro: {denuncia.den_bairro}</p>
 <p id="informacoes_denuncia">Cep: {denuncia.den_cep}</p>
-<p id="informacoes_denuncia">Descrição do local: {denuncia.den_local}</p>
-<p id="informacoes_denuncia">Ponto de referência: {denuncia.den_carac_local}</p>
+<p id="informacoes_denuncia">Descrição do local: {denuncia.den_desc_local}</p>
+<p id="informacoes_denuncia">Ponto de referência: {denuncia.den_ponto_ref}</p>
 
 <br></br>
 
@@ -136,14 +137,20 @@ return(
   <div className="wrap-comentario-direita">
  
 
-    <p id="informacoes_denuncia">Nome do agressor: {denuncia.agr_nome}</p>
-<p id="informacoes_denuncia">Apelido do agressor: {denuncia.agr_apelido}</p>
-<p id="informacoes_denuncia">Idade do agressor: {denuncia.agr_idade}</p>
-<p id="informacoes_denuncia">O agressor mora na mesma residência que a vítima: {denuncia.agr_nome}</p>
-<p id="informacoes_denuncia">Se mora em residência diferente, qual o local: {denuncia.agr_nome} </p>
-<p id="informacoes_denuncia">Ponto de referência da residência do agressor: {denuncia.agr_nome} </p>
-<p id="informacoes_denuncia">Local de trabalho do agressor : {denuncia.agr_nome}</p>
-<p id="informacoes_denuncia">O agressor tem algum relacionamento com a vítima: {denuncia.agr_nome} Se sim, qual: {denuncia.agr_nome}</p>
+<p id="informacoes_denuncia">Nome: {denuncia.agr_nome}</p>
+<p id="informacoes_denuncia">Apelido: {denuncia.agr_apelido}</p>
+<p id="informacoes_denuncia">Idade: {denuncia.agr_idade}</p>
+<p id="informacoes_denuncia">Estatura: {denuncia.agr_estatura}</p>
+<p id="informacoes_denuncia">Tipo físico: {denuncia.agr_tipo_fisico}</p>
+<p id="informacoes_denuncia">Cor da pele: {denuncia.agr_cor_pele}</p>
+<p id="informacoes_denuncia">Cor do cabelo: {denuncia.agr_cor_cabelo}</p>
+<p id="informacoes_denuncia">Tipo do cabelo: {denuncia.agr_tipo_cabelo}</p>
+<p id="informacoes_denuncia">Cor dos olhos: {denuncia.agr_cor_olhos}</p>
+<p id="informacoes_denuncia">O agressor mora na mesma residência que a vítima: {denuncia.agr_mesma_residencia}</p>
+<p id="informacoes_denuncia">Endereço do agressor: {denuncia.agr_endereco} </p>
+<p id="informacoes_denuncia">Ponto de referência da residência do agressor: {denuncia.agr_pont_ref_end} </p>
+<p id="informacoes_denuncia">Local de trabalho do agressor : {denuncia.agr_local_trab}</p>
+<p id="informacoes_denuncia">O agressor tem algum relacionamento com a vítima: {denuncia.agr_possuiu_relacionamento} </p>
 
 <br></br>
 
@@ -164,12 +171,12 @@ return(
 
 <div id="TelaStatus" >
 
-  {(comentarios.length > 0) ? renderComentarios : <h1>Essa denúncia não possuí comentários</h1>}
+  {(comentarios.length > 0) ? renderComentarios : <h1 id="naoexiste">Essa denúncia não possuí comentários</h1>}
 
 </div>
 
 
-<br></br><br></br><br></br><br></br>
+<br></br><br></br>
 <div>
 <label id="label-tipo-comentario">Escolha um tipo de comentário:</label>
   <select id="select-tipo-comentario" onChange={handleChange} name="aco_status" value={nComentario.aco_status} required>

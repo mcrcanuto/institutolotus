@@ -42,7 +42,7 @@ module.exports =  {
         try {
             let digitos = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
             
-            const {den_denunciante, den_violencia, den_frequencia, den_data_ocorrencia, den_hora_ocorrencia, den_local, den_cep, den_ponto_ref, den_carac_local} = req.body;
+            const {den_denunciante, den_violencia, den_frequencia, den_data_ocorrencia, den_hora_ocorrencia, den_bairro, den_cep, den_ponto_ref, den_desc_local, den_desc_ocorrido, den_naosabe_cep,} = req.body;
             let protocolo = "";
             while(true) {
                 for (let i = 0; i < 8; i++) {
@@ -63,14 +63,16 @@ module.exports =  {
                 den_denunciante,
                 den_violencia,
                 den_protocolo,
-                den_carac_local,
+                den_desc_local,
+                den_desc_ocorrido,
                 den_cep,
                 den_data_denuncia,
                 den_ponto_ref,
-                den_local,
+                den_bairro,
                 den_frequencia,
                 den_hora_ocorrencia,
-                den_data_ocorrencia
+                den_data_ocorrencia,
+                den_naosabe_cep,
             });
             
             return res.status(201).json({protocolo : den_protocolo});

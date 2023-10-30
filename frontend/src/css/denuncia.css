@@ -320,8 +320,8 @@ fieldset{
   border-radius: 20px;
   margin-right: 50px;
   width: 47%;
-
-
+  margin-bottom: 20%;
+  
 }
 
 .agressor{
@@ -330,8 +330,10 @@ fieldset{
   border-radius: 20px;
   width: 47%;
   padding-top: 80px;  
-  margin-bottom: 10%;
+ 
 }
+
+
 
 .btnvolta {
   padding-right: 100%;
