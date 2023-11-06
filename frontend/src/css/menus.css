@@ -86,8 +86,8 @@ header .menulat ul a:nth-child(1) {
   background-color:#DBC8EA ;
   border-width: 0px;
   font-family: Comfortaa, Inter, Arial;
-  margin-left: 500%;
-  margin-top: 9%;
+  margin-left: 450%;
+  margin-top: 23%;
   width: 12vw;
   font-size: 2.5vh;
 }
@@ -95,27 +95,11 @@ header .menulat ul a:nth-child(1) {
   background-color:#DBC8EA ;
   border-width: 0px;
   font-family: Comfortaa, Inter, Arial;
-  margin-left: 500%;
-  margin-top: 3vh;
+  margin-left: 450%;
+  margin-top: 23%;
   width: 12vw;
   font-size: 2.5vh;
 }
-.iconempedido{
-  width: 2vw;
-  height: 2.6vh;
-  font-family: 'Inter', arial;
-  margin-top: 10%;
-
-}
-.iconefpedido{
-  min-width: 2vw;
-  min-height: 2.6vh;
-  font-family: 'Inter', arial;
-  margin-top: 10%;
-}
-
-
-
 
 /*css do submenu*/
 
@@ -125,7 +109,7 @@ header{
 
 }
 
-header .container {
+header .containerprincipal {
   display: flex; 
   align-items: center;
   justify-content: space-between;
@@ -220,7 +204,9 @@ header nav ul li a{
  }
 }
 
-@media (max-width: 1120px){
+
+/*responsividade   talvezz*/
+@media screen and (max-width: 1120px){
  
    .menu-section nav{
     display: none;
@@ -229,7 +215,7 @@ header nav ul li a{
     width: 20vw;
     height: 19vh;
     margin-left: 9%;
-    margin-top: 3.2%;
+    margin-top: 2.5%;
   }
 
   header .placeholdermenu input {
@@ -240,7 +226,7 @@ header nav ul li a{
     text-align: center;
     border-width: 0px;
     font-style: italic;
-    margin-top: 27%;
+    margin-top: 20%;
     margin-right: 65%;
    
    }
@@ -249,39 +235,27 @@ header nav ul li a{
   margin-top: -6.5vh;
 }
 
-  .pedidosm{
+  #pedidosm{
     background-color:#DBC8EA ;
     border-width: 0px;
     font-family: Comfortaa, Inter, Arial;
-    margin-left: 5%;
+    margin-left: 335%;
+    margin-top: 38%;
    cursor: pointer;
-    width: 12vw;
+    width: 16vw;
     font-size: 2.5vh;
   }
-  .pedidosf{
+  #pedidosf{
     background-color:#DBC8EA ;
     border-width: 0px;
     font-family: Comfortaa, Inter, Arial;
-    margin-left: 210%;
-    width: 12vw;
+    margin-left: 355%;
+    margin-top: 38%;
+    width: 16vw;
     font-size: 2.5vh;
     cursor: pointer;
   }
-  .iconempedido{
-    width: 6vw;
-   
-    font-family: 'Inter', arial;
-    margin-top: 10%;
   
-  }
-  .iconefpedido{
-    width: 6vw;
-    font-family: 'Inter', arial;
-    margin-top: 10%;
-  }
-
-
-
   .one,
   .two,
   .three{
@@ -309,17 +283,21 @@ header nav ul li a{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0;
+    
   }
+
 
   .menu-section.on nav{
     display: block;
   }
 
-  
+
   .menu-section.on .menu-toggle{
     position: absolute;
-    right: 25px;
-    top: 25px;
+    right: 2.5%;
+    top: 2.5%;
+    
   }
 
   
@@ -338,21 +316,35 @@ header nav ul li a{
     background-color: #fff;
   }
 
+  .menu-section.on nav{
+    margin-bottom: 25%;
+  }
   .menu-section.on nav ul{
     text-align: center;
     display: block;
+  
   }
+
 
   .menu-section.on nav ul a{ 
    transition-duration:  0.5s;
-   font-size: 2.0rem;
+   font-size: 4.5vh;
     display: block;
     color: #fff;
     padding: 1.8rem;
+    margin-top: 0%;
   }
+  .menu-section.on nav ul a:hover{ 
+    transition-duration:  0.5s;
+    font-size: 4.5vh;
+     display: block;
+     color:#4e0566;
+     padding: 1.8rem;
+     margin-top: 0%;
+   }
   
 header nav ul li a .FiLogOut{
-width: 40px;
+width: 4vw;
 }
   .menu-section.on nav ul .hide{ 
      display: flex;
@@ -363,6 +355,9 @@ width: 40px;
    }
 
 }
+
+
+
 
 @media (max-width: 320px){
   #form h3{

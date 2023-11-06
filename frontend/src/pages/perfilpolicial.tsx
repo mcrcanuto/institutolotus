@@ -111,7 +111,7 @@ return(
   <div className="colunapolicial" >
     <h2 className="andamento">DENÚNCIAS EM ANDAMENTO</h2>
     <div className="row">
-      {(denunciasAbertas.length > 0) ? renderDenunciasAbertas : <h3 id="naoexiste">Não existem denúncias em andamento...</h3>}
+      {(denunciasAbertas.length > 0) ? renderDenunciasAbertas : <h3 id="naoexistem">Não existem denúncias em andamento...</h3>}
     </div>
 
   </div>
@@ -120,7 +120,7 @@ return(
   <div className="colunapolicial" >
     <h2 className="finalizada">DENÚNCIAS FINALIZADAS</h2>
     <div className="row">
-      {(denunciasFinalizadas.length > 0) ? renderDenunciasFinalizadas : <h3 id="naoexiste">Não existem denúncias finalizadas...</h3>}
+      {(denunciasFinalizadas.length > 0) ? renderDenunciasFinalizadas : <h3 id="naoexistem">Não existem denúncias finalizadas...</h3>}
     </div>
 
   </div>

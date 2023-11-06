@@ -8,7 +8,7 @@ const [classOn, setClassOn] = useState(false);
       
   return (
     <header>
-    <div className="container">
+    <div className="containerprincipal">
       
 
       <div className = { classOn ? 'menu-section on' : 'menu-section'} onClick={() => setClassOn(!classOn)}>

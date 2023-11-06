@@ -55,7 +55,7 @@ body{
     font-size: 30px;
     height: 77px;
     justify-content: center;
-    right: -50px;
+    right: 1%;
     position: absolute;
     top: 50px;
     width: 77px;
@@ -135,6 +135,7 @@ ul {
     font-size: 2.5vw;
     font-family: inter, arial;
     background: transparent;
+    margin-left: 2%;
 }
 
 .imagemleis{
@@ -148,4 +149,6 @@ ul {
     font-size: 3vh;
     text-align: justify;
     color: black;
+    margin-left: 2%;
+
 }

@@ -48,8 +48,8 @@
 
 .h2quemsomos{
     font-size: 3.5vh;
-    background-color:#5C286F;
-    color:#5C286F;
+    background-color:#a279af;
+    color:transparent;
     font-family: inter,arial;
     text-align: center;
 }
@@ -81,13 +81,13 @@
     width: 50%;
     margin-left: 25%;
     height: 30px;
-    background-color: rgb(157, 68, 167);
+    background-color: #5C286F;
     cursor: pointer;
 }
 
 
 #entrarpolicial{
-margin-left: 45%;
+margin-left: 43%;
 margin-top: 2%;
 width: 15vw;
 object-fit: cover;

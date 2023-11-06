@@ -21,4 +21,63 @@
     border-radius: 15px;       /* roundness of the scroll thumb */
   
   }
- 
+
+  a{
+    text-decoration: none;
+  }
+
+
+ /*confirmacoes*/
+  #voltarfeedback{
+    color: #5C286F;
+    font-size: 3.5vh;
+    font-family: inter, arial;
+
+  }
+  #quermesmosair{
+    text-align: center;
+    margin-left: 25%;
+    font-size: 4.5vh;
+    font-family: inter,arial;
+  }
+  #querexcluir{
+    text-align: center;
+    margin-left: 7%;
+    font-size: 4.5vh;
+    font-family: inter,arial;
+  }
+
+#botaosim{
+  font-size: 15px;
+  border: none;
+  border-radius: 10px;
+  color: rgb(250, 248, 252);
+  line-height: 1.2;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 30px;
+  background-color: rgb(73, 35, 77);
+  font-family: inter,arial;
+}
+#botaosim:hover{
+  font-size: 15px;
+  border: none;
+  border-radius: 10px;
+  color: rgb(250, 248, 252);
+  line-height: 1.2;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 30px;
+  background-color: rgb(96, 26, 104);
+  cursor: pointer;
+  font-family: inter,arial;
+}
+
+
+

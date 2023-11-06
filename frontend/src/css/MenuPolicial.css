@@ -83,7 +83,8 @@
     transition: 100ms;
   }
   
-  
+
+
   @keyframes menu {
     0%   { left:0px; top: -100px;}
     100% { left: 0px; top:0px;}
@@ -125,12 +126,14 @@
       margin-right: 20px;
     }
   
+
+
     /*Fullscreen*/
     .menu-section.on {
       position: absolute;
       top:0;
       left: 0;
-      width: 100vw;
+      width: 98.5vw;
       height: 100vh;
       background-color:#843b9e;
       z-index: 10; /*camada acima, evitar o scrool dos itens a baixo*/
@@ -172,11 +175,12 @@
     }
   
     .menu-section.on nav .ha a{ 
-     transition-duration:  0.5s;
-     font-size: 2.0rem;
-      display: block;
-      color: #fff;
-      padding: 1.8rem;
+      transition-duration:  0.5s;
+   font-size: 4.5vh;
+    display: block;
+    color: #fff;
+    padding: 1.8rem;
+    margin-top: 0%;
     }
 
    
@@ -212,11 +216,8 @@
   }
   .icones:hover{
     font-size: 3.5vh;
-    color:#5C286F;
+    color:#4e0566;
   }
-#conectadomenu{
-  background-color: #ff9902;
-}
 
 
 #notifica{

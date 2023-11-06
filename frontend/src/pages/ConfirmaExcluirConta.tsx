@@ -1,17 +1,20 @@
-import {Link } from "react-router-dom"
-import { IoIosArrowBack } from "react-icons/Io"
+import { Link, useNavigate } from "react-router-dom"
+
 import axios from "axios";
 import { useState } from "react";
 import decode from "../components/codigos/decoder";
 
-function ConfirmaExcluirConta(){
+import "./../css/geral.css"
 
+function ConfirmaExcluirConta(){
+  const navigate = useNavigate();
 const [policial] = useState(decode(localStorage.getItem("token")));
 async function apagarPolicial() {
       await axios.delete(`http://localhost:3344/policial/${policial.pol_cpf}`, {headers : {
         Authorization : "Bearer " + localStorage.getItem("token")
       }}).then((res) => {
-        alert(res.data.msg);
+        alert("Conta excluída com sucesso!")
+        navigate("/");
       }).catch((error) => {
         console.log(error);
       })
@@ -31,16 +34,16 @@ return(
         <div className="wrap-login">
             
         <Link to="/perfilpolicial">
-   <IoIosArrowBack className="back"/>
+        <p id="voltarfeedback"> ❮ Voltar</p>
    </Link>
 
         <div className="login-form">
-
-        <span className="login-form-title2">Quer mesmo excluir sua conta</span>
+<br></br>
+        <span id="querexcluir">Quer mesmo excluir sua conta?</span>
         <span className="login-form-title"></span>
         
         <div className="container-login-form-btn">
-      <button className="login-form-btn3" onClick={apagarPolicial}>Sim</button>
+      <button id="botaosim" onClick={apagarPolicial}  >Sim</button>
      </div>
         
         </div>

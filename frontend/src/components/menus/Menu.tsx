@@ -31,7 +31,7 @@ function Menu() {
       <li className="marginli">
         
           <button id="pedidosm" onClick={() => {navigate("/meuspedidos")}}>
-          <BiClipboard className="iconempedido" />Meus Pedidos
+          <BiClipboard /> Meus Pedidos
           </button>
         
           </li>
@@ -40,7 +40,7 @@ function Menu() {
           <li className="marginli">
         
           <button id="pedidosf" onClick={() => {navigate("/comprar")}}>
-          <TiShoppingCart className="iconefpedido" />Fazer Pedido
+          <TiShoppingCart/> Fazer Pedido
           </button>
      
           </li>
