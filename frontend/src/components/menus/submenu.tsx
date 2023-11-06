@@ -34,7 +34,7 @@ const [classOn, setClassOn] = useState(false);
               <Link to="/quemsomos">QUEM SOMOS</Link> 
               </li>
               <li>
-                <a href="/">SIGA-NOS NO INSTAGRAM</a>  
+                <a href="https://www.instagram.com/inst.lotusvr/">SIGA-NOS NO INSTAGRAM</a>  
               </li>
             </ul>
           </nav>

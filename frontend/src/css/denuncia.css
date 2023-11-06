@@ -201,19 +201,7 @@ fieldset{
 }
 
 .botaolimpar:hover {
-  font-size: 13px;
-  border: none;
-  border-radius: 10px;
-  color: rgb(250, 248, 252);
-  line-height: 1.2;
-  text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 32%;
-  height: 30px;
-  background-color: rgb(151, 95, 157);
-  cursor:pointer;
+  opacity: 0.8;
 }
 
 
@@ -235,19 +223,7 @@ fieldset{
 
 
 .botaoenviar:hover{
-  font-size: 13px;
-  border: none;
-  border-radius: 10px;
-  color: rgb(250, 248, 252);
-  line-height: 1.2;
-  text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 32%;
-  height: 30px;
-  background-color: rgb(107, 25, 117);
-  cursor:pointer;
+  opacity: 0.8;
 }
 
 .login-form-btn2-a {
