@@ -42,7 +42,7 @@ function Cadastro() {
       <div className="Container">
         <div className="container-login">
           <div className="wrap-login">
-            <div className="login-form">
+         
               <span className="login-form-title">Cadastrar Conta</span>
               <span className="login-form-title">
 
@@ -91,7 +91,7 @@ function Cadastro() {
             </div>
           </div>
         </div>
-      </div>
+ 
 
     </>
   );

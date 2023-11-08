@@ -72,7 +72,7 @@ const [taOn, setTaOn] = useState(false);
       
         </div>
         <br></br>
-        <div id="usuario"><p id='conectado'>Conectado(a) como {policial.nome}</p></div>
+        <div id="usuario"><p id='conectado'>Conectado(a) como {policial.nome} {policial.sobrenome} </p></div>
 
       </header>
 

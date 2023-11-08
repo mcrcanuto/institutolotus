@@ -54,12 +54,12 @@ function Login() {
             </div>
 
             <div className="container-login-form-btn">
-              <button className="login-form-btn" onClick={() => { login() }}>Entrar</button>
+              <button className="entrar" onClick={() => { login() }}>Entrar</button>
             </div>
 
             <div className="container-login-form-btn">
               <Link to="/cadastro">
-                <button className="login-form-btn-a" onClick={() => { navigate("/cadastro") }}>Criar Conta </button>
+                <button className="criarconta" onClick={() => { navigate("/cadastro") }}>Criar Conta </button>
               </Link>
             </div>
 
