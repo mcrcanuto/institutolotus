@@ -1,6 +1,6 @@
 import "./../css/geral.css"
 import "./../css/editarperfil.css"
-import {Link } from "react-router-dom"
+import {Link, useNavigate } from "react-router-dom"
 import { ChangeEvent, useEffect, useState } from "react";
 import axios from "axios";
 import decode from "../components/codigos/decoder";
@@ -10,6 +10,7 @@ import FooterPolicial from "../components/menus/FooterPolicial";
 
 function EditarPerfil () {
 
+    const navigate = useNavigate();
     const [polUpdate, setPolUpdate] = useState({
       nome : "",
       sobreNome : "",
@@ -26,10 +27,11 @@ function EditarPerfil () {
 
     useEffect(() => {
       if(policial.pol_cpf) queryPolicial();
+      console.log(policial)
     }, [policial])
 
     useEffect(() => {
-      if(getPolicial.length > 0)setPolUpdate(prev => ({...prev,
+      if(getPolicial.pol_cpf)setPolUpdate(prev => ({...prev,
         nome : getPolicial.pol_nome,
         sobreNome : getPolicial.pol_sobrenome,
         cpf : getPolicial.pol_cpf,
@@ -60,7 +62,7 @@ function EditarPerfil () {
         await axios.put(`http://localhost:3344/policial/${policial.pol_cpf}`, data, {headers : {
           Authorization : "Bearer " + localStorage.getItem("token")
         }}).then((res) => {
-          alert(res.data.token);
+          navigate(0)
           localStorage.setItem("token", res.data.token);
         }).catch((error) => {
           console.log(error);
@@ -72,6 +74,7 @@ function EditarPerfil () {
         Authorization : "Bearer " + localStorage.getItem("token")
       }}).then((res) => {
         setGet(res.data[0]);
+        console.log(res.data)
       }).catch((error) => {
         console.log(error);
       })
@@ -113,9 +116,9 @@ function EditarPerfil () {
 <p id="editar-email"> CPF:{getPolicial.pol_cpf}</p>
 <br></br>
 
-<p id="editar-den-andamento"> {getPolicial.pol_den_andamento || ""} Denúncias em Andamento</p>
+<p id="editar-den-andamento"> {getPolicial.pol_den_andamento ?? "nada" } Denúncias em Andamento</p>
 
-<p id="editar-den-finalizada">{getPolicial.pol_denF || ""} Denúncias Finalizadas</p>
+<p id="editar-den-finalizada">{getPolicial.pol_denF ?? "nada"} Denúncias Finalizadas</p>
 
 <br></br>
 

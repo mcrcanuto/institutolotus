@@ -40,7 +40,7 @@ function Atualizar() {
   }, [policial])
 
   async function getComentarios() {
-    await axios.get(`http://localhost:3000/acompanhamento/denuncia/${protocolo}`).then((res) => {
+    await axios.get(`http://localhost:3344/acompanhamento/denuncia/${protocolo}`).then((res) => {
       let sorted = res.data.sort(function (a, b) {
         return b.aco_data - a.aco_data;
       })
@@ -56,8 +56,9 @@ function Atualizar() {
   }
 
   async function getDenuncia() {
-    await axios.get(`http://localhost:3000/denuncia/protocolo/${protocolo}`).then((res) => {
+    await axios.get(`http://localhost:3344/denuncia/protocolo/${protocolo}`).then((res) => {
       setDenuncia(res.data[0]);
+      console.log(res.data)
     }).catch((error) => {
       console.log(error);
     });
@@ -65,7 +66,10 @@ function Atualizar() {
 
   async function postComentario() {
     console.log(nComentario)
-    await axios.post(`http://localhost:3000/acompanhamento`, {
+    if(denuncia.den_status == "Visualizada" && nComentario.aco_status == "Denúncia Visualizada" || denuncia.den_status == "Finalizada") {
+      alert("Não dá mano")
+    }
+    else await axios.post(`http://localhost:3344/acompanhamento`, {
       Polícia_pol_cpf: nComentario.Polícia_pol_cpf,
       Denúncia_den_protocolo: nComentario.Denúncia_den_protocolo,
       aco_status: nComentario.aco_status,
@@ -79,6 +83,7 @@ function Atualizar() {
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setNCom(prev => ({ ...prev, [e.target.name]: e.target.value }));
+    console.log(dateDisplayer(denuncia.den_data_denuncia))
   }
 
   const renderComentarios = comentarios.map(item => {
@@ -121,7 +126,7 @@ function Atualizar() {
               <p id="informacoes_denuncia">Protocolo da denúncia: {protocolo}</p>
               <p id="informacoes_denuncia">Tipo de denunciante: {denuncia.den_denunciante}</p>
               <p id="informacoes_denuncia">Frequência do ocorrido: {denuncia.den_frequencia}</p>
-              <p id="informacoes_denuncia">Data da ocorrência: {denuncia.den_data_ocorrencia}</p>
+              <p id="informacoes_denuncia">Data da ocorrência: {dateDisplayer(denuncia.den_data_denuncia ?? "")}</p>
               <p id="informacoes_denuncia">Horário da ocorrência: {denuncia.den_hora_ocorrencia}</p>
               <p id="informacoes_denuncia">Descrição do ocorrido: {denuncia.den_desc_ocorrido}</p>
               <p id="informacoes_denuncia">Bairro: {denuncia.den_bairro}</p>

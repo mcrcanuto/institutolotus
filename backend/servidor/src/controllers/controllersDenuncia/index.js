@@ -72,7 +72,6 @@ module.exports =  {
                 den_frequencia,
                 den_hora_ocorrencia,
                 den_data_ocorrencia,
-                den_naosabe_cep,
             });
             
             return res.status(201).json({protocolo : den_protocolo});

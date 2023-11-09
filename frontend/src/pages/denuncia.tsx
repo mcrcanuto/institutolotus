@@ -100,7 +100,7 @@ function Denuncia() {
 
   async function postDenuncia() {
     console.log(denunciaInfo)
-    await axios.post(`http://localhost:3000/denuncia`, { //criar denúncia
+    await axios.post(`http://localhost:3344/denuncia`, { //criar denúncia
       den_denunciante: denunciaInfo.den_denunciante,
       den_violencia: denunciaInfo.den_violencia,
       den_desc_local: denunciaInfo.den_desc_local,
@@ -122,7 +122,7 @@ function Denuncia() {
   }
 
   async function postAgressor() {
-    await axios.post(`http://localhost:3000/agressor`, { //criar agressors
+    await axios.post(`http://localhost:3344/agressor`, { //criar agressors
       agr_endereco: agressorInfo.agr_endereco,
       agr_idade: agressorInfo.agr_idade,
       agr_nome: agressorInfo.agr_nome,
@@ -138,7 +138,7 @@ function Denuncia() {
   async function postImage() { //envia uma imagem ao backend
     const data = new FormData();
     data.append("imagem", denunciaInfo.den_imagem);
-    await axios.put("http://localhost:3000/denuncia/imagem", data,
+    await axios.put("http://localhost:3344/denuncia/imagem", data,
       { headers: { den_protocolo: keys.protocoloDenuncia } }).then((res) => {
       }).catch((error) => {
         console.log(error);

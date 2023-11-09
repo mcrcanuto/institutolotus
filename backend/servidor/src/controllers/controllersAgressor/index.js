@@ -41,7 +41,7 @@ module.exports = {
     async criarAgressor(req, res) {
         try {
             const {agr_nome, agr_idade, agr_sexo, agr_estatura, agr_tipo_fisico, agr_cor_pele, agr_cor_cabelo, 
-                agr_cor_olhos, agr_tipo_cabelo, agr_carac_espec, agr_possui_relacionamento, agr_local_trabalho, agr_endereco,
+                agr_cor_olhos, agr_tipo_cabelo, agr_possui_relacionamento, agr_local_trabalho, agr_endereco,
                 agr_mesma_residencia, agr_pont_ref_end, 
             Denuncia_den_protocolo} = req.body;
 
@@ -63,7 +63,6 @@ module.exports = {
             
             await knex("Agressor").insert({
                 agr_id,
-                agr_carac_espec,
                 agr_cor_cabelo,
                 agr_cor_olhos,
                 agr_cor_pele,
@@ -75,8 +74,6 @@ module.exports = {
                 agr_estatura,
                 agr_idade,
                 agr_nome,
-                agr_possibili_fuga,
-                agr_possui_porte,
                 agr_sexo,
                 agr_tipo_fisico,
                 agr_tipo_cabelo,
@@ -94,11 +91,10 @@ module.exports = {
         try {
             const {id} = req.params;
             const {agr_nome, agr_idade, agr_sexo, agr_estatura, agr_tipo_fisico, agr_cor_pele, agr_cor_cabelo, 
-                agr_cor_olhos, agr_tipo_cabelo, agr_carac_espec, agr_possui_porte, agr_possibili_fuga, agr_endereco} = req.body;
+                agr_cor_olhos, agr_tipo_cabelo, agr_endereco} = req.body;
 
             if(await knex("Agressor").where("agr_id", id) != "") {
                 await knex("Agressor").update({
-                    agr_carac_espec,
                     agr_cor_cabelo,
                     agr_cor_olhos,
                     agr_cor_pele,
@@ -106,8 +102,6 @@ module.exports = {
                     agr_estatura,
                     agr_idade,
                     agr_nome,
-                    agr_possibili_fuga,
-                    agr_possui_porte,
                     agr_sexo,
                     agr_tipo_fisico,
                     agr_tipo_cabelo

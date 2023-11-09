@@ -15,7 +15,7 @@ function Status() {
 
   async function getDenuncia() {
     await axios.get(`http://localhost:3344/denuncia/protocolo/${protocolo}`).then((res) => {
-      setDenuncia(res.data[0]);
+      setDenuncia(res.data);
       console.log(res.data);
     }).catch((error) => {
       console.log(error);

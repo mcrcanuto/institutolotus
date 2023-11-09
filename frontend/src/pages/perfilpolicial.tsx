@@ -21,6 +21,7 @@ function PerfilPolicial(){
   async function getDenuncias() {
     await axios.get(`http://localhost:3344/denuncia`).then((res) => {
       setDenuncias(res.data);
+      console.log(res.data)
     }).catch((error) => {
       console.log(error);
     })
@@ -33,7 +34,7 @@ function PerfilPolicial(){
   useEffect(() => {
     if (denuncias.length > 0 && !once) {
       for (const denun of denuncias) {
-        if (denun.den_status == "Aberta") {
+        if (denun.den_status != "Finalizada") {
           setAbertas(prev => ([...prev, denun]));
         }
         else {
