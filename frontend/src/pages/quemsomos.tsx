@@ -66,8 +66,9 @@ nossa cidade, gerando uma maior rapidez no recebimento delas, pois são eles que
 <br></br>
 <h2 className="para">Para acompanhar uma denúncia já efetuada, clique no botão abaixo:</h2>
 <br></br>
+<Link to="/meuspedidos">
 <button className="buttonquemsomos">Meus Pedidos</button>
-
+</Link>
 </div>
   </div>
 

@@ -10,26 +10,6 @@
   box-shadow: 0 5px 10px 0px rgba(141, 125, 125, 0.76);
 }
 
-.wrap-comentario-esquerda{
-  width: 40vw;
-  background-color: rgb(255, 255, 255);
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  overflow: hidden;
-  padding: 0px 0px 5px 5px;
-  box-shadow: 0 5px 10px 0px rgba(141, 125, 125, 0.76);
-}
-
-.wrap-comentario-direita {
-  width: 40vw;
-  background-color: rgb(255, 255, 255);
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  overflow: hidden;
-  padding: 0px 0px 5px 5px;
-  box-shadow: 0 5px 10px 0px rgba(141, 125, 125, 0.76);
-}
-
 .rowcomentario {
   height: 30vh;
   width: 30vw;
@@ -38,17 +18,43 @@
   box-shadow: 0 5px 10px 0px rgba(141, 125, 125, 0.76);
 }
 
-.sobre{
-  font-size: 3.5vh;
+.sobreocorrencia{
+  font-size: 3vh;
+  background-color:#5C286F;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  color: rgb(255, 255, 255);
-  width: 40vw;
-  background-color:#5C286F;
+  color: aliceblue;
+  width: 42.5vw;
+  height: 4vh;
   font-family: inter,arial;
   font-weight: normal;
   text-align: center;
+
 }
+
+.sobreagressor{
+  font-size: 3vh;
+  background-color:#33133f;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: aliceblue;
+  font-family: inter,arial;
+  font-weight: normal;
+  width: 42.5vw;
+  height: 4vh;
+  text-align: center;
+
+}
+.divinfo{
+  width: 42.5vw;
+  background-color: rgb(255, 255, 255);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  overflow: hidden;
+  padding: 0px 0px 5px 5px;
+  box-shadow: 0 5px 10px 0px rgba(141, 125, 125, 0.76);
+}
+
 
 
 /* Clear floats after the columns */
@@ -67,6 +73,20 @@
     .colunafichario {
       width: 50%;
     }
+    .sobreagressor{
+      margin: 0px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+    .sobreocorrencia{
+      margin: 0px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
 }
 }
 
@@ -77,13 +97,13 @@
     font-family: inter,arial;
     color:#30113be5;
     font-size: 4.5vh;
-    font-weight: 600;
+    font-weight: 200;
 }
 
 #protocolo{
   text-align: center;
   font-family: inter,arial;
-  color:#000000e0;
+  color:#000000a2;
   font-size: 4.5vh;
 }
 
@@ -100,7 +120,7 @@
     color: #000000;
     font-size: 3vh;
     font-weight: normal;
-    margin-left: 8%;
+    margin-left: 2%;
 }
 
 .articledenuncia{
@@ -111,6 +131,13 @@
 .articleagressor{
   float: right;
   margin-right: 8%;
+}
+
+.prova{
+  margin: 0 auto;
+  width: 99.1vw;
+  height: 35vh;
+  object-fit: cover;
 }
 
 

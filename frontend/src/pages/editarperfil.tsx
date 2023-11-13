@@ -116,9 +116,9 @@ function EditarPerfil () {
 <p id="editar-email"> CPF:{getPolicial.pol_cpf}</p>
 <br></br>
 
-<p id="editar-den-andamento"> {getPolicial.pol_den_andamento ?? "nada" } Denúncias em Andamento</p>
+<p id="editar-den-andamento"> {getPolicial.pol_den_andamento ?? "0" } Denúncias em Andamento</p>
 
-<p id="editar-den-finalizada">{getPolicial.pol_denF ?? "nada"} Denúncias Finalizadas</p>
+<p id="editar-den-finalizada">{getPolicial.pol_denF ?? "0"} Denúncias Finalizadas</p>
 
 <br></br>
 
@@ -152,10 +152,7 @@ function EditarPerfil () {
 
 </div>
 
-<div className="wrap-input-editar">
-<input className='inputeditar' type="name" required placeholder="Cpf" name="cpf" value={polUpdate.cpf || ""} onChange={handleChange}/>
 
-</div>
 
 <span className="editar-subtitle">Dados de Login</span>
 

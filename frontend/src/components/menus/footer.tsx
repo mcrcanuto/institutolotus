@@ -41,13 +41,13 @@ function Footer() {
           
             <li>
             
-              <a href="faceboock.com"><BsFacebook/></a>
+              <a href="facebook.com"><BsFacebook/></a>
             <a id="ponto">...</a>
-            <a href="https://www.instagram.com/carla_da_silva98/"><GrInstagram/></a>
+            <a href="https://www.instagram.com/inst.lotusvr/"><GrInstagram/></a>
             <a id="ponto">...</a>
-          <a href=""><BsWhatsapp/></a>
+          <a href="https://api.whatsapp.com/send?phone=5524999938084&text=Preciso%20da%20ajuda%20da%20pol%C3%ADcia%20nesse%20exato%20momento!"><BsWhatsapp/></a>
            <a id="ponto">...</a>
-           <a href=""><BsTwitter/></a></li>
+           <a href="twitter.com"><BsTwitter/></a></li>
 
           </ul>
         </div>
