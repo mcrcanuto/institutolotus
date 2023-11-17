@@ -17,7 +17,7 @@ html, body {
 
    .oipolicial {
        width: 100%;
-       margin: 0 auto;
+       margin-left: 12%;
       
    }
  
@@ -46,7 +46,9 @@ html, body {
     flex-wrap: wrap;
     position: relative;
     width: 100%;
-    font-size: 15px;
+    font-size: 15px; 
+    margin-left: 3.5%;
+    
 
 }
 

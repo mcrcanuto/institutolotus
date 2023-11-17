@@ -49,21 +49,7 @@ const [taOn, setTaOn] = useState(false);
 
               <li>
                 
-  <Popup className="popupnotifica" trigger={<button id='notifica'> <FaRegBell className="icones"/></button>} position="bottom">
-    
-    <div id='conteudonotifica'>
-      
-        <p className="agressao-andamentonotifica">Violência Física</p>
-        <p className="autor-andamentonotifica">Agressor:  <br></br> Protocolo: </p>
-      
-        <Link to="/atualizarstatus">
-        <button className="visualizarnotifica"> Visualizar</button>
-        </Link>
-        <br></br>
-      </div>
-      
-  </Popup>
-
+  
               </li>
             </ul>
           </nav>

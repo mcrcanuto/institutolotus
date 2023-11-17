@@ -14,7 +14,7 @@
 
    .containermeuspedidos {
        width: 100vw;
-       height: fit-content;
+       height: 70vh;
       display: flex;
       padding: 10vh 0 10vh 0;
        flex-wrap: wrap;

@@ -212,8 +212,8 @@ header nav ul li a{
     display: none;
   }
   #logomenu{
-    width: 20vw;
-    height: 19vh;
+    width: 18vw;
+    height: 18vh;
     margin-left: 9%;
     margin-top: 2.5%;
   }
@@ -227,7 +227,7 @@ header nav ul li a{
     border-width: 0px;
     font-style: italic;
     margin-top: 20%;
-    margin-right: 65%;
+    margin-right: 75%;
    
    }
   

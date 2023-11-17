@@ -288,6 +288,7 @@ fieldset{
 
 #agressor {
   flex-direction: column;  
+  
 }
 
 .crime{
@@ -305,12 +306,11 @@ fieldset{
   padding: 30px;
   border-radius: 20px;
   width: 47%;
-  padding-top: 80px;  
+  padding-top: 6.5%;  
+  margin-bottom: 5.5%; 
+  flex-direction: column;
  
 }
-
-
-
 .btnvolta {
   padding-right: 100%;
 }
@@ -318,4 +318,5 @@ fieldset{
 #denuncie{
   color:rgb(73, 35, 77);
   font-size: 4vh;
+  margin-bottom: 4%;
 }

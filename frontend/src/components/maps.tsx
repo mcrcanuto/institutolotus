@@ -23,11 +23,7 @@ export default function Maps(){
         defaultCenter={defaultProps.center}
         defaultZoom={defaultProps.zoom}
       >
-        <AnyReactComponent
-          lat={-22.521640}
-          lng={-44.112148}
-          text="Delagacia da Mulher de Volta Redonda"
-        />
+       
       
 
 
