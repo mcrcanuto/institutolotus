@@ -75,10 +75,6 @@ nossa cidade, gerando uma maior rapidez no recebimento delas, pois são eles que
 
 
 
-<Link to="/login" className="link">
-<img src="./../imgs/entrarcomo.png" id="entrarpolicial" />
-  </Link>
-  <br></br><br></br>
 
 
 </div>

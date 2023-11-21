@@ -8,6 +8,7 @@ import axios from "axios";
 import dateDisplayer from "../components/codigos/dataDisplayer";
 
 
+
 function Status() {
   const { protocolo } = useParams();
   const [denuncia, setDenuncia] = useState([]);
@@ -66,7 +67,9 @@ function Status() {
       <div className="Containeracompanhamento">
         <div className="containeracompanhamento">
           <div className="wrapacompanhamento">
-            <h2 className='h2acompanhamento'>Denúncia: {denuncia.den_protocolo || ""}</h2>
+            <h2 className='h2acompanhamento'>Denúncia: {denuncia.den_violencia}</h2>
+       
+            <h2 className='protocoloacompa'>Protocolo: {denuncia.den_protocolo || ""}</h2>
             <h2 id='statusacompa'>Status: {denuncia.den_status || ""}</h2>
             <br />
             <ol className="progress" data-steps="4">

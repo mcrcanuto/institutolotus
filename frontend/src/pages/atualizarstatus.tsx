@@ -3,7 +3,7 @@ import MenuPolicial from "../components/menus/MenuPolicial"
 import FooterPolicial from "../components/menus/FooterPolicial";
 import "./../css/atualizar.css"
 import "./../css/geral.css"
-
+import require from "react"
 import { LuSendHorizonal } from "react-icons/lu"
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
@@ -161,7 +161,12 @@ function Atualizar() {
 </details>
 </div>
 
+<div>
+  <p className="prova">{denuncia.den_imagem}</p>
 
+
+     
+</div>
 
 
       </div>

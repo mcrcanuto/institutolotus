@@ -37,6 +37,9 @@ function Cadastro() {
     })
   }
 
+
+ 
+
   return (
     <>
       <div className="Container">
@@ -64,7 +67,7 @@ function Cadastro() {
 
               <div className="wrap-input">
                 <input className='input' placeholder="CPF" type="text" required
-                  pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2})|(\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2})"
+                 pattern="/^\d{3}\.\d{3}\.\d{3}\-\d{2}$/"
                   onChange={handleChange} name="cpf" maxLength={11} value={cadInfo.cpf} />
                 <span className="focus-input" ></span>
               </div>
@@ -81,7 +84,7 @@ function Cadastro() {
 
 
               <div className="container-login-form-btn">
-                <Link to="/Login">
+                <Link to="/loginp">
                   <span>Já possui uma conta?</span>
                 </Link>
               </div>

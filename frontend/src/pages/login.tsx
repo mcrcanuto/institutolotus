@@ -58,7 +58,10 @@ function Login() {
             </div>
 
             <div className="container-login-form-btn">
-              <Link to="/cadastro">
+             
+           
+              <Link to="/cadastrop">
+                
                 <button className="criarconta" onClick={() => { navigate("/cadastro") }}>Criar Conta </button>
               </Link>
             </div>

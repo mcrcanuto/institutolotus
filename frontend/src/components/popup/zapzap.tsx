@@ -22,7 +22,7 @@ function Zap(){
    <Action style={{backgroundColor: 'rgb(44, 141, 44)'}} onClick={() => {  
     setSwalProps({
                     show: true,
-                    text: 'Atenção! O link abaixo o direcionará para o contato da Delegacia da Mulher de Volta Redonda. Utilize-o caso precise de ajuda imediatamente.',
+                    text: 'BOTÃO DE EMERGÊNCIA: O link abaixo o direcionará para o contato da Delegacia da Mulher de Volta Redonda. Utilize-o caso precise de ajuda imediatamente.',
                     footer: ' <a href="https://api.whatsapp.com/send?phone=5524999938084&text=Preciso%20da%20ajuda%20da%20pol%C3%ADcia%20nesse%20exato%20momento!">Conversar agora</a>',
                 });
             }}>

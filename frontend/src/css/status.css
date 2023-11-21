@@ -39,11 +39,21 @@
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 50vw;
+    font-size: 4vh;
     color: #000000;
     text-align: center;
   }
+
+  .protocoloacompa{
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 50vw;
+    font-size: 3.5vh ;
+    color: #000000c5;
+    text-align: center;
+  }
   #statusacompa{
-    margin-top: -0.5vh;
+    margin-top: -0.2vh;
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 50vw;
