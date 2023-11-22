@@ -32,18 +32,20 @@
     color: #5C286F;
     font-size: 3.5vh;
     font-family: inter, arial;
+    margin-top: -11%;
+    margin-left: -5%;
 
   }
   #quermesmosair{
     text-align: center;
-    margin-left: 25%;
+    margin-left: 20%;
     font-size: 4.5vh;
     font-family: inter,arial;
   }
   #querexcluir{
     text-align: center;
     margin-left: 7%;
-    font-size: 4.5vh;
+    font-size: 3.8vh;
     font-family: inter,arial;
   }
 
