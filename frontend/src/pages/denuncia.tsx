@@ -205,7 +205,7 @@ function Denuncia() {
               <br />
               <div className='wrap-input-denuncia'>
                 <div className="wrap-input-denuncia">
-                  <input className='input' type="text" onChange={handleChange} name="den_denunciante" defaultValue={denunciaInfo.den_denunciante} placeholder="Como denunciante, eu sou..." required list='denunciante' />
+                <p className='text'>Como denunciante, eu sou... </p>  <input className='input' type="text" onChange={handleChange} name="den_denunciante" defaultValue={denunciaInfo.den_denunciante} required list='denunciante' />
                   <span className="focus-input"></span>
                   <datalist id='denunciante'>
                     <option className='tipoDenunciante' value="Vítima"></option>
@@ -213,7 +213,7 @@ function Denuncia() {
                   </datalist>
                 </div>
                 <div className="wrap-input-denuncia">
-                  <input className='input' type="text" onChange={handleChange} name="den_violencia" defaultValue={denunciaInfo.den_violencia} placeholder="Tipos de violência" required list='violencia' />
+                <p className='text'>Tipo de Violência </p> <input className='input' type="text" onChange={handleChange} name="den_violencia" defaultValue={denunciaInfo.den_violencia} required list='violencia' />
                   <span className="focus-input"></span>
                   <datalist id='violencia'>
                     <option className='tipoViolencia' value="Violência Física "></option>
@@ -224,7 +224,7 @@ function Denuncia() {
                   </datalist>
                 </div>
                 <div className="wrap-input-denuncia">
-                  <input className='input' type="text" onChange={handleChange} name="den_frequencia" defaultValue={denunciaInfo.den_frequencia} placeholder="Frequência do ocorrido" required list='frequencia' />
+                <p className='text'>Frequência da violência </p>  <input className='input' type="text" onChange={handleChange} name="den_frequencia" defaultValue={denunciaInfo.den_frequencia}  required list='frequencia' />
                   <span className="focus-input"></span>
                   <datalist id="frequencia">
                     <option>Diariamente</option>
@@ -234,13 +234,13 @@ function Denuncia() {
                   </datalist>
                 </div>
                 <div className="wrap-input-denuncia">
-                  <p className='text'>Data da Ocorrência: </p>   <input onChange={handleChange} defaultValue={denunciaInfo.den_data_ocorrencia} className='input' type="date" required />
+                  <p className='text'>Data da Ocorrência </p>   <input onChange={handleChange} defaultValue={denunciaInfo.den_data_ocorrencia} className='input' type="date" required />
                 </div>
                 <div className='wrap-input-denuncia'>
-                  <p className='text'>Hora da Ocorrência: </p> <input className='input' onChange={handleChange} name="den_hora_ocorrencia" defaultValue={denunciaInfo.den_hora_ocorrencia} type='time' required />
+                  <p className='text'>Hora da Ocorrência </p> <input className='input' onChange={handleChange} name="den_hora_ocorrencia" defaultValue={denunciaInfo.den_hora_ocorrencia} type='time' required />
                 </div>
                 <div>
-                  <textarea className='input' placeholder="Descrição do ocorrido" name="den_desc_local" required defaultValue={denunciaInfo.den_desc_ocorrido} />
+                <p className='text'>Descrição do ocorrido </p>  <textarea className='input'  name="den_desc_local" required defaultValue={denunciaInfo.den_desc_ocorrido} />
                   <span className="focus-input"></span>
                 </div>
               </div>
@@ -248,7 +248,7 @@ function Denuncia() {
                
                 
                 <div className="wrap-input-denuncia">
-                  <input className='input' type="text" required placeholder="Digite seu CEP" defaultValue={cep} onChange={e => {
+                <p className='text'>CDigite seu Cep </p>     <input className='input' type="text" required  defaultValue={cep} onChange={e => {
                     setCep(e.target.value);
                     handleChange(e);
                   }} name="den_cep" />
@@ -256,23 +256,23 @@ function Denuncia() {
                   </div>
 
                   <div className="wrap-input-denuncia">
-                  <p className='text'><input type="checkbox" name="den_naosabe_cep" />Não sei meu CEP</p>
+                  <p className='text'><input type="checkbox" name="den_naosabe_cep" />Não sei o CEP</p>
                </div>
                    
                    
                   <div className="wrap-input-denuncia">
-                  <input className='input' type="text" placeholder="Bairro" required onChange={handleChange} name="den_bairro" defaultValue={endereco.bairro} />
+                  <p className='text'>Bairro </p> <input className='input' type="text"  required onChange={handleChange} name="den_bairro" defaultValue={endereco.bairro} />
                   <span className="focus-input"></span>
                 </div>
 
                
 
                 <div className="wrap-input-denuncia">
-                  <input className='input' type="text" placeholder="Descrição do Local" onChange={handleChange} name="den_local" defaultValue={denunciaInfo.den_desc_local} required />
+                <p className='text'>Descrição do local </p> <input className='input' type="text"  onChange={handleChange} name="den_local" defaultValue={denunciaInfo.den_desc_local} required />
                   <span className="focus-input"></span>
                 </div>
                 <div className="wrap-input-denuncia">
-                  <input className='input' type="text" placeholder="Ponto de Referência" onChange={handleChange} name="den_ponto_ref" defaultValue={denunciaInfo.den_ponto_ref} required />
+                <p className='text'>Ponto de referência do local </p> <input className='input' type="text"  onChange={handleChange} name="den_ponto_ref" defaultValue={denunciaInfo.den_ponto_ref} required />
                   <span className="focus-input"></span>
                 </div>
              
@@ -286,20 +286,20 @@ function Denuncia() {
             <br />
             <article>
               <div className="wrap-input-denuncia">
-                <input className='input' type="text" placeholder="Nome do Agressor" onChange={handleChangeAgr} name="agr_nome" defaultValue={agressorInfo.agr_nome} required />
+              <p className='text'>Nome do agressor </p> <input className='input' type="text"  onChange={handleChangeAgr} name="agr_nome" defaultValue={agressorInfo.agr_nome} required />
                 <span className="focus-input"></span>
               </div>
               <div className="wrap-input-denuncia">
-                <input className='input' type="text" placeholder="Apelido do Agressor" name="agr_apelido" onChange={handleChangeAgr} defaultValue={agressorInfo.agr_apelido} required />
+              <p className='text'>Apelido do agressor </p> <input className='input' type="text"  name="agr_apelido" onChange={handleChangeAgr} defaultValue={agressorInfo.agr_apelido} required />
                 <span className="focus-input"></span>
               </div>
               <div className="wrap-input-denuncia">
-                <input className='input' type="number" placeholder="Idade do Agressor" onChange={handleChangeAgr} name="agr_idade" defaultValue={agressorInfo.agr_idade} required />
+              <p className='text'>Idade do agressor</p> <input className='input' type="number"  onChange={handleChangeAgr} name="agr_idade" defaultValue={agressorInfo.agr_idade} required />
                 <span className="focus-input"></span>
               </div>
 
               <div className="wrap-input-denuncia">
-                <input className='input' type="text" placeholder="Estatura do agressor" list="estatura" onChange={handleChangeAgr} name="agr_estatura" defaultValue={agressorInfo.agr_estatura} required />
+              <p className='text'>Estatura </p> <input className='input' type="text"  list="estatura" onChange={handleChangeAgr} name="agr_estatura" defaultValue={agressorInfo.agr_estatura} required />
                 <datalist id="estatura">
                   <option className='tipoEstatura' value="Baixa"></option>
                   <option className='tipoEstatura' value="Mediana"></option>
@@ -309,7 +309,7 @@ function Denuncia() {
               </div>
 
               <div className="wrap-input-denuncia">
-                <input className='input' type="text" placeholder="Qual o tipo físico do agressor?" required list='tipofisico' onChange={handleChangeAgr} defaultValue={agressorInfo.agr_tipo_fisico} />
+              <p className='text'>Tipo físico </p> <input className='input' type="text"  required list='tipofisico' onChange={handleChangeAgr} defaultValue={agressorInfo.agr_tipo_fisico} />
                 <datalist id='tipofisico'>
                   <option value="Magro"></option>
                   <option value="Médio"></option>
@@ -319,7 +319,7 @@ function Denuncia() {
               </div>
 
               <div className="wrap-input-denuncia">
-                <input className='input' type="text" placeholder="Qual a cor da pele do agressor?" required list='corpele' onChange={handleChangeAgr} defaultValue={agressorInfo.agr_cor_pele} />
+              <p className='text'>Cor da pele </p> <input className='input' type="text"  required list='corpele' onChange={handleChangeAgr} defaultValue={agressorInfo.agr_cor_pele} />
                 <datalist id="corpele">
                   <option value="Branco"></option>
                   <option value="Amarelo"></option>
@@ -330,7 +330,7 @@ function Denuncia() {
               </div>
 
               <div className="wrap-input-denuncia">
-                <input className='input' type="text" placeholder="Qual a cor do cabelo do agressor?" required list='corcabelo' onChange={handleChangeAgr} defaultValue={agressorInfo.agr_cor_cabelo} />
+              <p className='text'>Cor do cabelo </p> <input className='input' type="text"  required list='corcabelo' onChange={handleChangeAgr} defaultValue={agressorInfo.agr_cor_cabelo} />
                 <datalist id="corcabelo">
                   <option value="Castanho Claro"></option>
                   <option value="Castanho Escuro"></option>
@@ -346,7 +346,7 @@ function Denuncia() {
 
 
               <div className="wrap-input-denuncia">
-                <input className='input' type="text" placeholder="Qual o tipo de cabelo do agressor?" required list='tipocabelo' onChange={handleChangeAgr} defaultValue={agressorInfo.agr_tipo_cabelo} />
+              <p className='text'>Tipo do cabelo </p>  <input className='input' type="text"   required list='tipocabelo' onChange={handleChangeAgr} defaultValue={agressorInfo.agr_tipo_cabelo} />
                 <datalist id="tipocabelo">
                   <option value="Calvo"></option>
                   <option value="Curto"></option>
@@ -359,7 +359,7 @@ function Denuncia() {
 
 
               <div className="wrap-input-denuncia">
-                <input className='input' type="text" placeholder="Qual a cor dos olhos do agressor?" required list='corolhos' onChange={handleChangeAgr} defaultValue={agressorInfo.agr_cor_olhos} />
+              <p className='text'>Cor dos olhos </p>  <input className='input' type="text" required list='corolhos' onChange={handleChangeAgr} defaultValue={agressorInfo.agr_cor_olhos} />
                 <datalist id="corolhos">
                   <option value="Verde"></option>
                   <option value="Azul"></option>
@@ -371,7 +371,7 @@ function Denuncia() {
 
 
               <div className="wrap-input-denuncia">
-                <input className='input' type="text" placeholder="O agressor mora na mesma residência que a vítima?" onChange={handleChangeAgr} defaultValue={agressorInfo.agr_mesma_residencia} required list='locAgr' />
+              <p className='text'>O agressor mora na mesma residênciaque a vítima? </p> <input className='input' type="text"   onChange={handleChangeAgr} defaultValue={agressorInfo.agr_mesma_residencia} required list='locAgr' />
                 <span className="focus-input"></span>
                 <datalist id="locAgr">
                   <option>Sim</option>
@@ -380,20 +380,20 @@ function Denuncia() {
               </div>
 
               <div className="wrap-input-denuncia">
-                <input className='input' placeholder="Qual o endereço do agressor?" onChange={handleChangeAgr} name="agr_endereco" defaultValue={agressorInfo.agr_endereco} type="text" required />
+              <p className='text'>Qual o endereço do agressor?</p> <input className='input'  onChange={handleChangeAgr} name="agr_endereco" defaultValue={agressorInfo.agr_endereco} type="text" required />
                 <span className="focus-input"></span>
               </div>
               <div className="wrap-input-denuncia">
-                <input className='input' placeholder="Ponto de referência do endereço acima" onChange={handleChangeAgr} type="text" required defaultValue={agressorInfo.agr_pont_ref_end} />
+              <p className='text'>Ponto de referência do endereço acima </p>  <input className='input' onChange={handleChangeAgr} type="text" required defaultValue={agressorInfo.agr_pont_ref_end} />
                 <span className="focus-input"></span>
               </div>
               <div className="wrap-input-denuncia">
-                <input className='input' placeholder="Local de trabalho do agressor" onChange={handleChangeAgr} type="text" defaultValue={agressorInfo.agr_local_trabalho} required />
+              <p className='text'>Local de trabalho do agressor </p>  <input className='input'  onChange={handleChangeAgr} type="text" defaultValue={agressorInfo.agr_local_trabalho} required />
                 <span className="focus-input"></span>
               </div>
 
               <div className="wrap-input-denuncia">
-                <input className='input' type="text" placeholder="O agressor possui relacionamento com a vítima?" required list='sitAgr' onChange={handleChangeAgr} defaultValue={agressorInfo.agr_possui_relacionamento} />
+              <p className='text'>O agressor possui algum relacionamento com a vítima? </p>  <input className='input' type="text"  required list='sitAgr' onChange={handleChangeAgr} defaultValue={agressorInfo.agr_possui_relacionamento} />
                 <span className="focus-input"></span>
                 <datalist id="sitAgr">
                   <option value="Não possui"></option>

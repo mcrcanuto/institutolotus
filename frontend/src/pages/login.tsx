@@ -57,7 +57,7 @@ function Login() {
               <button className="entrar" onClick={() => { login() }}>Entrar</button>
             </div>
 
-            <div className="container-login-form-btn">
+            <div className="criarcontadiv">
              
            
               <Link to="/cadastrop">
