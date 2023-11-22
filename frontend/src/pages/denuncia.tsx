@@ -299,18 +299,18 @@ function Denuncia() {
               </div>
 
               <div className="wrap-input-denuncia">
-                <input className='input' type="text" placeholder="Estatura do agressor" list='altura' onChange={handleChangeAgr} name="agr_estatura" defaultValue={agressorInfo.agr_estatura} required />
-                <datalist id="altura">
-                  <option value="Baixa"></option>
-                  <option value="Mediana"></option>
-                  <option value="Alta"></option>
+                <input className='input' type="text" placeholder="Estatura do agressor" list="estatura" onChange={handleChangeAgr} name="agr_estatura" defaultValue={agressorInfo.agr_estatura} required />
+                <datalist id="estatura">
+                  <option className='tipoEstatura' value="Baixa"></option>
+                  <option className='tipoEstatura' value="Mediana"></option>
+                  <option className='tipoEstatura' value="Alta"></option>
                 </datalist>
                 <span className="focus-input"></span>
               </div>
 
               <div className="wrap-input-denuncia">
                 <input className='input' type="text" placeholder="Qual o tipo físico do agressor?" required list='tipofisico' onChange={handleChangeAgr} defaultValue={agressorInfo.agr_tipo_fisico} />
-                <datalist id="tipofisico">
+                <datalist id='tipofisico'>
                   <option value="Magro"></option>
                   <option value="Médio"></option>
                   <option value="Gordo"></option>

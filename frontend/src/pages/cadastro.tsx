@@ -31,7 +31,7 @@ function Cadastro() {
       senha: cadInfo.senha
     }).then((res) => {
       localStorage.setItem('token', res.data.token); //coloca o item dentro do localStorage
-      navigate("/perfilpolicial"); //navega para outra página
+      navigate("/loginp"); //navega para outra página
     }).catch((error) => {
       console.log(error);
     })
@@ -67,8 +67,10 @@ function Cadastro() {
 
               <div className="wrap-input">
                 <input className='input' placeholder="CPF" type="text" required
-                 pattern="/^\d{3}\.\d{3}\.\d{3}\-\d{2}$/"
-                  onChange={handleChange} name="cpf" maxLength={11} value={cadInfo.cpf} />
+                
+                  onChange={handleChange} name="cpf" maxLength={11} 
+                  pattern="/^\d{3}\.\d{3}\.\d{3}\-\d{2}$/"
+                  value={cadInfo.cpf} />
                 <span className="focus-input" ></span>
               </div>
 

@@ -52,8 +52,8 @@ receber o apoio que merece. Obrigado por sua compreensão e por fazer parte dess
 
   <div className="coluna" >
   <h2 className="h2quemsomos"><BsFillPatchExclamationFill/></h2>
-  <p className="pquemsomos">Além disso, as denúncias efetuadas aqui, vão direto para a polícia da Delegacia da Mulher da 
-nossa cidade, gerando uma maior rapidez no recebimento delas, pois são eles que administram o site.</p>
+  <p className="pquemsomos">Além disso, as denúncias efetuadas aqui, vão direto para a polícia da Delegacia da Mulher de Volta Redonda,
+   gerando uma maior rapidez no recebimento delas, pois são eles que administram o site.</p>
 <br></br>
 
 <div className="botoes">
