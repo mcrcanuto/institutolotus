@@ -298,7 +298,7 @@ fieldset{
   border-radius: 20px;
   margin-right: 50px;
   width: 47%;
-  margin-bottom: 20%;
+  margin-bottom: 25%;
   
 }
 
@@ -308,7 +308,7 @@ fieldset{
   border-radius: 20px;
   width: 47%;
   padding-top: 6.5%;  
-  margin-bottom: 5.5%; 
+  margin-bottom: 11.5%; 
   flex-direction: column;
  
 }

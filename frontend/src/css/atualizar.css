@@ -248,6 +248,32 @@ text-align: left;
 
    }
 
+   .anexada{
+    font-size: 3.5vh;
+      color:transparent;
+      font-family: inter,arial;
+      text-align: center;
+  }
+  
+  .sobreanexada{
+  font-size: 3vh;
+  background-color:rgba(176, 140, 189, 0.856);
+  border-radius: 10px;
+  color: aliceblue;
+  font-family: inter,arial;
+  font-weight: normal;
+  width: 42.5vw;
+  height: 4vh;
+  text-align: center;
+  }
+    
+
+   .imagemprova{
+    margin-left: 27%;
+    width: 20vw;
+    height: 25vh;
+    object-fit: cover;
+   }
 
    .form-comentario{  
     color: black;

@@ -163,11 +163,11 @@
   .progress .done .step:after,
   .progress .active .step,
   .progress .active .step:before {
-    background-color: yellowgreen;
+    background-color: rgb(231, 203, 245);
   }
   .progress .done .step,
   .progress .active .step {
-    border: 3px solid yellowgreen;
+    border: 3px solid rgb(231, 203, 245);
   }
 
   .comentariostitulo{

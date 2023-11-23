@@ -107,7 +107,7 @@ function Denuncia() {
   async function postDenuncia() {
     if ( denunciaInfo.den_denunciante == "" || denunciaInfo.den_desc_local == "" || denunciaInfo.den_frequencia == "" || denunciaInfo.den_hora_ocorrencia == "" || denunciaInfo.den_ponto_ref == ""
     || denunciaInfo.den_violencia == "" || agressorInfo.agr_tipo_cabelo == "" || agressorInfo.agr_cor_olhos == "" || agressorInfo.agr_cor_pele == "" || agressorInfo.agr_estatura == "" || agressorInfo.agr_mesma_residencia == "") {
-      alert("Todas as informações devem ser fornecidas!") //Feedback para formulário não preenchido
+      alert("Todas as informações devem ser fornecidas, caso não possua alguma, preencha com *Não possuo* ") //Feedback para formulário não preenchido
     }
     else await axios.post(`http://localhost:3344/denuncia`, { //criar denúncia
       den_denunciante: denunciaInfo.den_denunciante,
@@ -147,7 +147,7 @@ function Denuncia() {
       agr_local_trabalho: agressorInfo.agr_local_trabalho,
       Denuncia_den_protocolo: localStorage.getItem("denuncia")
     }).then((res) => {
-      alert("Denúncia criada")
+      alert("Denúncia criada, clique no botão de OK")
       navigate("/protocolo");
     }).catch((error) => {
       console.log(error);
@@ -308,10 +308,7 @@ function Denuncia() {
               <p className='text'>Nome do agressor </p> <input className='input' type="text"  onChange={handleChangeAgr} name="agr_nome" defaultValue={agressorInfo.agr_nome} required />
                 <span className="focus-input"></span>
               </div>
-              <div className="wrap-input-denuncia">
-              <p className='text'>Apelido do agressor </p> <input className='input' type="text"  name="agr_apelido" onChange={handleChangeAgr} defaultValue={agressorInfo.agr_apelido} required />
-                <span className="focus-input"></span>
-              </div>
+             
               <div className="wrap-input-denuncia">
               <p className='text'>Idade do agressor</p> <input className='input' type="number"  onChange={handleChangeAgr} name="agr_idade" defaultValue={agressorInfo.agr_idade} required />
                 <span className="focus-input"></span>

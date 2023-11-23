@@ -162,7 +162,6 @@ function Atualizar() {
             <summary className="sobreagressor"> SOBRE O AGRESSOR</summary>
             <div className="divinfo">
               <p id="informacoes_denuncia">Nome: {denuncia.agr_nome}</p>
-              <p id="informacoes_denuncia">Apelido: {denuncia.agr_apelido}</p>
               <p id="informacoes_denuncia">Idade: {denuncia.agr_idade}</p>
               <p id="informacoes_denuncia">Estatura: {denuncia.agr_estatura}</p>
               <p id="informacoes_denuncia">Tipo físico: {denuncia.agr_tipo_fisico}</p>
@@ -179,14 +178,26 @@ function Atualizar() {
           </details>
         </div>
 
-        <div>
-          <img className="prova" src={imgDenuncia ?? ""}></img>
+<br></br><br></br><br></br>
 
-
+        
+  
+      
+        <div className="colunapolicial" >
+          <details>
+            <summary className="sobreanexada">IMAGEM ANEXADA COMO PROVA</summary>
+            <div className="divinfo">
+              <br></br>
+          <img alt="Nenhuma imagem enviada" className="imagemprova" src={imgDenuncia ?? "" }></img>
+            </div>
+          </details>
         </div>
 
 
+
       </div>
+
+
 
 
       <p id="titulo-c-a">Comentários Antigos </p>

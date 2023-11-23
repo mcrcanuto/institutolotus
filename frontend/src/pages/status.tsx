@@ -73,21 +73,21 @@ function Status() {
             <h2 id='statusacompa'>Status: {denuncia.den_status || ""}</h2>
             <br />
             <ol className="progress" data-steps="4">
-              <li className="active">
-                <span className="name">Enviada</span>
-                <span className="step"><span>1</span></span>
+              <li className={(denuncia.den_status == "Enviada" || denuncia.den_status == "Enviada") ? "active" : "done" }>
+                <span className="name" style={{fontWeight: denuncia.den_status == "Enviada" && 'normal' }}>Enviada</span>
+                <span className="step" style={{fontWeight: denuncia.den_status == "Enviada" && 'normal' }}><span>1</span></span>
               </li>
-              <li className={(denuncia.den_status != "Enviada") ? "active" : "done" }>
-                <span className="name">Visualizada</span>
-                <span className="step"><span>2</span></span>
+              <li className={(denuncia.den_status == "Visualizada" || denuncia.den_status == "Visualizada") ? "active" : "done"  }>
+                <span className="name"  style={{fontWeight: denuncia.den_status == "Visualizada" && 'normal' }}>Visualizada</span>
+                <span className="step" style={{fontWeight: denuncia.den_status == "Visualizada" && 'normal' }}><span>2</span></span>
               </li>
-               <li className={(denuncia.den_status == "Investigação" || denuncia.den_status == "Finalizada") ? "active" : "done" }>
-                <span className="name">Investigação</span>
-                <span className="step"><span>3</span></span>
+               <li className={(denuncia.den_status == "Investigação" || denuncia.den_status == "Investigação") ? "active" : "done" }>
+                <span className="name"  style={{fontWeight: denuncia.den_status == "Investigação" && 'normal' }}>Investigação</span>
+                <span className="step" style={{fontWeight: denuncia.den_status == "Investigação" && 'normal' }}><span>3</span></span>
               </li>
-              <li className={(denuncia.den_status == "Finalizada") ? "active" : "done" }>
-                <span className="name">Finalizada</span>
-                <span className="step"><span>4</span></span>
+              <li className={(denuncia.den_status == "Finalizada") ? "active" : "done"  }>
+                <span className="name" style={{fontWeight: denuncia.den_status == "Finalizada" && 'normal' }} >Finalizada</span>
+                <span className="step" style={{fontWeight: denuncia.den_status == "Finalizada" && 'normal'}}><span>4</span></span>
               </li>
             </ol>
             <br /><br /><br /><br />
