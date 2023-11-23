@@ -387,7 +387,7 @@ function Denuncia() {
 
 
               <div className="wrap-input-denuncia">
-              <p className='text'>O agressor mora na mesma residênciaque a vítima? </p> <input className='input' type="text"   onChange={handleChangeAgr} defaultValue={agressorInfo.agr_mesma_residencia} required list='locAgr' name="agr_mesma_residencia"/>
+              <p className='text'>O agressor mora na mesma residência que a vítima? </p> <input className='input' type="text"   onChange={handleChangeAgr} defaultValue={agressorInfo.agr_mesma_residencia} required list='locAgr' name="agr_mesma_residencia"/>
                 <span className="focus-input"></span>
                 <datalist id="locAgr">
                   <option>Sim</option>
