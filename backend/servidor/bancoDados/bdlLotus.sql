@@ -33,9 +33,9 @@ CREATE TABLE IF NOT EXISTS `InstituloLotus`.`Denúncia` (
   `den_bairro` VARCHAR(100) NOT NULL,
   `den_status` VARCHAR(20) DEFAULT "Enviada",
   `den_cep` NVARCHAR(8) NOT NULL,
-  `den_ponto_ref` VARCHAR(55) NOT NULL,
-  `den_desc_local` VARCHAR(200) NOT NULL,
-  `den_desc_ocorrido` VARCHAR(300) NOT NULL
+  `den_ponto_ref` VARCHAR(800) NOT NULL,
+  `den_desc_local` VARCHAR(1000) NOT NULL,
+  `den_desc_ocorrido` VARCHAR(2000) NOT NULL
 )
 ENGINE = InnoDB;
 
@@ -87,10 +87,10 @@ CREATE TABLE IF NOT EXISTS `InstituloLotus`.`Agressor` (
   `agr_cor_cabelo` VARCHAR(45) NULL,
   `agr_cor_olhos` VARCHAR(45) NULL,
   `agr_tipo_cabelo` VARCHAR(45) NULL,
-  `agr_endereco` VARCHAR(100) NULL,
+  `agr_endereco` VARCHAR(400) NULL,
   `agr_mesma_residencia` VARCHAR(3) NULL,
-  `agr_pont_ref_end` VARCHAR(100) NULL,
-  `agr_local_trabalho` VARCHAR(100) NULL,
+  `agr_pont_ref_end` VARCHAR(400) NULL,
+  `agr_local_trabalho` VARCHAR(400) NULL,
   `agr_possui_relacionamento` VARCHAR(3) NULL,
   `Denuncia_den_protocolo` VARCHAR(8) NOT NULL REFERENCES `InstituloLotus`.`Denúncia` (`den_protocolo`) 
     ON DELETE NO ACTION

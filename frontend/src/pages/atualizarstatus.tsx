@@ -141,16 +141,20 @@ function Atualizar() {
           <details>
             <summary className="sobreocorrencia"> SOBRE A OCORRÊNCIA</summary>
             <div className="divinfo">
-              <p id="informacoes_denuncia">Tipo de Violência: {denuncia.den_violencia}</p>
+              <p id="informacoes_denuncia"> Tipo de Violência: {denuncia.den_violencia}</p>
               <p id="informacoes_denuncia">Protocolo da denúncia: {protocolo}</p>
               <p id="informacoes_denuncia">Tipo de denunciante: {denuncia.den_denunciante}</p>
               <p id="informacoes_denuncia">Frequência do ocorrido: {denuncia.den_frequencia}</p>
               <p id="informacoes_denuncia">Data da ocorrência: {dateDisplayer(denuncia.den_data_denuncia ?? "")}</p>
               <p id="informacoes_denuncia">Horário da ocorrência: {denuncia.den_hora_ocorrencia}</p>
+              <br></br>
               <p id="informacoes_denuncia">Descrição do ocorrido: {denuncia.den_desc_ocorrido}</p>
+              <br></br>
               <p id="informacoes_denuncia">Bairro: {denuncia.den_bairro}</p>
               <p id="informacoes_denuncia">Cep: {denuncia.den_cep}</p>
+              <br></br>
               <p id="informacoes_denuncia">Descrição do local: {denuncia.den_desc_local}</p>
+              <br></br>
               <p id="informacoes_denuncia">Ponto de referência: {denuncia.den_ponto_ref}</p>
             </div>
           </details>
@@ -170,8 +174,11 @@ function Atualizar() {
               <p id="informacoes_denuncia">Tipo do cabelo: {denuncia.agr_tipo_cabelo}</p>
               <p id="informacoes_denuncia">Cor dos olhos: {denuncia.agr_cor_olhos}</p>
               <p id="informacoes_denuncia">O agressor mora na mesma residência que a vítima: {denuncia.agr_mesma_residencia}</p>
+              <br></br>
               <p id="informacoes_denuncia">Endereço do agressor: {denuncia.agr_endereco} </p>
+              <br></br>
               <p id="informacoes_denuncia">Ponto de referência da residência do agressor: {denuncia.agr_pont_ref_end} </p>
+              <br></br>
               <p id="informacoes_denuncia">Local de trabalho do agressor : {denuncia.agr_local_trabalho}</p>
               <p id="informacoes_denuncia">O agressor tem algum relacionamento com a vítima: {denuncia.agr_possui_relacionamento} </p>
             </div>
