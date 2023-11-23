@@ -17,6 +17,7 @@ function Atualizar() {
   const [comentarios, setComentarios] = useState([]); // lista com os comentários registrados
   const [denuncia, setDenuncia] = useState([]); // lista com a denúncia
   const [policial, setPolicial] = useState(decode(localStorage.getItem("token"))); //policial pelo token
+  const [imgDenuncia, setImgDenuncia] = useState<any>();
   const [nComentario, setNCom] = useState({
     Polícia_pol_cpf: "",
     Denúncia_den_protocolo: "",
@@ -39,12 +40,16 @@ function Atualizar() {
     if (policial.pol_cpf) setNCom(prev => ({ ...prev, Polícia_pol_cpf: policial.pol_cpf }));
   }, [policial])
 
+  useEffect(() => {
+    if (denuncia.den_imagem) getDenunciaImg(denuncia.den_imagem);
+  }, [denuncia])
+
   async function getComentarios() {
     await axios.get(`http://localhost:3344/acompanhamento/denuncia/${protocolo}`).then((res) => {
       let sorted = res.data.sort(function (a, b) {
         return b.aco_data - a.aco_data;
       })
-      
+
       const ultimo_comentario = sorted[sorted.length - 1]
       const acompanhamento_status = ultimo_comentario.aco_status
 
@@ -58,7 +63,20 @@ function Atualizar() {
   async function getDenuncia() {
     await axios.get(`http://localhost:3344/denuncia/protocolo/${protocolo}`).then((res) => {
       setDenuncia(res.data[0]);
-      console.log(res.data)
+    }).catch((error) => {
+      console.log(error);
+    });
+  }
+
+  async function getDenunciaImg(filename: string) {
+    await axios.get(`http://localhost:3344/denuncia/imagem/${filename}`).then((res) => {
+      const buffer = new Uint8Array(res.data.img.data);
+      const blob = new Blob([buffer], { type: res.data.contentType });
+      let reader = new FileReader();
+      reader.readAsDataURL(blob);
+      reader.onload = () => {
+        setImgDenuncia(reader.result);
+      }
     }).catch((error) => {
       console.log(error);
     });
@@ -66,7 +84,7 @@ function Atualizar() {
 
   async function postComentario() {
     console.log(nComentario)
-    if(denuncia.den_status == "Visualizada" && nComentario.aco_status == "Denúncia Visualizada" || denuncia.den_status == "Finalizada") {
+    if (denuncia.den_status == "Visualizada" && nComentario.aco_status == "Denúncia Visualizada" || denuncia.den_status == "Finalizada") {
       alert("Não é possivel adicionar comentários após a finalização da investigação")
     }
     else await axios.post(`http://localhost:3344/acompanhamento`, {
@@ -111,7 +129,7 @@ function Atualizar() {
       <br></br>
       <br></br>
 
-    
+
 
       <div className="rolarpolicial">
 
@@ -119,11 +137,11 @@ function Atualizar() {
         <p id="protocolo"> {protocolo}</p>
 
 
-<div className="colunapolicial" >
-        <details>
-  <summary className="sobreocorrencia"> SOBRE A OCORRÊNCIA</summary>
-  <div className="divinfo">
-  <p id="informacoes_denuncia">Tipo de Violência: {denuncia.den_violencia}</p>
+        <div className="colunapolicial" >
+          <details>
+            <summary className="sobreocorrencia"> SOBRE A OCORRÊNCIA</summary>
+            <div className="divinfo">
+              <p id="informacoes_denuncia">Tipo de Violência: {denuncia.den_violencia}</p>
               <p id="informacoes_denuncia">Protocolo da denúncia: {protocolo}</p>
               <p id="informacoes_denuncia">Tipo de denunciante: {denuncia.den_denunciante}</p>
               <p id="informacoes_denuncia">Frequência do ocorrido: {denuncia.den_frequencia}</p>
@@ -134,15 +152,15 @@ function Atualizar() {
               <p id="informacoes_denuncia">Cep: {denuncia.den_cep}</p>
               <p id="informacoes_denuncia">Descrição do local: {denuncia.den_desc_local}</p>
               <p id="informacoes_denuncia">Ponto de referência: {denuncia.den_ponto_ref}</p>
-              </div>
-</details>
-</div>
+            </div>
+          </details>
+        </div>
 
 
-   <div className="colunapolicial" >
-<details>
-  <summary className="sobreagressor"> SOBRE O AGRESSOR</summary>
-  <div className="divinfo">
+        <div className="colunapolicial" >
+          <details>
+            <summary className="sobreagressor"> SOBRE O AGRESSOR</summary>
+            <div className="divinfo">
               <p id="informacoes_denuncia">Nome: {denuncia.agr_nome}</p>
               <p id="informacoes_denuncia">Apelido: {denuncia.agr_apelido}</p>
               <p id="informacoes_denuncia">Idade: {denuncia.agr_idade}</p>
@@ -155,23 +173,22 @@ function Atualizar() {
               <p id="informacoes_denuncia">O agressor mora na mesma residência que a vítima: {denuncia.agr_mesma_residencia}</p>
               <p id="informacoes_denuncia">Endereço do agressor: {denuncia.agr_endereco} </p>
               <p id="informacoes_denuncia">Ponto de referência da residência do agressor: {denuncia.agr_pont_ref_end} </p>
-              <p id="informacoes_denuncia">Local de trabalho do agressor : {denuncia.agr_local_trab}</p>
-              <p id="informacoes_denuncia">O agressor tem algum relacionamento com a vítima: {denuncia.agr_possuiu_relacionamento} </p>
+              <p id="informacoes_denuncia">Local de trabalho do agressor : {denuncia.agr_local_trabalho}</p>
+              <p id="informacoes_denuncia">O agressor tem algum relacionamento com a vítima: {denuncia.agr_possui_relacionamento} </p>
             </div>
-</details>
-</div>
+          </details>
+        </div>
 
-<div>
-  <p className="prova">{denuncia.den_imagem}</p>
+        <div>
+          <img className="prova" src={imgDenuncia ?? ""}></img>
 
 
-     
-</div>
+        </div>
 
 
       </div>
 
-     
+
       <p id="titulo-c-a">Comentários Antigos </p>
 
       <div id="TelaStatus" >

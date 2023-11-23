@@ -100,16 +100,16 @@ module.exports =  {
     async retornarImagens(req, res) {
         const {filename} = req.params;
 
-        const imagePath = path.resolve(__dirname, '..', '..', '..', 'userProfile', filename);
+        const imagePath = path.resolve(__dirname, '..', '..', '..', 'denunciaImgs', filename);
 
         fs.readFile(imagePath, (err, data) => {
             if (err) {
-                return res.status(500).json({ error: 'Erro na eitura de imagem' });
+                return res.status(500).json({ error: 'Erro na leitura de imagem' });
             }
 
             res.setHeader('contentType',`image/${path.extname(filename)}`);
 
-            res.end(data);
+            return res.status(201).json({contentType : `image/${path.extname(filename)}`, img : data});
         });
     },
 

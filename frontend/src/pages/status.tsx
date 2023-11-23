@@ -16,7 +16,7 @@ function Status() {
 
   async function getDenuncia() {
     await axios.get(`http://localhost:3344/denuncia/protocolo/${protocolo}`).then((res) => {
-      setDenuncia(res.data);
+      setDenuncia(res.data[0]);
       console.log(res.data);
     }).catch((error) => {
       console.log(error);
@@ -73,15 +73,15 @@ function Status() {
             <h2 id='statusacompa'>Status: {denuncia.den_status || ""}</h2>
             <br />
             <ol className="progress" data-steps="4">
-              <li className="done">
+              <li className="active">
                 <span className="name">Enviada</span>
                 <span className="step"><span>1</span></span>
               </li>
-              <li className={(denuncia.den_status == "Visualizada") ? "active" : "done" }>
+              <li className={(denuncia.den_status != "Enviada") ? "active" : "done" }>
                 <span className="name">Visualizada</span>
                 <span className="step"><span>2</span></span>
               </li>
-               <li className={(denuncia.den_status == "Investigação") ? "active" : "done" }>
+               <li className={(denuncia.den_status == "Investigação" || denuncia.den_status == "Finalizada") ? "active" : "done" }>
                 <span className="name">Investigação</span>
                 <span className="step"><span>3</span></span>
               </li>
